@@ -1,0 +1,87 @@
+@import "props";
+@import "typography";
+@import "colours";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "blocks/blocks";
+
+body {
+    background-image: url(../img/background.svg);
+    @media (max-width:768px) {
+        background-size: 200%;
+        background-position: center;
+    }
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+
+@media (min-width:992px) {
+    .cols-lg-2 {
+        columns: 2;
+    }
+    .cols-lg-3 {
+        columns: 3;
+    }
+}
+
+.sticky {
+    position: sticky;
+    top: 0; // var(--h-top);
+    @media (min-width: 992px) {
+        top: 0; //var(--h-top-desktop);
+    }
+    background-color: #fff;
+    z-index: 1000;
+}
+
+
+#breadcrumbs {
+    font-size: var(--fs-200);
+}
+
+.container-xl > .container-xl {
+    padding-inline: 0;
+}
+
+.yoast-breadcrumbs {
+    @extend .container-xl;
+    @extend .mb-4;
+    font-size: var(--fs-300);
+}
+
+a {
+    transition: color var(--transition);
+}
+
+
+.w-md-auto {
+    @media (min-width:768px) {
+        width: auto !important;
+    }
+}
+
+// show stuff that overflows horizontally
+// * {
+//     outline: 1px solid #f00 !important;
+// }
+// show stuff that overflows horizontally via console JS
+/*
+var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
+for (; i < all.length; i++) {
+    rect = all[i].getBoundingClientRect();
+    if (rect.right > docWidth || rect.left < 0){
+        console.log(all[i]);
+        all[i].style.borderTop = '1px solid red';
+    }
+}
+*/
+
+// @mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
+// 	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+// 	$calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+// 	font-size: $min-value; // Fallback for older browsers
+// 	font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+// }
