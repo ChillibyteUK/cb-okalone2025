@@ -1,0 +1,65 @@
+.app_cta {
+    &__container {
+        background-color: var(--col-navy-400);
+        color: var(--col-white);
+        border-radius: 1rem;
+        padding: 2rem;
+        position: relative;
+        isolation: isolate;
+    }
+    &__title {
+        grid-area: title;
+    }
+    &__content {
+        grid-area: content;
+        padding-bottom: 5rem;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    &__rosette {
+        position: absolute;
+        top: -1rem;
+        right: 1rem;
+        z-index: -1;
+    }
+    &__phone {
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+        height: 200px;
+        width: auto;
+        z-index: -1;
+    }
+
+
+    @media (min-width:768px) {
+        &__container {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-areas: "title" "content" "icons";
+        }
+        &__content {
+            max-width: 75%;
+            padding-bottom: 1rem;
+        }
+
+        &__icons {
+            grid-area: icons;
+            flex-direction: row;
+        }
+        &__rosette {
+            right: 225px;
+        }
+        &__phone {
+            height: unset;
+            right: 0;
+        }
+    }
+
+
+}

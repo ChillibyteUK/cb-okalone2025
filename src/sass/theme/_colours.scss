@@ -41,3 +41,21 @@
 .text--yellow-400 {
   color: var(--col-yellow-400);
 }
+
+
+.bg_grad--orange {
+  background: var(--col-yellow-400);
+  background: linear-gradient(-30deg, var(--col-yellow-400) 0%, var(--col-orange-400) 100%);
+  color: var(--col-black);
+  .btn {
+      background-color: white;
+      color: var(--col-orange-400);
+      transition: all 0.3s ease;
+      &:hover {
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 4px 4px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+  }
+  a {
+      color: black;
+  }
+}

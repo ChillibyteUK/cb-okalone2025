@@ -1,1 +1,52 @@
 @import 'hero';
+@import 'top_tab_group';
+@import 'video';
+@import 'case_study_quotes';
+@import 'spinner';
+@import 'app_cta';
+@import 'gradient_cta';
+
+
+
+.text_image iframe,
+.vimeo-embed, .youtube-embed {
+    img {
+        border-radius: 1rem;
+        box-shadow: var(--shadow-out);
+    }
+    border-radius: 1rem;
+    box-shadow: var(--shadow-out);   
+    .ltv-playbtn {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80px !important;
+        height: 80px !important;
+        background-image: url(../img/icons/play-button.png) !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-color: transparent !important;
+        pointer-events: none;
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.logo__slider {
+
+    .swiper-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .logo__slide {
+        // padding: 1rem;
+        aspect-ratio: 1;
+        border: 2px solid #C6D9DF;
+        background-color: var(--col-white);
+        border-radius: 0.75rem;
+        display: grid;
+        place-content: center;
+    }
+
+}

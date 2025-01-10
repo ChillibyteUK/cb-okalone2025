@@ -11,6 +11,80 @@ function acf_blocks()
             'mode'    => 'edit',
             'supports' => array('mode' => false),
         ));
+        acf_register_block(array(
+            'name'                => 'cb_top_tab_group',
+            'title'                => __('CB Top Tab Group'),
+            'render_template'    => 'page-templates/blocks/cb_top_tab_group.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
+            'name'                => 'cb_text_video',
+            'title'                => __('CB Text Video'),
+            'render_template'    => 'page-templates/blocks/cb_text_video.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
+            'name'                => 'cb_text_image',
+            'title'                => __('CB Text Image'),
+            'render_template'    => 'page-templates/blocks/cb_text_image.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
+            'name'                => 'CB Logo Slider',
+            'title'                => __('CB Logo Slider'),
+            'description'        => __(''),
+            'render_template'    => 'page-templates/blocks/cb_logo_slider.php',
+            'category'            => 'layout',
+            'icon'                => 'slides',
+            'keywords'            => array('logo', 'slider'),
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
+            'name'                => 'cb_case_study_quotes',
+            'title'                => __('CB Case Study / Quotes'),
+            'render_template'    => 'page-templates/blocks/cb_case_study_quotes.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
+            'name'                => 'cb_spinner',
+            'title'                => __('CB Stat Spinner'),
+            'render_template'    => 'page-templates/blocks/cb_spinner.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
+            'name'                => 'cb_app_cta',
+            'title'                => __('CB App CTA'),
+            'render_template'    => 'page-templates/blocks/cb_app_cta.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
+            'name'                => 'cb_gradient_cta',
+            'title'                => __('CB Gradient CTA'),
+            'render_template'    => 'page-templates/blocks/cb_gradient_cta.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
     }
 }
 add_action('acf/init', 'acf_blocks');
