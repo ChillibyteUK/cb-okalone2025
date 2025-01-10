@@ -48,7 +48,7 @@ $bg = null;
                     <img src="<?= get_stylesheet_directory_uri() ?>/img/heroAnim/circle.png" alt="" class="circle">
                     <img src="<?= get_stylesheet_directory_uri() ?>/img/heroAnim/dots.png" alt="" class="dots">
                     <img src="<?= get_stylesheet_directory_uri() ?>/img/heroAnim/gradient.png" alt="" class="gradient">
-                    <img src="<?= get_stylesheet_directory_uri() ?>/img/heroAnim/woman.png" alt="" class="shakira">
+                    <img src="<?= get_stylesheet_directory_uri() ?>/img/heroAnim/figure.png" alt="" class="shakira">
                     <img src="<?= get_stylesheet_directory_uri() ?>/img/heroAnim/laptop.png" alt="" class="laptop">
                     <img src="<?= get_stylesheet_directory_uri() ?>/img/heroAnim/phone.png" alt="" class="phone">
                     <!--
