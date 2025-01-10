@@ -85,6 +85,15 @@ function acf_blocks()
             'mode'    => 'edit',
             'supports' => array('mode' => false),
         ));
+        acf_register_block(array(
+            'name'                => 'cb_sector_slider',
+            'title'                => __('CB Sector Slider'),
+            'render_template'    => 'page-templates/blocks/cb_sector_slider.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
     }
 }
 add_action('acf/init', 'acf_blocks');
