@@ -60,11 +60,10 @@ add_action('wp_footer', function () {
         document.addEventListener('DOMContentLoaded', function() {
             var logoSlider = new Swiper('.sector_slider__slider', {
                 loop: true,
-                autoplay: false,
-                // autoplay: {
-                //     delay: 3000,
-                //     disableOnInteraction: false,
-                // },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
                 pagination: {
                     el: '.swiper-pagination-sectors',
                     dynamicBullets: true,
