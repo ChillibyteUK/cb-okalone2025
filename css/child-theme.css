@@ -21669,6 +21669,7 @@ header #burger-menu.open span:nth-child(4) {
   display: grid;
   overflow: clip;
   isolation: isolate;
+  max-width: 350px;
   width: 100%;
 }
 .heroAnim > * {
