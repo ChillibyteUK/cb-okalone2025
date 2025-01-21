@@ -39,7 +39,32 @@ if (function_exists('yoast_breadcrumb')) {
             </div>
             <?=$img?>
             <div class="p-4">
-                <?=add_class_to_first_paragraph(get_the_content())?>
+            <?php
+$content = get_the_content(); // Get raw content
+
+// Check if the content has blocks
+if (has_blocks($content)) {
+    // Parse and safely render Gutenberg blocks
+    $blocks = parse_blocks($content);
+    $content = '';
+    foreach ($blocks as $block) {
+        // Ensure only valid blocks are rendered
+        if (isset($block['blockName'])) {
+            $content .= render_block($block);
+        } else {
+            // Handle non-block content gracefully
+            $content .= $block['innerHTML'] ?? '';
+        }
+    }
+} else {
+    // Apply content filters for non-block content
+    $content = apply_filters('the_content', $content);
+}
+
+// Add class to the first paragraph
+echo add_class_to_first_paragraph($content);
+?>
+
             </div>
         </div>
 

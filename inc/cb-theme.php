@@ -235,7 +235,6 @@ function add_class_to_first_paragraph($content) {
     return $content;
 }
 
-
 // function add_custom_menu_item($items, $args)
 // {
 //     if ($args->theme_location == 'primary_nav') {

@@ -97,7 +97,7 @@ function acf_blocks()
         acf_register_block(array(
             'name'                => 'cb_faqs',
             'title'                => __('CB FAQs'),
-            'render_template'    => 'page-templates/blocks/cb_sector_slider.php',
+            'render_template'    => 'page-templates/blocks/cb_faqs.php',
             'category'            => 'layout',
             'icon'                => 'cover-image',
             'mode'    => 'edit',

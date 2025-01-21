@@ -51,21 +51,21 @@ while (have_posts()) {
         <?= understrap_pagination() ?>
     </div>
     <section class="gradient_cta py-5 bg_grad--orange">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 offset-lg-5 aos-init aos-animate" data-aos="fade-left">
-                <h2>Book a Demo Today</h2>
-                <div class="mb-4">
-                    Protect your people with our dedicated personal safety service for at-risk and lone workers. Combining leading technology with a professional 24/7 Safety Monitoring Center, you can ensure your people get immediate emergency help when they need it most.<br>
-                    <br>
-                    <h3 class="mb-0">Alternatively, get a free trial of the app</h3><br>
-                    Want to try OK Alone? Click the button below and enter your details. It's free and no credit card is required.</div>
-                    <button type="button" class="button button-outline" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
-                    <a href="#" target="" class="button button-outline">Get a Free Trial</a>
-                </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 offset-lg-5 aos-init aos-animate" data-aos="fade-left">
+                    <h2>Book a Demo Today</h2>
+                    <div class="mb-4">
+                        Protect your people with our dedicated personal safety service for at-risk and lone workers. Combining leading technology with a professional 24/7 Safety Monitoring Center, you can ensure your people get immediate emergency help when they need it most.<br>
+                        <br>
+                        <h3 class="mb-0">Alternatively, get a free trial of the app</h3><br>
+                        Want to try OK Alone? Click the button below and enter your details. It's free and no credit card is required.</div>
+                        <button type="button" class="button button-outline" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
+                        <a href="#" target="" class="button button-outline">Get a Free Trial</a>
+                    </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 </main>
 <?php
 
