@@ -217,6 +217,17 @@ function cb_theme_enqueue()
 }
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 
+// stupid blog layout
+function modify_blog_posts_per_page($query) {
+    if ($query->is_main_query() && $query->is_home() && !is_admin()) {
+        if (!$query->is_paged()) {
+            $query->set('posts_per_page', 10); // First page shows 10 posts
+        } else {
+            $query->set('posts_per_page', 9); // Other pages show 9 posts
+        }
+    }
+}
+add_action('pre_get_posts', 'modify_blog_posts_per_page');
 
 // function add_custom_menu_item($items, $args)
 // {

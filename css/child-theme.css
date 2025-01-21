@@ -21641,6 +21641,109 @@ header #burger-menu.open span:nth-child(4) {
   transform: rotate(90deg) translateY(-10px);
 }
 
+.blog .blog_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.blog .blog_card {
+  display: grid;
+  row-gap: 0.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-out);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+  color: var(--col-black);
+  text-decoration: none;
+  grid-template-areas: "image" "meta" "title" "excerpt";
+}
+.blog .blog_card:hover {
+  box-shadow: var(--shadow-in);
+  transform: translateY(2px);
+}
+.blog .blog_card:hover .blog_card__button {
+  background-color: var(--col-yellow-400);
+}
+.blog .blog_card__image {
+  grid-area: image;
+}
+.blog .blog_card__image img {
+  width: 100%;
+  aspect-ratio: 6/4;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='m600,0v248.73c-67.95,91.77-177.03,151.27-300,151.27S67.95,340.5,0,248.72V0h600Z'/%3E%3C/g%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='m600,0v248.73c-67.95,91.77-177.03,151.27-300,151.27S67.95,340.5,0,248.72V0h600Z'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-size: 100% auto;
+  mask-size: 100% auto;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  display: block;
+  overflow: hidden;
+}
+.blog .blog_card__flash {
+  grid-area: flash;
+  background: var(--gradient-orange);
+  border-radius: 100vw;
+  padding: 0.5em 1em;
+  color: var(--col-white);
+  font-weight: var(--fw-900);
+  font-size: var(--fs-100);
+}
+.blog .blog_card__meta {
+  grid-area: meta;
+  display: flex;
+  color: var(--col-orange-400);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-900);
+  margin-inline: 1rem;
+}
+.blog .blog_card__title {
+  grid-area: title;
+  font-size: var(--fs-600);
+  margin-bottom: 0;
+  margin-inline: 1rem;
+}
+.blog .blog_card__excerpt {
+  grid-area: excerpt;
+  margin-inline: 1rem;
+}
+.blog .blog_card__button {
+  padding: 0.75em 1em;
+  border: 2px solid var(--col-black);
+  border-radius: 0.25rem;
+  justify-self: start;
+  margin-block: 1rem;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-900);
+  transition: background-color var(--transition);
+}
+.blog .blog_card:not(:has(.first-post)) .blog_card__flash {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.blog .first-post {
+  grid-column: 1/span 3;
+  display: grid;
+  -moz-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0.5rem;
+  grid-template-rows: 3rem auto auto 1fr;
+  grid-template-areas: "image flash" "image meta" "image title" "image excerpt";
+}
+.blog .first-post .blog_card__title {
+  font-size: var(--fs-700);
+}
+.blog .first-post .blog_card__image img {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cmask id='mask'%3E%3Crect width='600' height='400' fill='white'/%3E%3Cpath d='M450,0 Q600,200 450,400 H600 V0 Z' fill='black'/%3E%3C/mask%3E%3C/defs%3E%3Crect width='600' height='400' fill='white' mask='url(%23mask)'/%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cmask id='mask'%3E%3Crect width='600' height='400' fill='white'/%3E%3Cpath d='M450,0 Q600,200 450,400 H600 V0 Z' fill='black'/%3E%3C/mask%3E%3C/defs%3E%3Crect width='600' height='400' fill='white' mask='url(%23mask)'/%3E%3C/svg%3E");
+}
+
 .homepage_hero {
   min-height: 600px;
   margin-top: var(--h-top);

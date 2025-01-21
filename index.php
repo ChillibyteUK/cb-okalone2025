@@ -13,56 +13,42 @@ get_header();
         <div class="fw-bold">The latest news and stories from the lone worker sector.</div>
     </div>
 
-    <div class="container-xl py-5">
-        <div class="row w-100" id="newsGrid">
-            <?php
-            while (have_posts()) {
-                the_post();
-                $img = get_the_post_thumbnail_url(get_the_ID(), 'large');
-                if (!$img) {
-                    $img = get_stylesheet_directory_uri() . '/img/default-blog.jpg';
-                }
-                $cats = get_the_category();
-                $category = wp_list_pluck($cats, 'name');
-                $flashcat = cbslugify($category[0]);
-                $catClass = implode(' ', array_map('cbslugify', $category));
-                $category = implode(', ', $category);
-
-                if (has_category('event')) {
-                    $the_date = get_field('start_date', get_the_ID());
-                } else {
-                    $the_date = get_the_date('jS F, Y');
-                }
-
-            ?>
-                <div
-                    class="grid_item col-lg-4 col-md-6 px-1 <?= $catClass ?>">
-                    <a href="<?= get_the_permalink() ?>"
-                        class="news_grid__item mb-2 mx-1"
-                        style="background-image:url(<?= $img ?>)"
-                        data-aos="fade">
-                        <div class="overlay <?= $catClass ?>"></div>
-                        <!-- div class="catflash <?= $catClass ?>">
-                    <?= $flashcat ?>
-            </div -->
-                        <h3><?= get_the_title() ?></h3>
-                        <div class="news_meta">
-                            <div class="news_meta__date">
-                                <?= get_the_date('j F Y') ?>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            <?php
-            }
-            ?>
-        </div>
-        <!--        <div class="mt-5">
+    <div class="container-xl pb-5">
+        <div class="blog_grid mb-4">
         <?php
-        // numeric_posts_nav();
-        ?>
-    </div>
-    -->
+$post_count = 0;
+
+while (have_posts()) {
+    the_post();
+    $post_count++;
+    $first_post_class = (!is_paged() && $post_count === 1) ? 'first-post' : '';
+
+    $img = get_the_post_thumbnail(get_the_ID(), 'large') ?? null;
+    $cats = get_the_category();
+    $category = wp_list_pluck($cats, 'name');
+    $flashcat = cbslugify($category[0]);
+    $catClass = implode(' ', array_map('cbslugify', $category));
+    $category = implode(', ', $category);
+?>
+    <a href="<?= get_the_permalink() ?>" class="blog_card mb-2 mx-1 <?=$first_post_class?>">
+        <div class="blog_card__image">
+            <?= $img ?>
+        </div>
+        <div class="blog_card__flash">Blog</div>
+        <div class="blog_card__meta">
+            <?= get_the_date('j F Y') ?>
+        </div>
+        <h2 class="blog_card__title"><?= get_the_title() ?></h2>
+        <div class="blog_card__excerpt">
+            <?=wp_trim_words(get_the_content(), 20)?>
+            <div class="blog_card__button">Read More</div>
+        </div>
+    </a>
+<?php
+}
+?>
+        </div>
+        <?= understrap_pagination() ?>
     </div>
 </main>
 <?php
