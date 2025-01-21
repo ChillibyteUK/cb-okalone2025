@@ -9,7 +9,7 @@
         }
         if(get_field('faq_intro')) {
             ?>
-        <div class="text-center mw-md-75 mb-4"><?=get_field('faq_intro')?></div>
+        <p class="text-center mw-md-75 mb-4"><?=get_field('faq_intro')?></p>
             <?php
         }
         ?>
