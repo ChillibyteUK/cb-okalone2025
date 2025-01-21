@@ -7,17 +7,11 @@ $bg = get_the_post_thumbnail_url($page_for_posts, 'full');
 
 get_header();
 ?>
-<main id="main" class="theme--blue">
-    <section class="hero hero--short" data-parallax="scroll"
-        data-image-src="<?= get_the_post_thumbnail_url(get_option('page_for_posts'), 'full') ?>">
-        <div class="container-bg bg--left">
-            <div class="container-xl pe-0">
-                <div class="hero__content">
-                    <h1 data-aos="fade-right">Reports &amp; News</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+<main id="main">
+    <div class="container-xl py-5">
+        <h1 data-aos="fade-right">OK Alone Lone Worker Blog</h1>
+        <div class="fw-bold">The latest news and stories from the lone worker sector.</div>
+    </div>
 
     <div class="container-xl py-5">
         <?php
