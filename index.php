@@ -36,7 +36,7 @@ while (have_posts()) {
         </div>
         <div class="blog_card__flash">Blog</div>
         <div class="blog_card__meta">
-            <?= get_the_date('j F Y') ?>
+            <?= get_the_date('F j, Y') ?>
         </div>
         <h2 class="blog_card__title"><?= get_the_title() ?></h2>
         <div class="blog_card__excerpt">

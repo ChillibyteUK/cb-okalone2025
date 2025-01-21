@@ -229,6 +229,13 @@ function modify_blog_posts_per_page($query) {
 }
 add_action('pre_get_posts', 'modify_blog_posts_per_page');
 
+function add_class_to_first_paragraph($content) {
+    // Use regex to find the first <p> tag and add a class
+    $content = preg_replace('/<p([^>]*)>/', '<p class="first-paragraph"$1>', $content, 1);
+    return $content;
+}
+
+
 // function add_custom_menu_item($items, $args)
 // {
 //     if ($args->theme_location == 'primary_nav') {
