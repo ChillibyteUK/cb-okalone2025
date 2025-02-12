@@ -51,8 +51,9 @@ function widgets_init()
 {
 
     register_nav_menus(array(
-        'primary_nav' => __('Primary Nav', 'cb-okalone2025'),
-        'footer_menu1' => __('Footer Nav', 'cb-okalone2025'),
+        'footer_products' => __('Footer Products', 'cb-okalone2025'),
+        'footer_about' => __('Footer About', 'cb-okalone2025'),
+        'footer_resources' => __('Footer Resources', 'cb-okalone2025'),
     ));
 
     unregister_sidebar('hero');
