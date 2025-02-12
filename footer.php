@@ -42,10 +42,14 @@ defined('ABSPATH') || exit;
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 text-center text-md-start mb-4">
-                <div class="nav-title">Products</div>
-                <?php wp_nav_menu(array('theme_location' => 'footer_products')); ?>
+                <div class="nav-title">Solutions</div>
+                <?php wp_nav_menu(array('theme_location' => 'footer_solutions')); ?>
+                <div class="nav-title">Partners</div>
+                <?php wp_nav_menu(array('theme_location' => 'footer_partners')); ?>
             </div>
             <div class="col-md-6 col-lg-3 text-center text-md-start mb-4">
+                <div class="nav-title">About Us</div>
+                <?php wp_nav_menu(array('theme_location' => 'footer_about')); ?>
                 <div class="nav-title">Sectors</div>
                 <ul class="menu">
                     <?php
@@ -65,8 +69,6 @@ defined('ABSPATH') || exit;
                 </ul>
             </div>
             <div class="col-md-6 col-lg-3 text-center text-md-start">
-                <div class="nav-title">About Us</div>
-                <?php wp_nav_menu(array('theme_location' => 'footer_about')); ?>
                 <div class="nav-title">Resources</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_resources')); ?>
             </div>

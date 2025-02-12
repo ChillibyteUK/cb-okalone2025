@@ -51,7 +51,8 @@ function widgets_init()
 {
 
     register_nav_menus(array(
-        'footer_products' => __('Footer Products', 'cb-okalone2025'),
+        'footer_solutions' => __('Footer Solutions', 'cb-okalone2025'),
+        'footer_partners' => __('Footer Partners', 'cb-okalone2025'),
         'footer_about' => __('Footer About', 'cb-okalone2025'),
         'footer_resources' => __('Footer Resources', 'cb-okalone2025'),
     ));
