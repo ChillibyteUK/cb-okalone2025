@@ -12,6 +12,11 @@
     background-color: $ps-navy;
     color: white;
     font-size: 0.875rem;
+
+    a {
+        text-decoration: none;
+    }
+
     a:not(.btn) {
         color: white;
         transition: all 0.3s ease;
