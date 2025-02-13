@@ -22553,6 +22553,7 @@ header #burger-menu.open span:nth-child(4) {
   width: 100%;
   position: relative;
   margin-bottom: 10px;
+  background-color: transparent;
 }
 .faq_block .accordion-head {
   display: grid;
