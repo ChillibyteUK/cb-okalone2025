@@ -20664,6 +20664,10 @@ strong {
   font-size: var(--fs-500);
 }
 
+.fs-550 {
+  font-size: var(--fs-550);
+}
+
 .fs-600 {
   font-size: var(--fs-600);
 }
