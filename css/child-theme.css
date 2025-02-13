@@ -22554,6 +22554,7 @@ header #burger-menu.open span:nth-child(4) {
   position: relative;
   margin-bottom: 10px;
   background-color: transparent;
+  border-color: var(--col-black);
 }
 .faq_block .accordion-head {
   display: grid;
