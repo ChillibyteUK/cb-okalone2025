@@ -29,6 +29,11 @@ $d = 0;
                 <?=wp_get_attachment_image(get_field('tab_1_image'),'large',false,array('class' => 'content active', 'alt' => '', 'id' => $i . '_tab1'))?>
                 <?=wp_get_attachment_image(get_field('tab_2_image'),'large',false,array('class' => 'content', 'alt' => '', 'id' => $i . '_tab2'))?>
                 <?=wp_get_attachment_image(get_field('tab_3_image'),'large',false,array('class' => 'content', 'alt' => '', 'id' => $i . '_tab3'))?>
+                <?php
+                if (get_field('tab_4_image') ?? null) {
+                    echo wp_get_attachment_image(get_field('tab_4_image'),'large',false,array('class' => 'content', 'alt' => '', 'id' => $i . '_tab4'));
+                }
+                ?>
             </div>
             <?php
             $d += 100;
