@@ -22010,6 +22010,11 @@ header #burger-menu.open span:nth-child(4) {
     bottom: 40px;
   }
 }
+.product_hero {
+  min-height: 620px;
+  margin-top: var(--h-top);
+}
+
 .top_tab_group {
   /* Desktop view */
 }

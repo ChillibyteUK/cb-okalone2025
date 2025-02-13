@@ -2,7 +2,6 @@
     min-height: 600px;
     margin-top: var(--h-top);
     
-
     h1 {
         font-size: var(--fs-900);
     }
@@ -155,4 +154,9 @@
         left: -70px;
         bottom: 40px;
     }
+}
+
+.product_hero {
+    min-height: 620px;
+    margin-top: var(--h-top);
 }

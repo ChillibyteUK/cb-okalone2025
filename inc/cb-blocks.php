@@ -11,6 +11,15 @@ function acf_blocks()
             'mode'    => 'edit',
             'supports' => array('mode' => false),
         ));
+        acf_register_block_type(array(
+            'name'                => 'cb_product_hero',
+            'title'                => __('CB Product Hero'),
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'render_template'    => 'page-templates/blocks/cb_product_hero.php',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
         acf_register_block(array(
             'name'                => 'cb_top_tab_group',
             'title'                => __('CB Top Tab Group'),
