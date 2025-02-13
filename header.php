@@ -182,6 +182,14 @@ defined('ABSPATH') || exit;
                                 <div class="h3">Lone Worker App</div>
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
+                                    <a class="item" href="/products/lone-worker-app/">
+                                        <img class="item__image" src="<?=get_stylesheet_directory_uri()?>/img/products/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Our Lone Worker App</div>
+                                            <div class="item__desc">Transform your smartphone into a comprehensive lone worker safety device with the OK Alone app. </div>
+                                        </div>
+                                    </a>
+
                                     <?php
                                     /* LEFT AS AN EXAMPLE
                         <a class="item" href="/products/cat-phones/">
