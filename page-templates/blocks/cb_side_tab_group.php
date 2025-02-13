@@ -3,6 +3,7 @@ $i = 'x' . random_str(4);
 $tab1Link = get_field('tab_1_link') ?? null;
 $tab2Link = get_field('tab_2_link') ?? null;
 $tab3Link = get_field('tab_3_link') ?? null;
+$tab4Link = get_field('tab_4_link') ?? null;
 $titleClass = get_field('title_class') == 'H1' ? 'h1' : '';
 
 $d = 0;
@@ -72,7 +73,25 @@ $d = 0;
                         ?>
                     </div>
                 </div>
-
+                <?php
+                if (get_field('tab_4_title') ?? null) {
+                    ?>
+                <div class="pill" aria-controls="<?=$i?>_tab4" data-aos="fade"> 
+                    <h3 class="pill__title"><?=get_field('tab_4_title')?></h3>
+                    <div class="pill__content">
+                        <p><?=get_field('tab_3_content')?><p>
+                        <?php
+                        if (!empty($tab4Link)) {
+                            ?>
+                        <a href="<?=$tab4Link['url']?>" class="button button-outline--white"><?=$tab4Link['title']?></a>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+                    <?php
+                }
+                ?>
             
             </div>
 
