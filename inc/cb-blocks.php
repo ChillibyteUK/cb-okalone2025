@@ -30,6 +30,15 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block(array(
+            'name'                => 'cb_side_tab_group',
+            'title'                => __('CB Side Tab Group'),
+            'render_template'    => 'page-templates/blocks/cb_side_tab_group.php',
+            'category'            => 'layout',
+            'icon'                => 'cover-image',
+            'mode'    => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block(array(
             'name'                => 'cb_text_video',
             'title'                => __('CB Text Video'),
             'render_template'    => 'page-templates/blocks/cb_text_video.php',
