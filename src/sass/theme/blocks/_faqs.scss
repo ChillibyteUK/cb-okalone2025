@@ -1,5 +1,10 @@
 .faq_block {
     padding: 1rem 0 1rem 0;
+
+    &__inner {
+        border-top: 1px solid var(--col-black);
+        border-bottom: 1px solid var(--col-black);
+    }
     .accordion-item {
         width: 100%;
         position: relative;
