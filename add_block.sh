@@ -3,14 +3,18 @@
 # Prompt for block name
 read -p "Enter block name: " block_name
 
-# Convert to lowercase and replace spaces with underscores
+# Convert to lowercase and replace spaces with underscores (for file naming)
 block_slug=$(echo "$block_name" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
+
+# Convert block name to kebab-case (for ACF location)
+block_kebab=$(echo "$block_name" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
 
 # Define file paths
 php_file="./page-templates/blocks/${block_slug}.php"
 scss_file="./src/sass/theme/blocks/_${block_slug}.scss"
 blocks_scss="./src/sass/theme/blocks/_blocks.scss"
 blocks_php="./inc/cb-blocks.php"
+acf_json_file="./acf-json/${block_slug}.json"
 
 # Create PHP and SCSS files
 touch "$php_file"
@@ -37,3 +41,31 @@ if grep -q "function acf_blocks()" "$blocks_php"; then
 else
     echo "acf_blocks() function not found in $blocks_php. Please check the file."
 fi
+
+# Create ACF JSON skeleton with escaped forward slash and kebab-case block name
+acf_json_content="{
+    \"key\": \"group_${block_slug}\",
+    \"title\": \"$block_name\",
+    \"fields\": [
+        {
+            \"key\": \"field_${block_slug}_title\",
+            \"label\": \"Title\",
+            \"name\": \"title\",
+            \"type\": \"text\"
+        }
+    ],
+    \"location\": [
+        [
+            {
+                \"param\": \"block\",
+                \"operator\": \"==\",
+                \"value\": \"acf\\/$block_kebab\"
+            }
+        ]
+    ],
+    \"active\": 1,
+    \"description\": \"\"
+}"
+
+echo "$acf_json_content" > "$acf_json_file"
+echo "Created ACF field group JSON: $acf_json_file"
