@@ -20486,6 +20486,7 @@ readers do not read off random characters that represent icons */
   --col-orange-400: #DF4305;
   --col-pink-400: #DE007D;
   --col-blue-200: #D5E1E5;
+  --col-mid-grey: #5F6465;
   --col-greyish: #343432;
   --gradient-pink: linear-gradient( var(--col-pink-400), var(--col-orange-400) );
   --gradient-orange: linear-gradient( var(--col-orange-400), var(--col-yellow-400) );
@@ -20494,6 +20495,7 @@ readers do not read off random characters that represent icons */
   --fs-900: clamp(56px, calc(3.5rem + ((1vw - 7.68px) * 1.3889)), 72px);
   --fs-800: 56px;
   --fs-700: 40px;
+  --fs-650: 32px;
   --fs-600: 24px;
   --fs-550: 22px;
   --fs-500: 18px;
@@ -22595,6 +22597,46 @@ header #burger-menu.open span:nth-child(4) {
   display: none;
   font-size: 0.889rem;
   padding-bottom: max(2.5vw, 20px);
+}
+
+.team__card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-in);
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+.team .col-md-6 .team__card .team__image {
+  max-width: 200px;
+}
+.team .col-md-6 .team__card .team__name {
+  margin-bottom: 0;
+  font-size: var(--fs-650);
+}
+.team .col-md-6 .team__card .team__role {
+  font-size: var(--fs-500);
+  color: var(--col-mid-grey);
+  font-weight: var(--fw-900);
+}
+.team .col-md-6 .team__card .team__bio {
+  font-size: var(--fs-300);
+}
+.team .col-md-3 .team__card .team__image {
+  max-width: 170px;
+}
+.team .col-md-3 .team__card .team__name {
+  margin-bottom: 0;
+  font-size: var(--fs-600);
+}
+.team .col-md-3 .team__card .team__role {
+  font-size: var(--fs-300);
+  color: var(--col-mid-grey);
+  font-weight: var(--fw-900);
 }
 
 .text_image iframe,
