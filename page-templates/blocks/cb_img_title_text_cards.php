@@ -18,7 +18,7 @@
                         <?php
                         if ($l) {
                             ?>
-                            <a class="img_title_text_cards__card" href="<?= esc_url($l) ?>">
+                            <a class="img_title_text_cards__card" href="<?= esc_url($l) ?>" target="_blank">
                             <?php
                         } else {
                             ?>

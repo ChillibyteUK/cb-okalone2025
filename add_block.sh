@@ -9,7 +9,7 @@ block_slug=$(echo "$block_name" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
 # Define file paths
 php_file="./page-templates/blocks/${block_slug}.php"
 scss_file="./src/sass/theme/blocks/_${block_slug}.scss"
-blocks_scss="./src/sass/themes/blocks/_blocks.scss"
+blocks_scss="./src/sass/theme/blocks/_blocks.scss"
 blocks_php="./inc/cb-blocks.php"
 
 # Create PHP and SCSS files
