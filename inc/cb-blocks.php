@@ -4,6 +4,17 @@ function acf_blocks()
     if (function_exists('acf_register_block_type')) {
 
         acf_register_block_type(array(
+            'name'                => 'cb_pricing_columns', 
+            'title'               => __('CB Pricing Columns'), 
+            'category'            => 'layout',
+            'icon'                => 'cover-image', 
+            'render_template'    => 'page-templates/blocks/cb_pricing_columns.php', 
+            'mode'                => 'edit',
+            'supports'            => array('mode' => false),
+        ));
+
+
+        acf_register_block_type(array(
             'name'                => 'cb_three_col_image_icon_cards', 
             'title'               => __('CB Three Col Image Icon Cards'), 
             'category'            => 'layout',

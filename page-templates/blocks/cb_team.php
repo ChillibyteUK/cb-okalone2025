@@ -25,11 +25,12 @@ $teams = get_field('team') ?? null;
                 ),
             ));
             if ($q->have_posts()) {
+                $d = 0;
                 while ($q->have_posts()) {
                     $q->the_post();
                     ?>
                 <div class="<?=$cols?>">
-                    <div class="team__card">
+                    <div class="team__card" data-aos="fade" data-aos-delay="<?=$d?>">
                         <?=get_the_post_thumbnail(get_the_ID(),'large',['class' => 'team__image'])?>
                         <h3 class="team__name"><?=get_the_title()?></h3>
                         <div class="team__role"><?=get_field('role',get_the_ID())?></div>
@@ -43,6 +44,7 @@ $teams = get_field('team') ?? null;
                     </div>
                 </div>
                     <?php
+                    $d+=200;
                 }
             }   
             ?>
