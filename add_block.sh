@@ -49,9 +49,9 @@ acf_json_content="{
     \"fields\": [
         {
             \"key\": \"field_${block_slug}_title\",
-            \"label\": \"Title\",
+            \"label\": \"$block_name\",
             \"name\": \"title\",
-            \"type\": \"text\"
+            \"type\": \"message\"
         }
     ],
     \"location\": [

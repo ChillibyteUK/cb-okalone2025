@@ -1,0 +1,50 @@
+.pricing_table {
+    &__inner {
+        background-color: var(--col-white);
+        padding: 0 1rem 1rem 1rem;
+        box-shadow: var(--shadow-out);
+        border-radius: 1rem;
+    }
+
+    table {
+
+        th:not(:first-of-type),
+        td:not(:first-of-type) {
+            text-align: center;
+        }
+
+        th:nth-child(4) {
+            background-color: var(--col-light-grey);
+            color: var(--col-orange-400);
+            .pill {
+                background: var(--gradient-orange-90);
+                font-size: var(--fs-100);
+                font-weight: var(--fw-400);
+                color: var(--col-white);
+                text-transform: uppercase;
+                border-radius: 100vw;
+                justify-self: center;
+                padding: 0.25rem 0.65rem;
+                line-height: 1;
+                margin-block: 0.5rem;
+            }
+        }
+        td:nth-child(4) {
+            background-color: var(--col-light-grey);
+        }
+
+        td:first-of-type {
+            vertical-align: middle;
+            font-size: var(--fs-300);
+            white-space: nowrap;
+        }
+
+        .fa-solid {
+            color: var(--col-teal-400);
+            font-size: 1.5rem;
+        }
+        .fa-minus {
+            color: var(--col-light-grey);
+        }
+    }
+}

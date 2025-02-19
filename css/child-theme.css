@@ -20753,7 +20753,7 @@ strong {
   --_padding-block: 1rem;
   --_button-border: 2px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: var(--fs-300);
   text-decoration: none;
   padding: var(--_padding-inline) var(--_padding-block);
   border-radius: 0.25rem;
@@ -20765,11 +20765,12 @@ strong {
   background-color: var(--col-yellow-400);
   padding: calc(var(--_padding-inline) + var(--_button-border)) calc(var(--_padding-block) + var(--_button-border));
   border: none;
-  color: black;
+  color: var(--col-white);
   transition: color var(--transition);
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  text-align: center;
 }
 .button-yellow span {
   transition: color var(--transition);
@@ -22897,6 +22898,48 @@ header #burger-menu.open span:nth-child(4) {
   border-radius: 0.75rem;
   display: grid;
   place-content: center;
+}
+
+.pricing_table__inner {
+  background-color: var(--col-white);
+  padding: 0 1rem 1rem 1rem;
+  box-shadow: var(--shadow-out);
+  border-radius: 1rem;
+}
+.pricing_table table th:not(:first-of-type),
+.pricing_table table td:not(:first-of-type) {
+  text-align: center;
+}
+.pricing_table table th:nth-child(4) {
+  background-color: var(--col-light-grey);
+  color: var(--col-orange-400);
+}
+.pricing_table table th:nth-child(4) .pill {
+  background: var(--gradient-orange-90);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-400);
+  color: var(--col-white);
+  text-transform: uppercase;
+  border-radius: 100vw;
+  justify-self: center;
+  padding: 0.25rem 0.65rem;
+  line-height: 1;
+  margin-block: 0.5rem;
+}
+.pricing_table table td:nth-child(4) {
+  background-color: var(--col-light-grey);
+}
+.pricing_table table td:first-of-type {
+  vertical-align: middle;
+  font-size: var(--fs-300);
+  white-space: nowrap;
+}
+.pricing_table table .fa-solid {
+  color: var(--col-teal-400);
+  font-size: 1.5rem;
+}
+.pricing_table table .fa-minus {
+  color: var(--col-light-grey);
 }
 
 body {

@@ -3,7 +3,7 @@
     --_padding-block: 1rem;
     --_button-border: 2px;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: var(--fs-300);
     text-decoration: none;
     padding: var(--_padding-inline) var(--_padding-block);
     border-radius: 0.25rem; 
@@ -15,11 +15,12 @@
     background-color: var(--col-yellow-400);
     padding: calc(var(--_padding-inline) + var(--_button-border)) calc(var(--_padding-block) + var(--_button-border));
     border: none;
-    color: black;
+    color: var(--col-white);
     transition: color var(--transition);
     position: relative;
     overflow: hidden;
     isolation: isolate;
+    text-align: center;
     span {
         transition: color var(--transition);
         z-index: 1;
