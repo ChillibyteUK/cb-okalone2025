@@ -3,7 +3,7 @@ $cta = get_field('cta');
 $cta_text = $cta['title'] ?? 'Get Instant Quote';
 $cta_url = $cta['url'] ?? '#';
 ?>
-<section class="pricing_table py-5">
+<section class="pricing_table pt-4 pb-5">
     <div class="container-xl">
         <div class="pricing_table__inner">
             <div class="table-responsive">
