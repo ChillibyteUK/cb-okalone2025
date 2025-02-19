@@ -20488,8 +20488,10 @@ readers do not read off random characters that represent icons */
   --col-blue-200: #D5E1E5;
   --col-mid-grey: #5F6465;
   --col-greyish: #343432;
+  --col-light-grey: #E3EEF1;
   --gradient-pink: linear-gradient( var(--col-pink-400), var(--col-orange-400) );
   --gradient-orange: linear-gradient( var(--col-orange-400), var(--col-yellow-400) );
+  --gradient-orange-90: linear-gradient( 90deg, var(--col-orange-400), var(--col-yellow-400) );
   --gradient-blue: linear-gradient( var(--col-blue-400), var(--col-teal-400) );
   --gradient-green: linear-gradient( var(--col-teal-400), var(--col-blue-400) );
   --fs-900: clamp(56px, calc(3.5rem + ((1vw - 7.68px) * 1.3889)), 72px);
@@ -22733,6 +22735,128 @@ header #burger-menu.open span:nth-child(4) {
   aspect-ratio: 1;
   max-width: 80px;
   bottom: -1rem;
+}
+
+.pricing-plans .pt-2rem {
+  padding-top: 2rem;
+}
+.pricing-plans .pricing-card {
+  box-shadow: var(--shadow-out);
+  border-radius: 1rem;
+  background-color: var(--col-white);
+  overflow: hidden;
+}
+.pricing-plans .pricing-card.border-highlight {
+  border: 2px solid var(--col-yellow-400);
+}
+.pricing-plans .pricing-card.border-highlight .card-title {
+  background: var(--gradient-orange-90);
+  height: 9rem;
+}
+.pricing-plans .pricing-card.border-highlight .card-title .pill {
+  background-color: var(--col-navy-400);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-400);
+  text-transform: uppercase;
+  border-radius: 100vw;
+  justify-self: center;
+  padding: 0.25rem 0.65rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.pricing-plans .card-body {
+  display: grid;
+  grid-template-rows: 4rem auto 1.5rem auto 1fr;
+}
+.pricing-plans .card-body hr {
+  margin: 0.5rem 0 0 0;
+}
+.pricing-plans .card-title {
+  font-size: var(--fs-550);
+  background-color: var(--col-navy-400);
+  color: var(--col-white);
+  height: 7rem;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  padding: 1rem 3rem 0 3rem;
+  -webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='m600,0v248.73c-67.95,91.77-177.03,151.27-300,151.27S67.95,340.5,0,248.72V0h600Z'/%3E%3C/g%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='m600,0v248.73c-67.95,91.77-177.03,151.27-300,151.27S67.95,340.5,0,248.72V0h600Z'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.pricing-plans .card-text {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-900);
+}
+.pricing-plans .fa-ul {
+  margin-left: 1.5rem;
+}
+.pricing-plans .fa-ul li {
+  font-weight: var(--fw-900);
+  font-size: var(--fs-200);
+}
+.pricing-plans .fa-ul li:not(:last-of-type) {
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--col-light-grey);
+}
+.pricing-plans .fa-ul li:not(:first-of-type) {
+  padding-top: 1em;
+  border-bottom: 1px solid var(--col-light-grey);
+}
+.pricing-plans .fa-li {
+  color: var(--col-teal-400);
+}
+
+#pricingAccordion .accordion-item {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0.5rem;
+  box-shadow: var(--shadow-out);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#pricingAccordion .accordion-button {
+  background-color: var(--col-navy-400);
+  color: var(--col-white);
+  font-weight: var(--fw-900);
+  transition: border-radius var(--transition);
+}
+#pricingAccordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+#pricingAccordion .accordion-highlighted {
+  border: 2px solid var(--col-yellow-400);
+}
+#pricingAccordion .accordion-highlighted .accordion-button {
+  background: var(--gradient-orange-90);
+}
+#pricingAccordion .accordion-body {
+  background-color: var(--col-white);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+#pricingAccordion .accordion-text {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-900);
+  margin-bottom: 1rem;
+}
+#pricingAccordion .pill {
+  background-color: var(--col-navy-400);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-400);
+  color: var(--col-white);
+  text-transform: uppercase;
+  border-radius: 100vw;
+  justify-self: center;
+  padding: 0.25rem 0.65rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
 .text_image iframe,

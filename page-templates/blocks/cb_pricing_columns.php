@@ -1,6 +1,6 @@
-<section class="pricing-plans py-5">
+<section class="pricing-plans pb-5">
     <div class="container-xl">
-        <div class="row d-none d-lg-flex justify-content-center g-4">
+        <div class="row d-none d-md-flex justify-content-center g-4">
             <?php 
             if (have_rows('plans')) {
                 while (have_rows('plans')) {
@@ -15,28 +15,30 @@
                     $highlighted = get_sub_field('highlight'); 
                     $button = $highlighted ? 'button-yellow' : 'button-outline';
             ?>
-                <div class="col-lg-3">
-                    <div class="card h-100 <?= $highlighted ? 'border-warning' : '' ?>">
-                        <?php
-                        if ($highlighted) {
+                <div class="col-md-6 col-lg-3 <?=$highlighted ? '' : 'pt-2rem' ?>">
+                    <div class="card pricing-card h-100 <?= $highlighted ? 'border-highlight' : '' ?>">
+                        <h4 class="card-title">
+                            <?php
+                            if ($highlighted) {
+                                ?>
+                                <div class="pill">
+                                    Recommended Plan
+                                </div>
+                                <?php 
+                            } 
                             ?>
-                            <div class="pill">
-                                Recommended Plan
-                            </div>
-                            <?php 
-                        } 
-                        ?>
+                            <?= esc_html($title) ?>
+                        </h4>
                         <div class="card-body text-center">
-                            <h4 class="card-title"><?= esc_html($title) ?></h4>
-                            <p class="card-text"><?= $description ?></p>
+                            <div class="card-text"><?= $description ?></div>
                             <a href="<?= esc_url($cta_url) ?>" class="button <?=$button?> d-block mb-2"><span><?= esc_html($cta_text) ?></span></a>
                             <hr>
                             <?php if ($features) { ?>
-                                <p><?=$features_intro?></p>
-                                <ul class="list-unstyled text-start mt-3">
+                                <p class="text-start fs-300"><?=$features_intro?></p>
+                                <ul class="fa-ul text-start mt-3">
                                     <?php 
                                     foreach ($features as $feature) { 
-                                        echo "<li>✅ " . esc_html($feature['feature_text']) . "</li>";
+                                        echo '<li><span class="fa-li"><i class="fa-solid fa-check"></i></span> ' . esc_html($feature['feature_text']) . "</li>";
                                     } 
                                     ?>
                                 </ul>
@@ -51,7 +53,7 @@
         </div>
 
         <!-- Mobile Accordion -->
-        <div class="accordion d-lg-none" id="pricingAccordion">
+        <div class="accordion d-md-none" id="pricingAccordion">
             <?php 
             if (have_rows('plans')) {
                 $index = 0;
@@ -69,9 +71,9 @@
                     $collapse_id = 'collapse' . $index;
 
             ?>
-                <div class="accordion-item">
+                <div class="accordion-item <?=$highlighted ? 'accordion-highlighted' : '' ?>">
                     <h2 class="accordion-header" id="heading<?= $index ?>">
-                        <button class="accordion-button <?= $index !== 0 ? 'collapsed' : '' ?>" 
+                        <button class="accordion-button <?= $highlighted ? '' : 'collapsed' ?>" 
                                 type="button" data-bs-toggle="collapse" 
                                 data-bs-target="#<?= $collapse_id ?>" 
                                 aria-expanded="<?= $index === 0 ? 'true' : 'false' ?>" 
@@ -79,7 +81,7 @@
                             <?= esc_html($title) ?>
                         </button>
                     </h2>
-                    <div id="<?= $collapse_id ?>" class="accordion-collapse collapse <?= $index === 0 ? 'show' : '' ?>" 
+                    <div id="<?= $collapse_id ?>" class="accordion-collapse collapse <?= $highlighted ? 'show' : '' ?>" 
                          aria-labelledby="heading<?= $index ?>" data-bs-parent="#pricingAccordion">
                         <div class="accordion-body text-center">
                             <?php
@@ -92,15 +94,15 @@
                                 <?php
                             }
                             ?>
-                            <p><?= $description ?></p>
-                            <a href="<?= esc_url($cta_url) ?>" class="button <?=$button?>"><span><?= esc_html($cta_text) ?></span></a>
+                            <div class="accordion-text"><?= $description ?></div>
+                            <a href="<?= esc_url($cta_url) ?>" class="d-block button <?=$button?>"><span><?= esc_html($cta_text) ?></span></a>
                             <hr>
                             <?php if ($features) { ?>
-                                <p><?=$features_intro?></p>
-                                <ul class="list-unstyled mt-3">
+                                <p class="text-start fs-300"><?=$features_intro?></p>
+                                <ul class="fa-ul text-start mt-3">
                                     <?php 
                                     foreach ($features as $feature) { 
-                                        echo "<li>✅ " . esc_html($feature['feature_text']) . "</li>";
+                                        echo '<li><span class="fa-li"><i class="fa-solid fa-check"></i></span> ' . esc_html($feature['feature_text']) . "</li>";
                                     } 
                                     ?>
                                 </ul>
