@@ -5164,7 +5164,7 @@
 
 	  // Function to add .scrolled class when page is scrolled more than 100px
 	  function handleScroll() {
-	    if (window.scrollY > 100) {
+	    if (window.scrollY > 50) {
 	      header.classList.add('scrolled');
 	    } else {
 	      header.classList.remove('scrolled');

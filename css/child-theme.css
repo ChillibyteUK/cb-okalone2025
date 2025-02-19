@@ -21877,6 +21877,111 @@ header #burger-menu.open span:nth-child(4) {
   font-size: var(--fs-200);
 }
 
+.resources {
+  padding-top: 5rem;
+}
+.resources .latest_stories {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 992px) {
+  .resources .latest_stories {
+    grid-template-areas: "main one" "main two" "main three";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+}
+.resources .latest_stories__card {
+  text-decoration: none;
+  color: var(--col-black);
+  background-color: var(--col-white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-out);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.resources .latest_stories__card .latest_stories__image {
+  -webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='m600,0v248.73c-67.95,91.77-177.03,151.27-300,151.27S67.95,340.5,0,248.72V0h600Z'/%3E%3C/g%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath class='cls-1' d='m600,0v248.73c-67.95,91.77-177.03,151.27-300,151.27S67.95,340.5,0,248.72V0h600Z'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-size: 100% auto;
+  mask-size: 100% auto;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.resources .latest_stories__card:not(:first-of-type) .latest_stories__image {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cmask id='mask'%3E%3Crect width='600' height='400' fill='white'/%3E%3Cpath d='M450,0 Q600,200 450,400 H600 V0 Z' fill='black'/%3E%3C/mask%3E%3C/defs%3E%3Crect width='600' height='400' fill='white' mask='url(%23mask)'/%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3Cmask id='mask'%3E%3Crect width='600' height='400' fill='white'/%3E%3Cpath d='M450,0 Q600,200 450,400 H600 V0 Z' fill='black'/%3E%3C/mask%3E%3C/defs%3E%3Crect width='600' height='400' fill='white' mask='url(%23mask)'/%3E%3C/svg%3E");
+  -webkit-mask-size: auto 120%;
+  mask-size: auto 120%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.resources .latest_stories__card:hover {
+  box-shadow: var(--shadow-in);
+  transform: translateY(2px);
+}
+.resources .latest_stories__inner {
+  padding: 1rem;
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto auto 1fr;
+}
+.resources .latest_stories__inner .button {
+  align-self: flex-end;
+  justify-self: flex-start;
+}
+.resources .latest_stories h3, .resources .latest_stories .h3 {
+  font-size: var(--fs-600);
+}
+.resources .latest_stories__card:not(:first-of-type) .latest_stories__inner {
+  grid-template-rows: auto auto;
+}
+.resources .latest_stories__card:not(:first-of-type) .latest_stories__excerpt {
+  display: none;
+}
+@media (min-width: 992px) {
+  .resources .latest_stories__card:first-of-type {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+  .resources .latest_stories__card:nth-of-type(2) {
+    grid-area: one;
+  }
+  .resources .latest_stories__card:nth-of-type(3) {
+    grid-area: two;
+  }
+  .resources .latest_stories__card:nth-of-type(4) {
+    grid-area: three;
+  }
+}
+.resources .latest_stories__card:not(:first-of-type) {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+}
+.resources .latest_stories__card:not(:first-of-type) h3, .resources .latest_stories__card:not(:first-of-type) .h3 {
+  font-size: var(--fs-500);
+}
+@media (min-width: 1200px) {
+  .resources .latest_stories__card:not(:first-of-type) .latest_stories__excerpt {
+    display: block;
+    font-size: var(--fs-300);
+  }
+}
+.resources .latest_stories__card:not(:first-of-type) .button {
+  display: none;
+}
+
 .homepage_hero {
   min-height: 600px;
   margin-top: var(--h-top);
