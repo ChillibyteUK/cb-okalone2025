@@ -50,7 +50,13 @@ if (has_blocks($content)) {
     foreach ($blocks as $block) {
         // Ensure only valid blocks are rendered
         if (isset($block['blockName'])) {
-            $content .= render_block($block);
+            error_log('block ' . $block['blockName']);
+            if ($block['blockName'] === 'core/embed') {
+                $url = $block['attrs']['url'] ?? strip_tags($block['innerHTML']);
+                $content .= '<div class="text-center py-4">' . wp_oembed_get($url) . '</div>' ?: render_block($block);
+            } else {
+                $content .= render_block($block);
+            }
         } else {
             // Handle non-block content gracefully
             $content .= $block['innerHTML'] ?? '';
@@ -60,6 +66,10 @@ if (has_blocks($content)) {
     // Apply content filters for non-block content
     $content = apply_filters('the_content', $content);
 }
+
+$content = wp_oembed_get($content) ?: $content;
+$content = do_shortcode($content);
+$content = wpautop($content);
 
 // Add class to the first paragraph
 echo add_class_to_first_paragraph($content);
