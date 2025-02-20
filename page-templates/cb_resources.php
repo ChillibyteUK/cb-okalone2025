@@ -39,6 +39,39 @@ get_header();
         </div>
         <?php
         ?>
+        <h2>Blog</h2>
+        <div class="latest_blogs pb-5 row g-4">
+            <?php
+            $q = new WP_Query(array(
+                'post_type'      => 'post',
+                'posts_per_page' => 4,
+                'tax_query'      => array(
+                    array(
+                        'taxonomy' => 'article-type',
+                        'field'    => 'slug', // You can also use 'term_id' if you prefer
+                        'terms'    => 'blog', // The slug of the term
+                    ),
+                ),
+            ));
+            while ($q->have_posts()) {
+                $q->the_post();
+                ?>
+                <div class="col-md-6 col-lg-3">
+                    <a href="<?=get_the_permalink()?>" class="latest_blogs__card">
+                        <?=get_the_post_thumbnail($q->ID,'large',['class' => 'latest_blogs__image'])?>
+                        <div class="latest_blogs__inner">
+                            <h3><?=get_the_title()?></h3>
+                            <div class="latest_blogs__excerpt <?=$mb?>"><?=wp_trim_words(get_the_content(null,false,$q->ID),12)?></div>
+                        </div>
+                    </a>
+                </div>
+                <?php
+                $first = false;
+            }
+            ?>
+        </div>
+        <?php
+        ?>
     </div>
  </main>
 <?php
