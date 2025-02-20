@@ -50,7 +50,6 @@ if (has_blocks($content)) {
     foreach ($blocks as $block) {
         // Ensure only valid blocks are rendered
         if (isset($block['blockName'])) {
-            error_log('block ' . $block['blockName']);
             if ($block['blockName'] === 'core/embed') {
                 $url = $block['attrs']['url'] ?? strip_tags($block['innerHTML']);
                 $content .= '<div class="text-center py-4">' . wp_oembed_get($url) . '</div>' ?: render_block($block);
@@ -69,7 +68,6 @@ if (has_blocks($content)) {
 
 $content = wp_oembed_get($content) ?: $content;
 $content = do_shortcode($content);
-$content = wpautop($content);
 
 // Add class to the first paragraph
 echo add_class_to_first_paragraph($content);
