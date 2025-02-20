@@ -45,7 +45,7 @@
         "assign_terms": "edit_posts"
     },
     "public": 1,
-    "publicly_queryable": 0,
+    "publicly_queryable": 1,
     "hierarchical": 1,
     "show_ui": 1,
     "show_in_menu": 1,
@@ -62,7 +62,7 @@
         "with_front": "0",
         "rewrite_hierarchical": "1"
     },
-    "query_var": "taxonomy_key",
+    "query_var": "post_type_key",
     "query_var_name": "",
     "default_term": {
         "default_term_enabled": "1",
@@ -74,5 +74,5 @@
     "meta_box": "default",
     "meta_box_cb": "",
     "meta_box_sanitize_cb": "",
-    "modified": 1740046541
+    "modified": 1740049658
 }

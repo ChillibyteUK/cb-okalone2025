@@ -8,7 +8,7 @@ defined('ABSPATH') || exit;
 get_header();
 ?>
  <main id="main" class="resources">
-    <div class="container-xl">
+    <div class="container-xl pt-5">
         <h1>OK Alone Knowledge Hub</h1>
         <p>The latest news and stories from the lone worker sector.</p>
         <h2>Latest Stories</h2>
@@ -38,7 +38,10 @@ get_header();
             ?>
         </div>
 
-        <h2>Blog</h2>
+        <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-4">
+            <h2>Blog</h2>
+            <a href="/blogs/" class="button button-outline">View All</a>
+        </div>
         <div class="latest_blogs pb-5 row g-4">
             <?php
             $q = new WP_Query(array(
@@ -70,7 +73,13 @@ get_header();
             ?>
         </div>
 
-        <h2>How To</h2>
+        <?php
+        $term_link = get_term_link('how-to', 'article-type');
+        ?>
+        <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-4">
+            <h2>How To</h2>
+            <a href="<?=esc_url($term_link)?>" class="button button-outline">View All</a>
+        </div>
         <div class="how_to pb-5 row g-4">
             <?php
             $q = new WP_Query(array(
@@ -103,8 +112,13 @@ get_header();
         </div>
         <?php
         // there are no guides
+
+        $term_link = get_term_link('video', 'article-type');
         ?>
-        <h2>Videos</h2>
+        <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-4">
+            <h2>Videos</h2>
+            <a href="<?=esc_url($term_link)?>" class="button button-outline">View All</a>
+        </div>
         <div class="videos pb-5 row g-4">
             <?php
             $q = new WP_Query(array(
