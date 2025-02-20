@@ -37,12 +37,12 @@ get_header();
                 <div class="col-md-4">
                     <a href="<?=get_the_permalink()?>" class="videos__card">
                         <div class="videos__image_box">
-                            <?=get_the_post_thumbnail($q->ID,'large',['class' => 'videos__image'])?>
+                            <?=get_the_post_thumbnail(get_the_ID(),'large',['class' => 'videos__image'])?>
                             <img src="<?=get_stylesheet_directory_uri()?>/img/icons/play-button.png" class="play" width="59" height="59">
                         </div>
                         <div class="videos__inner">
                             <h3><?=get_the_title()?></h3>
-                            <div class="videos__excerpt <?=$mb?>"><?=wp_trim_words(get_the_content(null,false,$q->ID),12)?></div>
+                            <div class="videos__excerpt"><?=wp_trim_words(get_the_content(null,false,get_the_ID()),12)?></div>
                         </div>
                     </a>
                 </div>
@@ -52,10 +52,10 @@ get_header();
                         ?>
                 <div class="col-md-6">
                     <a href="<?=get_the_permalink()?>" class="how_to__card">
-                        <?=get_the_post_thumbnail($q->ID,'large',['class' => 'how_to__image'])?>
+                        <?=get_the_post_thumbnail(get_the_ID(),'large',['class' => 'how_to__image'])?>
                         <div class="how_to__inner">
                             <h3><?=get_the_title()?></h3>
-                            <div class="how_to__excerpt <?=$mb?>"><?=wp_trim_words(get_the_content(null,false,$q->ID),12)?></div>
+                            <div class="how_to__excerpt"><?=wp_trim_words(get_the_content(null,false,get_the_ID()),12)?></div>
                         </div>
                     </a>
                 </div>
