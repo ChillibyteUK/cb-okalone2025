@@ -31,8 +31,8 @@
                 <div class="pb-1 fw-900"><?=get_sub_field('question')?></div>
             </div>
             <div class="collapse <?=$show?>" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" id="c<?=$ac?>" aria-labelledby="heading_<?=$ac?>" data-bs-parent="#accordion<?=$accordion?>">
-                <div itemprop="text" class="faq__answer mb-4">
-                    <p><?=get_sub_field('answer')?></p>
+                <div itemprop="text" class="faq__answer">
+                    <p class="mb-4"><?= preg_replace('/<p>(\s|&nbsp;)*<\/p>/i', '', get_sub_field('answer')) ?></p>
                 </div>
             </div>
         </div>
