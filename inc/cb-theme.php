@@ -247,3 +247,67 @@ function add_class_to_first_paragraph($content) {
 //     return $items;
 // }
 // add_filter('wp_nav_menu_items', 'add_custom_menu_item', 10, 2);
+
+
+function add_article_type_filter_to_admin() {
+    global $typenow;
+
+    // Only add for the 'post' post type
+    if ($typenow !== 'post') {
+        return;
+    }
+
+    $taxonomy = 'article-type'; // Change to your actual taxonomy slug
+    $taxonomy_obj = get_taxonomy($taxonomy);
+    $taxonomy_label = $taxonomy_obj->label;
+
+    $selected = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+    $terms = get_terms(array('taxonomy' => $taxonomy, 'hide_empty' => false));
+
+    if (!empty($terms)) {
+        echo "<select name='$taxonomy' id='$taxonomy' class='postform'>";
+        echo "<option value=''>" . sprintf(__('Show All %s'), $taxonomy_label) . "</option>";
+
+        foreach ($terms as $term) {
+            printf(
+                '<option value="%s" %s>%s</option>',
+                esc_attr($term->slug),
+                selected($selected, $term->slug, false),
+                esc_html($term->name)
+            );
+        }
+
+        echo "</select>";
+    }
+}
+add_action('restrict_manage_posts', 'add_article_type_filter_to_admin');
+
+function filter_posts_by_article_type($query) {
+    global $pagenow;
+
+    if ($pagenow !== 'edit.php' || !isset($_GET['article-type']) || empty($_GET['article-type'])) {
+        return;
+    }
+
+    $query->set('tax_query', array(
+        array(
+            'taxonomy' => 'article-type',
+            'field'    => 'slug',
+            'terms'    => $_GET['article-type']
+        )
+    ));
+}
+add_action('pre_get_posts', 'filter_posts_by_article_type');
+
+function hide_yoast_filters_css() {
+    $screen = get_current_screen();
+    if ($screen->id === 'edit-post') {
+        echo '<style>
+            select[name="seo_filter"], select[name="readability_filter"] {
+                display: none !important;
+            }
+        </style>';
+    }
+}
+add_action('admin_head', 'hide_yoast_filters_css');
+

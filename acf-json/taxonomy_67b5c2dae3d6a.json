@@ -70,9 +70,9 @@
         "default_term_slug": "",
         "default_term_description": ""
     },
-    "sort": 0,
+    "sort": 1,
     "meta_box": "default",
     "meta_box_cb": "",
     "meta_box_sanitize_cb": "",
-    "modified": 1739965425
+    "modified": 1740046541
 }
