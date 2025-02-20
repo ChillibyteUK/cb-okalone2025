@@ -23,9 +23,16 @@ get_header();
                 $q->the_post();
                 $words = $first ? 20 : 12;
                 $mb = $first ? 'mb-4' : '';
+
+                $terms = get_the_terms(get_the_ID(), 'article-type');
+                $first_term_name = (!empty($terms) && !is_wp_error($terms)) ? $terms[0]->name : '';
+
                 ?>
             <a href="<?=get_the_permalink()?>" class="latest_stories__card">
-                <?=get_the_post_thumbnail($q->ID,'large',['class' => 'latest_stories__image'])?>
+                <div class="latest_stories__image_box">
+                    <?=get_the_post_thumbnail($q->ID,'large',['class' => 'latest_stories__image'])?>
+                    <div class="pill"><?=$first_term_name?></div>
+                </div>
                 <div class="latest_stories__inner">
                     <h3><?=get_the_title()?></h3>
                     <div class="latest_stories__excerpt <?=$mb?>"><?=wp_trim_words(get_the_content(null,false,$q->ID),$words)?></div>
