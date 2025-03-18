@@ -7,7 +7,7 @@ if ($cols === '2') {
 }
 
 $d = 0;
-
+$count = 0;
 ?>
 <section class="col_cards">
     <div class="container-xl py-5">
@@ -32,7 +32,12 @@ $d = 0;
                 </div>
             </div>  
                 <?php
-                $d+=200;
+                $count++;
+                if ($count % $resetAfter === 0) {
+                    $d = 0; // Reset delay
+                } else {
+                    $d += 200;
+                }
             }
             ?>   
         </div>
