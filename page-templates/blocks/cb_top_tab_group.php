@@ -14,7 +14,7 @@
                 $icon = wp_get_attachment_image_url(get_sub_field('tab_icon'), 'medium', false);
                 $tab_title = get_sub_field('tab_title');
                 $pre_title = get_sub_field('pre_title');
-                $link = get_sub_field('link');
+                $link = get_sub_field('link') ?? null;
                 $image = wp_get_attachment_image(get_sub_field('image'), 'large', false, array('class' => 'content__image', 'width' => 500, 'height' => 500, 'alt' => $tab_title));
             ?>
                 <div data-aos="fade" data-aos-delay="<?= $d ?>">
@@ -29,7 +29,13 @@
                         <div class="fs-300 fw-900 text--orange-400"><?= $pre_title ?></div>
                         <h2><?= get_sub_field('title') ?></h2>
                         <p><?= get_sub_field('content') ?></p>
+                        <?php
+                        if (!empty($link)) {
+                            ?>
                         <a href="<?= $link['url'] ?>" class="button button-outline"><?= $link['title'] ?></a>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             <?php
