@@ -21729,6 +21729,8 @@ header #burger-menu.open span:nth-child(4) {
 .blog .blog_card__excerpt {
   grid-area: excerpt;
   margin-inline: 1rem;
+  display: grid;
+  align-content: space-between;
 }
 .blog .blog_card__button {
   padding: 0.75em 1em;
@@ -23216,6 +23218,35 @@ header #burger-menu.open span:nth-child(4) {
 }
 .pricing_table table .fa-minus {
   color: var(--col-light-grey);
+}
+
+.col_cards__card {
+  display: grid;
+  row-gap: 0rem;
+  grid-template-rows: auto auto 1fr auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-out);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+  color: var(--col-black);
+  text-decoration: none;
+  height: 100%;
+}
+.col_cards__image {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+.col_cards__title {
+  padding: 1rem;
+  font-size: var(--fs-500);
+}
+.col_cards__button {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 body {

@@ -1,0 +1,32 @@
+.col_cards {
+    &__card {
+        display: grid;
+        row-gap: 0rem;
+        grid-template-rows: auto auto 1fr auto;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-out);
+        overflow: hidden;
+        position: relative;
+        transition: transform var(--transition), box-shadow var(--transition);
+        color: var(--col-black);
+        text-decoration: none;
+        height: 100%;
+    }
+
+    &__image {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__title {
+        padding: 1rem;
+        font-size: var(--fs-500);
+    }
+
+    &__button {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}

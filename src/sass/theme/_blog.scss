@@ -70,6 +70,8 @@
         &__excerpt {
             grid-area: excerpt;
             margin-inline: 1rem;
+            display: grid;
+            align-content: space-between;
         }
 
         &__button {
