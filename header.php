@@ -263,11 +263,11 @@ defined('ABSPATH') || exit;
                                         <div class="item__desc">Help &amp; guidance for employee safety</div>
                                     </div>
                                 </a>
-                                <a class="item" href="/whitepapers/">
+                                <a class="item" href="/legislation/">
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/whitepapers.png">
                                     <div class="item__inner">
-                                        <div class="item__title">Whitepapers</div>
-                                        <div class="item__desc">Thought leadership research</div>
+                                        <div class="item__title">Legislation</div>
+                                        <div class="item__desc">Regional Lone Worker legislation</div>
                                     </div>
                                 </a>
                                 <a class="item" href="/video/">
