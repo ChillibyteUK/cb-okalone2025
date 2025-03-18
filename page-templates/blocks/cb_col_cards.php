@@ -4,7 +4,11 @@ $columns = 'col-md-6 col-lg-4';
 
 if ($cols === '2') {
     $columns = 'col-md-6';    
+    $resetAfter = 2; // Reset after 2 cards
+} else {
+    $resetAfter = 3; // Reset after 3 cards
 }
+
 
 $d = 0;
 $count = 0;
