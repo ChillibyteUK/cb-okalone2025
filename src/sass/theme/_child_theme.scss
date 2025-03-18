@@ -18,6 +18,10 @@ body {
     background-repeat: repeat-y;
 }
 
+.todo {
+    background-color: yellow;
+    color: black;
+}
 
 @media (min-width:992px) {
     .cols-lg-2 {

@@ -21773,6 +21773,7 @@ header #burger-menu.open span:nth-child(4) {
   box-shadow: var(--shadow-in);
   margin-bottom: 3rem;
   padding-top: 1rem;
+  overflow: hidden;
 }
 .single-blog__date {
   color: var(--col-orange-400);
@@ -23259,6 +23260,11 @@ body {
     background-size: 200%;
     background-position: center;
   }
+}
+
+.todo {
+  background-color: yellow;
+  color: black;
 }
 
 @media (min-width: 992px) {

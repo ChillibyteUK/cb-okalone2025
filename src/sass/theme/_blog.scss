@@ -133,6 +133,7 @@
         box-shadow: var(--shadow-in);
         margin-bottom: 3rem;
         padding-top: 1rem;
+        overflow: hidden;
     }
     &__date {
         color: var(--col-orange-400);
