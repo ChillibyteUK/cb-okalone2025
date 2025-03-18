@@ -22,8 +22,6 @@ if (function_exists('yoast_breadcrumb')) {
 ?>
     </section>
     <div class="container-xl">
-        <div class="row g-5">
-            <div class="col-md-9">
         <div class="single-blog__post pt-0">
             <?=$img?>
             <h1 class="single-blog__title pt-4 pb-0"><?=get_the_title()?></h1>
@@ -64,15 +62,6 @@ echo add_class_to_first_paragraph($content);
 
             </div>
         </div>
-        </div>
-        <div class="col-md-3">
-            <div class="single-blog__sidebar">
-                <h3 class="todo">Sidebar</h3>
-            </div>
-        </div>
-        </div>
-
-
     </div>
     <section class="gradient_cta py-5 bg_grad--orange">
         <div class="container">
