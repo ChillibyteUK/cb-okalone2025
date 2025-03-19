@@ -25,7 +25,17 @@ $count = 0;
                 <div class="col_cards__card">
                     <?=wp_get_attachment_image(get_sub_field('image'),'large',false,['class' => 'col_cards__image'])?>
                     <h2 class="col_cards__title mb-0"><?=get_sub_field('title')?></h2>
-                    <div class="col_cards__content fs-300 text--mid-grey p-3"><?=get_sub_field('content')?></div>
+                    <div class="col_cards__content fs-300 text--mid-grey p-3"><?php
+                    $content = get_sub_field('content');
+
+                    // Apply wpautop to format paragraphs properly
+                    $content = wpautop($content);
+                    
+                    // Remove unwanted <br> before and after list tags
+                    $content = preg_replace('/(<br\s*\/?>\s*)?(<\/?(ul|ol|li)>)(\s*<br\s*\/?>)?/i', '$2', $content);
+                    
+                    echo $content;
+                    ?></div>
                     <?php
                     if (!empty($l)) {
                         ?>
