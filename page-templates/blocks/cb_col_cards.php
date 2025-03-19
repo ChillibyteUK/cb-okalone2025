@@ -27,9 +27,6 @@ $count = 0;
                     <h2 class="col_cards__title mb-0"><?=get_sub_field('title')?></h2>
                     <div class="col_cards__content fs-300 text--mid-grey p-3"><?php
                     $content = get_sub_field('content');
-
-                    // Apply wpautop to format paragraphs properly
-                    $content = wpautop($content);
                     
                     // Remove unwanted <br> before and after list tags
                     $content = preg_replace('/(<br\s*\/?>\s*)?(<\/?(ul|ol|li)>)(\s*<br\s*\/?>)?/i', '$2', $content);
