@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
         <div class="row px-4 px-md-0">
             <div class="col-md-6 col-lg-3 text-center text-md-start mb-4">
                 <img
-                    src="<?=get_stylesheet_directory_uri()?>/img/oka-logo.svg">
+                    src="<?=get_stylesheet_directory_uri()?>/img/oka-logo--wo.svg">
                 <div class="py-4">The UK's leading provider of technology-enabled employee safety solutions.</div>
                 <a href="/contact-us/" class="btn btn-primary">Get in touch</a>
                 <div class="social mb-4">
