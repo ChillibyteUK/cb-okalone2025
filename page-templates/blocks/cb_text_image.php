@@ -10,9 +10,15 @@ $l = get_field('cta') ?? null;
 <section class="text_image py-5">
     <div class="container-xl">
         <div class="row g-4">
-            <div class="col-md-6 <?= $orderText ?>"
+            <div class="col-md-6 <?= $orderText ?>  d-grid align-content-center" style="justify-items:start;"
                 data-aos="<?= $text_fade ?>">
-                <div class="fs-300 fw-900 text-blue mb-3"><?= get_field('pre_title') ?></div>
+                <?php
+                if (get_field('pre_title') ?? null) {
+                ?>
+                    <div class="fs-300 fw-900 text-blue mb-3"><?= get_field('pre_title') ?></div>
+                <?php
+                }
+                ?>
                 <h2><?= get_field('title') ?></h2>
                 <p><?= get_field('content') ?></p>
                 <?php

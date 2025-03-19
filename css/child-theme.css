@@ -23268,6 +23268,20 @@ body {
   color: black;
 }
 
+ul.check li {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+ul.check li::before {
+  position: absolute;
+  left: -1.5rem;
+  content: "\f00c";
+  font-family: var(--ff-fa);
+  font-weight: var(--fw-fa-solid);
+  color: var(--col-teal-400);
+}
+
 @media (min-width: 992px) {
   .cols-lg-2 {
     -moz-columns: 2;
