@@ -23251,6 +23251,32 @@ header #burger-menu.open span:nth-child(4) {
   align-self: flex-end;
 }
 
+.contact__card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-out);
+  height: 100%;
+}
+.contact__card div {
+  font-size: var(--fs-300);
+}
+.contact__card--white {
+  background-color: white;
+  display: grid;
+  grid-template-rows: 2rem 1fr auto;
+  gap: 0.5rem;
+}
+.contact__card--blue {
+  background-color: var(--col-navy-400);
+  color: white;
+  display: grid;
+  grid-template-rows: 2rem auto auto;
+  gap: 0.5rem;
+}
+.contact__card--blue .contact__links {
+  color: var(--col-white);
+}
+
 body {
   background-image: url(../img/background.svg);
   background-size: 100%;
