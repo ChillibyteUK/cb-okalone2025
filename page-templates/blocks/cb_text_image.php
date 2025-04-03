@@ -50,17 +50,33 @@ $l = get_field('cta') ?? null;
 add_action('wp_footer', function () {
 ?>
     <script>
-        document.querySelectorAll('.vimeo-embed, .youtube-embed').forEach(v => {
-            const [poster, src] = v.classList.contains('vimeo-embed') ? [`vumbnail.com/${v.id}.jpg`, 'player.vimeo.com/video'] : [`i.ytimg.com/vi/${v.id}/hqdefault.jpg`, 'www.youtube.com/embed'];
+document.querySelectorAll('.vimeo-embed, .youtube-embed').forEach(v => {
+	const isVimeo = v.classList.contains('vimeo-embed');
 
-            v.innerHTML = `<img loading="lazy" src="https://${poster}" alt="${v.title}" aria-label="Play"><div class="ltv-playbtn"></div>`;
+	if (isVimeo) {
+		// Handle vimeo ID and optional hash
+		const [id, hash] = v.id.split('/');
+		const poster = `vumbnail.com/${id}${hash ? '/' + hash : ''}.jpg`;
+		const src = `player.vimeo.com/video/${id}${hash ? '?h=' + hash : ''}`;
 
-            v.children[0].addEventListener('click', () => {
-                console.log('clicked');
-                v.innerHTML = `<iframe allow="autoplay" src="https://${src}/${v.id}?autoplay=1" allowfullscreen></iframe>`;
-                v.classList.add('video-loaded');
-            });
-        });
+		v.innerHTML = `<img loading="lazy" src="https://${poster}" alt="${v.title}" aria-label="Play"><div class="ltv-playbtn"></div>`;
+
+		v.children[0].addEventListener('click', () => {
+			v.innerHTML = `<iframe allow="autoplay" src="https://${src}&autoplay=1" allowfullscreen></iframe>`;
+			v.classList.add('video-loaded');
+		});
+	} else {
+		const poster = `i.ytimg.com/vi/${v.id}/hqdefault.jpg`;
+		const src = `www.youtube.com/embed/${v.id}`;
+
+		v.innerHTML = `<img loading="lazy" src="https://${poster}" alt="${v.title}" aria-label="Play"><div class="ltv-playbtn"></div>`;
+
+		v.children[0].addEventListener('click', () => {
+			v.innerHTML = `<iframe allow="autoplay" src="https://${src}?autoplay=1" allowfullscreen></iframe>`;
+			v.classList.add('video-loaded');
+		});
+	}
+});
     </script>
 <?php
 });
