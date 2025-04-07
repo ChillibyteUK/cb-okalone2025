@@ -318,7 +318,7 @@ defined('ABSPATH') || exit;
 						</div>
                         <div id="dropdownKnowledge" class="dropdownMenu">
                             <div class="items mb-3">
-                                <a class="item" href="/blogs/">
+                                <a class="item" href="/article-type/blog/">
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/blog.png">
                                     <div class="item__inner">
                                         <div class="item__title">Blogs</div>
