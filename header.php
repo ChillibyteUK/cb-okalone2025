@@ -310,9 +310,9 @@ defined('ABSPATH') || exit;
                         <div id="dropdownAbout" class="dropdownMenu">
 							<ul>
 								<li><a href="/about/">About Us</a></li>
-								<li><a href="/about/">Leadership Team</a></li>
+								<li><a href="/about/#leadership">Leadership Team</a></li>
 								<li><a href="/data-security/">Data Security</a></li>
-								<li><a href="/about/">Contact Us</a></li>
+								<li><a href="/contact-us/">Contact Us</a></li>
 							</ul>
 
 						</div>
@@ -367,7 +367,7 @@ defined('ABSPATH') || exit;
                         </div>
 						<div id="dropdownSupport" class="dropdownMenu">
                             <ul>
-                                <li><a href="/">Training</a></li>
+                                <li><a href="/training/">Training</a></li>
                                 <li><a href="/article-type/how-to/">How To</a></li>
                                 <li><a href="/contact-us/">Contact Us</a></li>
                             </ul>
