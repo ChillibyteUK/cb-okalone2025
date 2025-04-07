@@ -47,7 +47,7 @@ get_header();
 
         <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-4">
             <h2>Blog</h2>
-            <a href="/blogs/" class="button button-outline">View All</a>
+            <a href="/article-type/blog/" class="button button-outline">View All</a>
         </div>
         <div class="latest_blogs pb-5 row g-4">
             <?php
