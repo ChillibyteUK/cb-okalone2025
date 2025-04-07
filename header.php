@@ -332,31 +332,31 @@ defined('ABSPATH') || exit;
 										<div class="item__desc">Regional Lone Worker legislation</div>
 									</div>
 								</a>
-                                <a class="item" href="/news/">
+                                <!-- a class="item" href="/news/">
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/news.png">
                                     <div class="item__inner">
                                         <div class="item__title">News</div>
                                         <div class="item__desc">The very latest developments</div>
                                     </div>
-                                </a>
-                                <a class="item" href="/guides/">
-                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/guides.png">
-                                    <div class="item__inner">
-                                        <div class="item__title">Guides</div>
-                                        <div class="item__desc">Help &amp; guidance for employee safety</div>
-                                    </div>
-                                </a>
-                                <a class="item" href="/case-studies/">
+                                </a -->
+                                <a class="item" href="/resources/case-studies/">
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/case-studies.png">
                                     <div class="item__inner">
                                         <div class="item__title">Case Studies</div>
                                         <div class="item__desc">Hear direct from our customers</div>
                                     </div>
                                 </a>
-                                <a class="item" href="/case-studies/">
-                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/case-studies.png">
+                                <a class="item" href="/resources/job-roles/">
+                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/whitepapers.png">
                                     <div class="item__inner">
                                         <div class="item__title">Job Roles</div>
+                                        <div class="item__desc">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </a>
+                                <a class="item" href="/article-type/video/">
+                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/videos.png">
+                                    <div class="item__inner">
+                                        <div class="item__title">Videos</div>
                                         <div class="item__desc">Lorem ipsum dolor sit amet.</div>
                                     </div>
                                 </a>
