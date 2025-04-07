@@ -4,6 +4,17 @@ function acf_blocks()
     if (function_exists('acf_register_block_type')) {
 
         acf_register_block_type(array(
+            'name'                => 'cb_sector_nav', 
+            'title'               => __('CB Sector Nav'), 
+            'category'            => 'layout',
+            'icon'                => 'cover-image', 
+            'render_template'    => 'page-templates/blocks/cb_sector_nav.php', 
+            'mode'                => 'edit',
+            'supports'            => array('mode' => false),
+        ));
+
+
+        acf_register_block_type(array(
             'name'                => 'cb_contact_cards', 
             'title'               => __('CB Contact Cards'), 
             'category'            => 'layout',
