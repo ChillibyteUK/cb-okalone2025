@@ -21384,6 +21384,42 @@ header nav #dropdownSectors a::after {
   right: 0;
   top: 0.2rem;
 }
+header nav #dropdownAbout,
+header nav #dropdownSupport {
+  width: 200px;
+  margin-left: 420px;
+  padding: 1rem;
+}
+header nav #dropdownAbout ul,
+header nav #dropdownSupport ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+header nav #dropdownAbout a,
+header nav #dropdownSupport a {
+  font-weight: var(--fw-900);
+  color: var(--col-black);
+  text-decoration: none;
+  transition: color var(--transition);
+  display: block;
+  padding-block: 0.2rem;
+}
+header nav #dropdownAbout a:hover,
+header nav #dropdownSupport a:hover {
+  color: var(--col-blue-400);
+}
+header nav #dropdownAbout.active,
+header nav #dropdownSupport.active {
+  display: block;
+}
+header nav #dropdownAbout {
+  margin-left: 510px;
+}
+header nav #dropdownSupport {
+  margin-left: 760px;
+}
 header nav #dropdownKnowledge {
   width: 600px;
   margin-left: 520px;

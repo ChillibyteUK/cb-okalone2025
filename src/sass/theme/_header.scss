@@ -556,34 +556,37 @@ header {
             }
           }
     }
-    //   #dropdownPlatform,
-    //   #dropdownSupport {
-    //     width: 200px;
-    //     margin-left: 420px;
-    //     padding: 1rem;
-    //     ul {
-    //       list-style: none;
-    //       padding-inline-start: 0;
-    //       margin-bottom: 0;
-    //     }
-    //     a {
-    //       font-weight: var(--fw-900);
-    //       color: var(--col-black);
-    //       text-decoration: none;
-    //       transition: color var(--transition);
-    //       display: block;
-    //       padding-block: 0.2rem;
-    //       &:hover {
-    //         color: var(--col-blue-400);
-    //       }
-    //     }
-    //     &.active {
-    //       display: block;
-    //     }
-    //   }
-    //   #dropdownSupport {
-    //     margin-left: 780px;
-    //   }
+      #dropdownAbout,
+      #dropdownSupport {
+        width: 200px;
+        margin-left: 420px;
+        padding: 1rem;
+        ul {
+          list-style: none;
+          padding-inline-start: 0;
+          margin-bottom: 0;
+        }
+        a {
+          font-weight: var(--fw-900);
+          color: var(--col-black);
+          text-decoration: none;
+          transition: color var(--transition);
+          display: block;
+          padding-block: 0.2rem;
+          &:hover {
+            color: var(--col-blue-400);
+          }
+        }
+        &.active {
+          display: block;
+        }
+      }
+      #dropdownAbout {
+        margin-left: 510px;
+      }
+      #dropdownSupport {
+        margin-left: 760px;
+      }
 
 
 

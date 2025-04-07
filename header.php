@@ -163,8 +163,9 @@ defined('ABSPATH') || exit;
                             <a class="toggle" aria-controls="dropdownSolutions" data-href="/solutions/">Solutions</a>
                             <a class="toggle" aria-controls="dropdownSectors" data-href="/sectors/">Sectors</a>
                             <a class="navLink" href="/pricing/">Pricing</a>
-                            <a class="navLink" href="/about/">About</a>
+                            <a class="toggle" aria-controls="dropdownAbout" data-href="/about/">About</a>
                             <a class="toggle" aria-controls="dropdownKnowledge" data-href="/resources/">Knowledge Hub</a>
+                            <a class="toggle" aria-controls="dropdownSupport" data-href="/support/">Support</a>
                             <div class="navbar__extras me-xl-2">
                                 <a href="/portal-login/">Login</a>
                                 <span role="button" data-bs-toggle="modal" data-bs-target="#demoModal" class="button button-yellow mb-2"><span>Book a Demo</span></span>
@@ -182,11 +183,25 @@ defined('ABSPATH') || exit;
                                 <div class="h3">Lone Worker App</div>
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
-                                    <a class="item" href="/products/lone-worker-app/">
+                                    <a class="item" href="/solutions/lone-worker-app/">
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Our Lone Worker App</div>
                                             <div class="item__desc">Transform your smartphone into a comprehensive lone worker safety device with the OK Alone app. </div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/man-down/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Man Down</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/timed-activity/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Timed Activity</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
                                         </div>
                                     </a>
 
@@ -207,11 +222,68 @@ defined('ABSPATH') || exit;
                                 <div class="h3">Platform</div>
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
+                                    <a class="item" href="/solutions/safety-dashboard/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Safety Dashboard</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/24-7-safety-monitoring-center/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Safety Monitoring Center</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/safety-awards/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Safety Awards &amp; Training</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/mass-notifications/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Mass Notification</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+								</div>
                             </div>
                             <div class="right right--products" id="integrations">
                                 <div class="h3">Integrations</div>
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
+									<a class="item" href="/solutions/geotab/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Geotab</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+									<a class="item" href="/solutions/zoleo/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Zoleo Satellite Phones</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+									<a class="item" href="/products/lone-worker-app/">
+										<img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <div class="item__inner">
+											<div class="item__title">API</div>
+                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                        </div>
+                                    </a>
+									<a class="item" href="/solutions/spot-lone-workers/">
+										<img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+										<div class="item__inner">
+											<div class="item__title">Spot Satellite Phones</div>
+											<div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+										</div>
+									</a>
                                 </div>
                             </div>
                         </div>
@@ -221,25 +293,29 @@ defined('ABSPATH') || exit;
                                 <div class="h3">By Sector</div>
                                 <div class="mb-2">Whatever the risks your staff face at work, our fully accredited service will support them in an emergency.</div>
                                 <ul class="cols-md-2">
-                                    <li><a href="/sectors/nhs/">NHS</a></li>
-                                    <li><a href="/sectors/housing/">Housing</a></li>
-                                    <li><a href="/sectors/retail/">Retail</a></li>
-                                    <li><a href="/sectors/transport/">Transport</a></li>
-                                    <li><a href="/sectors/education/">Education</a></li>
-                                    <li><a href="/sectors/estate-agents/">Estate Agents</a></li>
-                                    <li><a href="/sectors/manufacturing/">Manufacturing</a></li>
-                                    <li><a href="/sectors/professional-services-government/">Professional Services &amp; Government</a></li>
-                                    <li><a href="/sectors/councils/">Councils</a></li>
-                                    <li><a href="/sectors/utilities-telecoms/">Utilities</a></li>
-                                    <li><a href="/sectors/haulage-distribution/">Haulage &amp; Distribution</a></li>
-                                    <li><a href="/sectors/charity/">Charity</a></li>
-                                    <li><a href="/sectors/hospitality/">Hospitality</a></li>
+                                    <li><a href="/sectors/agriculture/">Agriculture</a></li>
+                                    <li><a href="/sectors/care/">Care</a></li>
                                     <li><a href="/sectors/construction/">Construction</a></li>
-                                    <li><a href="/sectors/police/">Police</a></li>
+                                    <li><a href="/sectors/education/">Education</a></li>
+                                    <li><a href="/sectors/electricians/">Electricians</a></li>
+                                    <li><a href="/sectors/hvac-employees/">HVAC Employees</a></li>
+                                    <li><a href="/sectors/logistics-and-drivers/">Logistics and Drivers</a></li>
+                                    <li><a href="/sectors/municiapl-government/">Municipal/Government</a></li>
+                                    <li><a href="/sectors/office-and-retail-staff/">Office and Retail Staff</a></li>
+                                    <li><a href="/sectors/security-companies/">Security Companies</a></li>
                                     <li><a href="/sectors/">All Sectors</a></li>
                                 </ul>
                             </div>
                         </div>
+                        <div id="dropdownAbout" class="dropdownMenu">
+							<ul>
+								<li><a href="/about/">About Us</a></li>
+								<li><a href="/about/">Leadership Team</a></li>
+								<li><a href="/data-security/">Data Security</a></li>
+								<li><a href="/about/">Contact Us</a></li>
+							</ul>
+
+						</div>
                         <div id="dropdownKnowledge" class="dropdownMenu">
                             <div class="items mb-3">
                                 <a class="item" href="/blogs/">
@@ -249,6 +325,13 @@ defined('ABSPATH') || exit;
                                         <div class="item__desc">Tips &amp; content for safety at work</div>
                                     </div>
                                 </a>
+								<a class="item" href="/legislation/">
+									<img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/whitepapers.png">
+									<div class="item__inner">
+										<div class="item__title">Legislation</div>
+										<div class="item__desc">Regional Lone Worker legislation</div>
+									</div>
+								</a>
                                 <a class="item" href="/news/">
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/news.png">
                                     <div class="item__inner">
@@ -263,34 +346,6 @@ defined('ABSPATH') || exit;
                                         <div class="item__desc">Help &amp; guidance for employee safety</div>
                                     </div>
                                 </a>
-                                <a class="item" href="/legislation/">
-                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/whitepapers.png">
-                                    <div class="item__inner">
-                                        <div class="item__title">Legislation</div>
-                                        <div class="item__desc">Regional Lone Worker legislation</div>
-                                    </div>
-                                </a>
-                                <a class="item" href="/video/">
-                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/videos.png">
-                                    <div class="item__inner">
-                                        <div class="item__title">Video</div>
-                                        <div class="item__desc">Watch our latest content</div>
-                                    </div>
-                                </a>
-                                <a class="item" href="/brochures/">
-                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/brochures.png">
-                                    <div class="item__inner">
-                                        <div class="item__title">Brochures</div>
-                                        <div class="item__desc">Peoplesafe product offerings</div>
-                                    </div>
-                                </a>
-                                <a class="item" href="/stories/">
-                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/stories.png">
-                                    <div class="item__inner">
-                                        <div class="item__title">Real Life Stories</div>
-                                        <div class="item__desc">How we helped each person</div>
-                                    </div>
-                                </a>
                                 <a class="item" href="/case-studies/">
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/case-studies.png">
                                     <div class="item__inner">
@@ -298,10 +353,24 @@ defined('ABSPATH') || exit;
                                         <div class="item__desc">Hear direct from our customers</div>
                                     </div>
                                 </a>
+                                <a class="item" href="/case-studies/">
+                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/case-studies.png">
+                                    <div class="item__inner">
+                                        <div class="item__title">Job Roles</div>
+                                        <div class="item__desc">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="w-50 ms-auto">
                                 <a href="/resources/" class="knowledge-link"><span>View all Knowledge Hub</span><i class="fa-solid fa-arrow-right"></i></a>
                             </div>
+                        </div>
+						<div id="dropdownSupport" class="dropdownMenu">
+                            <ul>
+                                <li><a href="/">Training</a></li>
+                                <li><a href="/">How To</a></li>
+                                <li><a href="/contact-us/">Contact Us</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
