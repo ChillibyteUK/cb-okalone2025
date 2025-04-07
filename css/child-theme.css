@@ -21603,6 +21603,9 @@ header #burger-menu.open span:nth-child(4) {
   padding-inline-start: 0;
   line-height: 1.1;
 }
+.footer .menu li {
+  margin-bottom: 0.5rem;
+}
 .footer img {
   max-width: 200px;
 }
