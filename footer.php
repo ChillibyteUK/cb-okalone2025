@@ -19,7 +19,7 @@ defined('ABSPATH') || exit;
                 <img
                     src="<?=get_stylesheet_directory_uri()?>/img/oka-logo--wo.svg">
                 <div class="py-4">The UK's leading provider of technology-enabled employee safety solutions.</div>
-                <a href="/contact-us/" class="btn btn-primary">Get in touch</a>
+                <a href="/contact-us/" class="button button-yellow"><span>Get in touch</span></a>
                 <div class="social mb-4">
                     <?=do_shortcode('[social_in_icon]')?>
                     <?=do_shortcode('[social_yt_icon]')?>
