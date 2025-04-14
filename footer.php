@@ -57,7 +57,8 @@ defined('ABSPATH') || exit;
                     $q = new WP_Query(array(
                         'post_type' => 'page',
                         'post_parent' => $parent->ID,
-                        'posts_per_page' => -1
+                        'posts_per_page' => -1,
+                        'orderby' => 'name',
                     ));
                     while ($q->have_posts()) {
                         $q->the_post();
