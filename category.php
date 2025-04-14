@@ -13,11 +13,12 @@ get_header();
         while (have_posts()) {
             the_post();
             ?>
-            <div class="col-lg-3">
-                <a class="blog_card" href="<?=get_the_permalink()?>">
-                    <img src="<?=get_the_post_thumbnail_url(get_the_ID(),'large')?>" alt="" class="blog_card__image">
-                    <div class="blog_card__content">
-                        <h3 class="blog_card__title"><?=get_the_title()?></h3>
+            <div class="col-md-6 col-lg-3">
+                <a href="<?=get_the_permalink()?>" class="latest_blogs__card">
+                    <?=get_the_post_thumbnail($q->ID,'large',['class' => 'latest_blogs__image'])?>
+                    <div class="latest_blogs__inner">
+                        <h3><?=get_the_title()?></h3>
+                        <div class="latest_blogs__excerpt <?=$mb?>"><?=wp_trim_words(get_the_content(null,false,$q->ID),12)?></div>
                     </div>
                 </a>
             </div>
