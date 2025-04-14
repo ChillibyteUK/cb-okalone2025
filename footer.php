@@ -59,6 +59,7 @@ defined('ABSPATH') || exit;
                         'post_parent' => $parent->ID,
                         'posts_per_page' => -1,
                         'orderby' => 'name',
+                        'order' => 'ASC',
                     ));
                     while ($q->have_posts()) {
                         $q->the_post();
