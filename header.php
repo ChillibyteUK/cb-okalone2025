@@ -186,7 +186,7 @@ defined('ABSPATH') || exit;
                                     <a class="item" href="/solutions/lone-worker-app/">
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
-                                            <div class="item__title">Our Lone Worker App</div>
+                                            <div class="item__title">Lone Worker App</div>
                                             <div class="item__desc">Transform your smartphone into a comprehensive lone worker safety device with the OK Alone app. </div>
                                         </div>
                                     </a>
@@ -194,14 +194,14 @@ defined('ABSPATH') || exit;
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Man Down</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Automatically raise an alarm when a worker falls and becomes unresponsive.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/timed-activity/">
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Timed Activity</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Get automatic alerts if a worker fails to end a high-risk activity on time.</div>
                                         </div>
                                     </a>
 
@@ -226,28 +226,28 @@ defined('ABSPATH') || exit;
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Safety Dashboard</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Report and manage your lone worker service easily through our simple, cloud-based dashboard.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/24-7-safety-monitoring-center/">
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Safety Monitoring Center</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Get 24/7 emergency help where you are through our professional Safety Monitoring Center.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/safety-awards/">
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Safety Awards &amp; Training</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Embed and drive usage of your lone worker service by engaging your teams with our dedicated Safety Awards & dedicated training.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/mass-notifications/">
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Mass Notification</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Warn and inform your dispersed workforce through mass notification system embedded in our lone worker app.</div>
                                         </div>
                                     </a>
 								</div>
@@ -260,28 +260,28 @@ defined('ABSPATH') || exit;
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Geotab</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Protect your drivers in and out the vehicle with our fully-embedded Geotab integration.</div>
                                         </div>
                                     </a>
 									<a class="item" href="/solutions/zoleo/">
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
-                                            <div class="item__title">Zoleo Satellite Phones</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__title">ZOLEO Satellite Phones</div>
+                                            <div class="item__desc">Protect your remote workers through ZOLEO's satellite network, connected directly to our lone worker app.</div>
                                         </div>
                                     </a>
-									<a class="item" href="/products/lone-worker-app/">
+									<a class="item" href="/solutions/lone-worker-api/">
 										<img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
 											<div class="item__title">API</div>
-                                            <div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+                                            <div class="item__desc">Automate the data management of workers and scheduling of alerts by connecting our service to your HR or Workforce Management services.</div>
                                         </div>
                                     </a>
-									<a class="item" href="/solutions/spot-lone-workers/">
+									<a class="item" href="/solutions/spot-lone-worker/">
 										<img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
 										<div class="item__inner">
 											<div class="item__title">Spot Satellite Phones</div>
-											<div class="item__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni odit impedit commodi deserunt dolore.</div>
+											<div class="item__desc">Get help to remote workers through our direct integration to the SPOT satellite network.</div>
 										</div>
 									</a>
                                 </div>

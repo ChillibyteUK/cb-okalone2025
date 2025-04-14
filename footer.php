@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
             <div class="col-md-6 col-lg-3 text-center text-md-start mb-4">
                 <img
                     src="<?=get_stylesheet_directory_uri()?>/img/oka-logo--wo.svg">
-                <div class="py-4">The UK's leading provider of technology-enabled employee safety solutions.</div>
+                <div class="py-4">Part of Peoplesafe, the world's largest provider of personal safety technology.</div>
                 <a href="/contact-us/" class="button button-yellow"><span>Get in touch</span></a>
                 <div class="social mb-4">
                     <?=do_shortcode('[social_in_icon]')?>
