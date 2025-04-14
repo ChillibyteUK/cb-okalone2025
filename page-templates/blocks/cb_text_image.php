@@ -22,6 +22,12 @@ $l = get_field('cta') ?? null;
                 <h2><?= get_field('title') ?></h2>
                 <p><?= get_field('content') ?></p>
                 <?php
+                $demo = get_field('book_demo') ?? null;
+                if (!empty($demo)) {
+                    ?>
+                    <button type="button" class="button button-yellow mb-2 me-2 text-center w-100 w-md-auto d-inline" data-bs-toggle="modal" data-bs-target="#demoModal"><span>Book a Demo</span></button>
+                    <?php
+                }
                 if (!empty($l)) {
                 ?>
                     <a href="<?= $l['url'] ?>" target="<?= $l['target'] ?>" class="button button-yellow text-center w-100 w-md-auto"><span><?= $l['title'] ?></span></a>
