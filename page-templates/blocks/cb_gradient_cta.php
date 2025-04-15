@@ -24,7 +24,7 @@ if ( $img == '' ) {
                 $modal_trigger = $modal_trigger;
                 if (is_array($modal_trigger) && isset($modal_trigger[0]) && $modal_trigger[0] == 'Yes') {
                 ?>
-                    <button type="button" class="button button-outline" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
+                    <button type="button" class="button button-white" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
                 <?php
                 }
                 if ($cta) {
