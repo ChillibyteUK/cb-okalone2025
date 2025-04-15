@@ -114,6 +114,7 @@ echo add_class_to_first_paragraph($content);
         ?>
     </div>
     <section class="gradient_cta py-5 bg_grad--orange">
+        <div class="gradient_cta__image" data-aos="fade" style="--bg-url:url('/wp-content/uploads/2025/04/woman-on-ok-alone-laptop.png')"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 offset-lg-5 aos-init aos-animate" data-aos="fade-left">
