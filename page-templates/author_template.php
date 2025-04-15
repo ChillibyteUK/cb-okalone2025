@@ -16,7 +16,7 @@ get_header();
 		?>
     </section>
     <div class="container-xl">
-		<div class="single-blog__post pt-0">
+		<div class="single-blog__post p-4">
 			<h1 class="h2 text-center"><?= get_the_title(); ?></h1>
 			<?= get_the_post_thumbnail(get_the_ID(), 'medium', array( 'class' => 'd-block mx-auto mb-4 single-author__image' ) ); ?>
 			<?=get_the_content()?>
