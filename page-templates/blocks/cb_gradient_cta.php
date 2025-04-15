@@ -17,12 +17,12 @@ $modal_trigger = get_query_var('modal_trigger', get_field('modal_trigger'));
                 $modal_trigger = $modal_trigger;
                 if (is_array($modal_trigger) && isset($modal_trigger[0]) && $modal_trigger[0] == 'Yes') {
                 ?>
-                    <button type="button" class="button button-outline--white text-white" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
+                    <button type="button" class="button button-outline" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
                 <?php
                 }
                 if ($cta) {
                 ?>
-                    <a href="<?= $cta['url'] ?>" target="<?= $cta['target'] ?>" class="button button-outline"><?= $cta['title'] ?></a>
+                    <a href="<?= $cta['url'] ?>" target="<?= $cta['target'] ?>" class="button button-outline--white text-white"><?= $cta['title'] ?></a>
                 <?php
                 }
                 ?>
