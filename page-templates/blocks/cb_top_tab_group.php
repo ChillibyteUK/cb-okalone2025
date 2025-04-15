@@ -35,6 +35,14 @@
                         <a href="<?= $link['url'] ?>" class="button button-outline"><?= $link['title'] ?></a>
                             <?php
                         }
+
+                        $demo = get_field('book_demo') ?? null;
+                        if (!empty($demo)) {
+                            ?>
+                            <button type="button" class="button button-yellow mb-2 me-2 text-center w-100 w-md-auto d-inline" data-bs-toggle="modal" data-bs-target="#demoModal"><span>Book a Demo</span></button>
+                            <?php
+                        }
+        
                         ?>
                     </div>
                 </div>
