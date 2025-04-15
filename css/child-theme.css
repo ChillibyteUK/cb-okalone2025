@@ -22811,6 +22811,28 @@ header #burger-menu.open span:nth-child(4) {
   z-index: 0;
   isolation: isolate;
 }
+.gradient_cta__image {
+  z-index: -1;
+  display: none;
+}
+@media (min-width: 992px) {
+  .gradient_cta__image {
+    position: absolute;
+    display: block;
+    max-width: 960px;
+    inset: 0;
+    margin-inline: auto;
+    background-image: var(--bg-url);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 1240px) {
+  .gradient_cta__image {
+    max-width: 1180px;
+  }
+}
 .gradient_cta::before {
   position: absolute;
   content: "";
