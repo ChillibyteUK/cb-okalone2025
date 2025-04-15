@@ -109,6 +109,9 @@ echo add_class_to_first_paragraph($content);
         ?>
             </div>
         </div>
+        <?php
+        get_template_part('template-parts/blocks/cb_author_stacey');
+        ?>
     </div>
     <section class="gradient_cta py-5 bg_grad--orange">
         <div class="container">
