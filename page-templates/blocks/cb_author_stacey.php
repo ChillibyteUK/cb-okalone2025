@@ -5,7 +5,7 @@
 				<?= wp_get_attachment_image( get_field( 'stacey_photo', 'option' ), 'full', false, array( 'class' => 'img-fluid rounded-circle' ) ); ?>
 			</div>
 			<div class="col-12 col-md-10">
-				<h2>Stacey Manclark</h2>
+				<h3>Stacey Manclark</h3>
 				<p><?= get_field( 'stacey_bio', 'option' ); ?></p>
 				<?= get_field( 'stacey_page', 'option' ); ?>
 			</div>
