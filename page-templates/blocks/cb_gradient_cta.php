@@ -7,9 +7,9 @@ $modal_trigger = get_query_var('modal_trigger', get_field('modal_trigger'));
 if ( $title == '' ) {
     $title = get_field('title');
 }
-$img = wp_get_attachment_image_url(get_field('image'),'full'); // ?? '/wp-content/uploads/2025/04/Group-43.webp';
+$img = wp_get_attachment_image_url(get_field('image'),'full');
 if ( $img == '' ) {
-    $img = '/wp-content/uploads/2025/04/Group-43.webp';
+    $img = '/wp-content/uploads/2025/04/woman-on-ok-alone-laptop.png';
 }
 ?>
 <!-- gradient_cta -->
