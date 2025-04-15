@@ -20812,11 +20812,11 @@ strong {
 .button-outline--white {
   background-color: transparent;
   border: var(--_button-border) solid var(--col-white);
-  color: var(--col-white);
+  color: var(--col-white) !important;
   transition: color var(--transition), border-color var(--transition);
 }
 .button-outline--white:hover {
-  color: var(--col-orange-400);
+  color: var(--col-orange-400) !important;
   border-color: var(--col-orange-400);
 }
 

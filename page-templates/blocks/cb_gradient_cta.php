@@ -1,7 +1,7 @@
 <?php
 $grad = get_query_var('grad', get_field('theme'));
 $cta = get_query_var('cta', get_field('cta') ?? null);
-$title = get_query_var('title', get_field('title'));
+$title = get_query_var('title', get_field('title') ?? 'NO TITLE');
 $content = get_query_var('content', get_field('content'));
 $modal_trigger = get_query_var('modal_trigger', get_field('modal_trigger'));
 
@@ -17,7 +17,7 @@ $modal_trigger = get_query_var('modal_trigger', get_field('modal_trigger'));
                 $modal_trigger = $modal_trigger;
                 if (is_array($modal_trigger) && isset($modal_trigger[0]) && $modal_trigger[0] == 'Yes') {
                 ?>
-                    <button type="button" class="button button-outline" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
+                    <button type="button" class="button button-outline--white text-white" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
                 <?php
                 }
                 if ($cta) {
