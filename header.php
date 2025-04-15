@@ -280,7 +280,7 @@ defined('ABSPATH') || exit;
 									<a class="item" href="/solutions/spot-lone-worker/">
 										<img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-spot.png' ); ?>">
 										<div class="item__inner">
-											<div class="item__title">Spot Satellite Phones</div>
+											<div class="item__title">SPOT Satellite Phones</div>
 											<div class="item__desc">Get help to remote workers through our direct integration to the SPOT satellite network.</div>
 										</div>
 									</a>
