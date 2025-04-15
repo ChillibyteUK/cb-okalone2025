@@ -110,7 +110,7 @@ echo add_class_to_first_paragraph($content);
             </div>
         </div>
         <?php
-        get_template_part('template-parts/blocks/cb_author_stacey');
+        get_template_part('page-templates/blocks/cb_author_stacey');
         ?>
     </div>
     <section class="gradient_cta py-5 bg_grad--orange">
