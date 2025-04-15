@@ -350,14 +350,14 @@ defined('ABSPATH') || exit;
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/whitepapers.png">
                                     <div class="item__inner">
                                         <div class="item__title">Job Roles</div>
-                                        <div class="item__desc">Lorem ipsum dolor sit amet.</div>
+                                        <div class="item__desc">Read how we protect different types of workers</div>
                                     </div>
                                 </a>
                                 <a class="item" href="/article-type/video/">
                                     <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/videos.png">
                                     <div class="item__inner">
                                         <div class="item__title">Videos</div>
-                                        <div class="item__desc">Lorem ipsum dolor sit amet.</div>
+                                        <div class="item__desc">See how our lone worker tech works</div>
                                     </div>
                                 </a>
                             </div>
