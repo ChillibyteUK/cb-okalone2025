@@ -29,7 +29,7 @@ if ( $img == '' ) {
                 }
                 if ($cta) {
                 ?>
-                    <a href="<?= $cta['url'] ?>" target="<?= $cta['target'] ?>" class="button button-white text-white"><?= $cta['title'] ?></a>
+                    <a href="<?= $cta['url'] ?>" target="<?= $cta['target'] ?>" class="button button-white"><?= $cta['title'] ?></a>
                 <?php
                 }
                 ?>
