@@ -7,7 +7,7 @@
 defined('ABSPATH') || exit;
 get_header();
 ?>
-<main id="main" class="single-author">
+<main id="main" class="single-author mt-5">
     <section class="breadcrumbs container-xl">
         <?php
 		if ( function_exists( 'yoast_breadcrumb' ) ) {
@@ -16,8 +16,8 @@ get_header();
 		?>
     </section>
     <div class="container-xl">
-		<h1><?= get_the_title(); ?></h1>
-		<?= get_the_post_thumbnail(get_the_ID(), 'large', array( 'class' => 'mx-auto mb-4 single-author__image' ) ); ?>
+		<h1 class="h2"><?= get_the_title(); ?></h1>
+		<?= get_the_post_thumbnail(get_the_ID(), 'medium', array( 'class' => 'd-block mx-auto mb-4 single-author__image' ) ); ?>
 		<?=get_the_content()?>
 		<h2>Latest Posts</h2>
 		<?php
