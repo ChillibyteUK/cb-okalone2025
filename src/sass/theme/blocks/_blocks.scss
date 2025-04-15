@@ -1,65 +1,63 @@
-@import 'hero';
-@import 'top_tab_group';
-@import 'side_tab_group';
-@import 'video';
-@import 'case_study_quotes';
-@import 'spinner';
-@import 'app_cta';
-@import 'gradient_cta';
-@import 'sector_slider';
-@import 'faqs';
-@import 'team';
-@import 'img_title_text_cards';
-@import 'cb_three_col_image_icon_cards';
-@import 'pricing_columns';
-
-
+@import "hero";
+@import "top_tab_group";
+@import "side_tab_group";
+@import "video";
+@import "case_study_quotes";
+@import "spinner";
+@import "app_cta";
+@import "gradient_cta";
+@import "sector_slider";
+@import "faqs";
+@import "team";
+@import "img_title_text_cards";
+@import "cb_three_col_image_icon_cards";
+@import "pricing_columns";
 
 .text_image iframe,
-.vimeo-embed, .youtube-embed {
-    img {
-        border-radius: 1rem;
-        box-shadow: var(--shadow-out);
-    }
+.vimeo-embed,
+.youtube-embed {
+  img {
     border-radius: 1rem;
-    box-shadow: var(--shadow-out);   
-    .ltv-playbtn {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 80px !important;
-        height: 80px !important;
-        background-image: url(../img/icons/play-button.png) !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-color: transparent !important;
-        pointer-events: none;
-        &::before {
-            display: none;
-        }
+    box-shadow: var(--shadow-out);
+  }
+  border-radius: 1rem;
+  box-shadow: var(--shadow-out);
+  .ltv-playbtn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px !important;
+    height: 80px !important;
+    background-image: url(../img/icons/play-button.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-color: transparent !important;
+    pointer-events: none;
+    &::before {
+      display: none;
     }
+  }
 }
 
 .logo__slider {
+  .swiper-wrapper {
+    margin-bottom: 2rem;
+  }
 
-    .swiper-wrapper {
-        margin-bottom: 2rem;
-    }
-
-    .logo__slide {
-        // padding: 1rem;
-        aspect-ratio: 1;
-        border: 2px solid #C6D9DF;
-        background-color: var(--col-white);
-        border-radius: 0.75rem;
-        display: grid;
-        place-content: center;
-    }
-
+  .logo__slide {
+    // padding: 1rem;
+    aspect-ratio: 1;
+    border: 2px solid #c6d9df;
+    background-color: var(--col-white);
+    border-radius: 0.75rem;
+    display: grid;
+    place-content: center;
+  }
 }
 
-@import 'cb_testing';
-@import 'cb_pricing_table';
-@import 'cb_col_cards';
-@import 'cb_contact_cards';
-@import 'cb_sector_nav';
+@import "cb_testing";
+@import "cb_pricing_table";
+@import "cb_col_cards";
+@import "cb_contact_cards";
+@import "cb_sector_nav";
+@import "cb_author_stacey";
