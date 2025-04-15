@@ -32,7 +32,7 @@
                         <?php
                         if (!empty($link)) {
                             ?>
-                        <a href="<?= $link['url'] ?>" class="button button-outline"><?= $link['title'] ?></a>
+                        <a href="<?= $link['url'] ?>" class="button button-outline mb-2"><?= $link['title'] ?></a>
                             <?php
                         }
                         $demo = get_sub_field('book_demo') ?? null;
