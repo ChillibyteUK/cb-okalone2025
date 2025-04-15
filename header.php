@@ -191,14 +191,14 @@ defined('ABSPATH') || exit;
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/man-down/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-fall-detection.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Man Down</div>
                                             <div class="item__desc">Automatically raise an alarm when a worker falls and becomes unresponsive.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/timed-activity/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-timed-activity.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Timed Activity</div>
                                             <div class="item__desc">Get automatic alerts if a worker fails to end a high-risk activity on time.</div>
@@ -223,28 +223,28 @@ defined('ABSPATH') || exit;
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
                                     <a class="item" href="/solutions/safety-dashboard/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-safety-dashboard.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Safety Dashboard</div>
                                             <div class="item__desc">Report and manage your lone worker service easily through our simple, cloud-based dashboard.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/24-7-safety-monitoring-center/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-safety-monitoring-centre.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Safety Monitoring Center</div>
                                             <div class="item__desc">Get 24/7 emergency help where you are through our professional Safety Monitoring Center.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/safety-awards/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-safety-awards.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Safety Awards &amp; Training</div>
                                             <div class="item__desc">Embed and drive usage of your lone worker service by engaging your teams with our dedicated Safety Awards & dedicated training.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/mass-notifications/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-mass-notification.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Mass Notification</div>
                                             <div class="item__desc">Warn and inform your dispersed workforce through mass notification system embedded in our lone worker app.</div>
@@ -257,28 +257,28 @@ defined('ABSPATH') || exit;
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
 									<a class="item" href="/solutions/geotab/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-geotab.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Geotab</div>
                                             <div class="item__desc">Protect your drivers in and out the vehicle with our fully-embedded Geotab integration.</div>
                                         </div>
                                     </a>
 									<a class="item" href="/solutions/zoleo/">
-                                        <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-zoleo.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">ZOLEO Satellite Phones</div>
                                             <div class="item__desc">Protect your remote workers through ZOLEO's satellite network, connected directly to our lone worker app.</div>
                                         </div>
                                     </a>
 									<a class="item" href="/solutions/lone-worker-api/">
-										<img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+										<img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-api.png' ); ?>">
                                         <div class="item__inner">
 											<div class="item__title">API</div>
                                             <div class="item__desc">Automate the data management of workers and scheduling of alerts by connecting our service to your HR or Workforce Management services.</div>
                                         </div>
                                     </a>
 									<a class="item" href="/solutions/spot-lone-worker/">
-										<img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
+										<img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-spot.png' ); ?>">
 										<div class="item__inner">
 											<div class="item__title">Spot Satellite Phones</div>
 											<div class="item__desc">Get help to remote workers through our direct integration to the SPOT satellite network.</div>
