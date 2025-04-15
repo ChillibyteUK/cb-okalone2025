@@ -173,7 +173,7 @@
         {
           "key": "field_67fe1758a496e",
           "label": "Book Demo Modal",
-          "name": "demo_modal",
+          "name": "book_demo",
           "aria-label": "",
           "type": "checkbox",
           "instructions": "",
