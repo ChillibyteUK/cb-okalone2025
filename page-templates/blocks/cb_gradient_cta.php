@@ -7,7 +7,7 @@ $modal_trigger = get_query_var('modal_trigger', get_field('modal_trigger'));
 if ( $title == '' ) {
     $title = get_field('title');
 }
-$img = wp_get_attachment_image_url(get_field('image'),'full') || '/wp-content/uploads/2025/04/Group-43.webp';
+$img = wp_get_attachment_image_url(get_field('image'),'full') ?? '/wp-content/uploads/2025/04/Group-43.webp';
 ?>
 <!-- gradient_cta -->
 <section class="gradient_cta py-5 bg_grad--<?= $grad ?>">
