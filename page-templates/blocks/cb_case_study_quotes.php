@@ -6,7 +6,7 @@
                 <div class="fs-300 text--orange-400 fw-900 mb-3">Case Studies</div>
                 <h2><?= get_field('title') ?></h2>
                 <p><?= get_field('intro') ?></p>
-                <a href="/case-studies/" class="button button-outline text-center w-100 w-md-auto">View all Case Studies</a>
+                <a href="/resources/case-studies/" class="button button-outline text-center w-100 w-md-auto">View all Case Studies</a>
             </div>
             <div class="col-lg-7" data-aos="fade-left">
                 <div class="swiper quotes_slider mb-4">
