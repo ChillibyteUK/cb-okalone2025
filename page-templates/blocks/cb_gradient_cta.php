@@ -7,9 +7,11 @@ $modal_trigger = get_query_var('modal_trigger', get_field('modal_trigger'));
 if ( $title == '' ) {
     $title = get_field('title');
 }
+$img = wp_get_attachment_image_url(get_field('image'),'full');
 ?>
 <!-- gradient_cta -->
 <section class="gradient_cta py-5 bg_grad--<?= $grad ?>">
+    <div class="gradient_cta__image" data-aos="fade" style="--bg-url:url(<?=$img?>)"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-7 offset-lg-5" data-aos="fade-left">
