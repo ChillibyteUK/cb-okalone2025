@@ -4,7 +4,7 @@ $cta = get_query_var('cta', get_field('cta') ?? null);
 $title = get_query_var('title', get_field('title') ?? 'NO TITLE');
 $content = get_query_var('content', get_field('content'));
 $modal_trigger = get_query_var('modal_trigger', get_field('modal_trigger'));
-
+echo '<h1>' . get_field('title') . '</h1>';
 ?>
 <!-- gradient_cta -->
 <section class="gradient_cta py-5 bg_grad--<?= $grad ?>">
