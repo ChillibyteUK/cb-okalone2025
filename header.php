@@ -107,19 +107,19 @@ defined('ABSPATH') || exit;
             {
                 "@context": "http://schema.org",
                 "@type": "Organization",
-                "url": "https://peoplesafe.co.uk/",
-                "name": "Peoplesafe",
-                "legalName": "Skyguard Ltd",
-                "description": "Formerly Skyguard and Guardian24, Peoplesafe is an industry leading UK-based technology business centred around the safety of lone and at-risk workers",
-                "logo": "https://peoplesafe.co.uk/wp-content/themes/cb-peoplesafe<?= get_stylesheet_directory_uri() ?>/img/ps-logo-full--dark.svg",
+                "url": "https://www.okaloneworker.com/",
+                "name": "OK Alone",
+                "description": "Try our lone worker app &amp; safety monitoring system with man down. Meet work alone regulations. Get started in minutes with Ok Alone&#039;s smartphone solution.",
+                "logo": "https://www.okaloneworker.com/wp-content/themes/cb-okalone2025/img/oka-logo.svg",
                 "sameAs": [
-                    "https://twitter.com/peoplesafe",
-                    "https://www.youtube.com/channel/UCRT8D1BWOHpR9Gt8jZukZSQ",
-                    "https://www.linkedin.com/company/peoplesafe-ltd/"
+                    "https://www.facebook.com/okalone",
+                    "https://x.com/OkAloneWorker",
+                    "https://www.linkedin.com/company/ok-alone",
+                    "https://www.youtube.com/channel/UCRVo8W0hCpR13jL7gkjrOjQ"
                 ],
                 "contactPoint": {
                     "@type": "ContactPoint",
-                    "telephone": "+44-330-333-6556",
+                    "telephone": "+44-1372-664-357",
                     "contactType": "Customer service"
                 }
             }
