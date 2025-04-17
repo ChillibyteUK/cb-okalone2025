@@ -78,9 +78,7 @@ defined('ABSPATH') || exit;
     </div>
     <div class="colophon">
         <div class="container d-flex justify-content-between flex-wrap py-2">
-            <div>&copy; <?=date('Y')?> Skyguard
-                Ltd T/A Peoplesafe. Company Registration Number: 04107459. All rights reserved. Peoplesafe is part of
-                the Send for Help Group.</div>
+            <div>&copy; <?=date('Y')?> Peoplesafe Personal Safety Ltd - <a href="/work-alone-monitoring-terms/">Terms</a> - <a href="/work-alone-monitoring-privacy/">Privacy</a> - <a href="/fair-use-policy/">Fair Use Policy</a> - <a href="/gdpr/">GDPR/The Canadian Privacy Act</a></div>
             <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
                 title="Digital Marketing by Chillibyte"></a>
         </div>
