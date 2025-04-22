@@ -128,7 +128,7 @@ defined('ABSPATH') || exit;
     }
     ?>
     <?php wp_head(); ?>
-    <script type="text/javascript" async src="//l.getsitecontrol.com/d7ol6g67.js"></script>
+    <script type="text/javascript" async src="//l.getsitecontrol.com/v7n3e214.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
