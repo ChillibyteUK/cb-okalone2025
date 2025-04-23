@@ -129,6 +129,14 @@ defined('ABSPATH') || exit;
     ?>
     <?php wp_head(); ?>
     <script type="text/javascript" async src="//l.getsitecontrol.com/v7n3e214.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7R39LXLMJQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7R39LXLMJQ');
+    </script>     
 </head>
 
 <body <?php body_class(); ?>>
