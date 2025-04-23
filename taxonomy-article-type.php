@@ -69,9 +69,9 @@ get_header();
                 </article>
                         <?php
                     }
-                    // Display the pagination component.
-                    understrap_pagination();
                 }
+                // Display the pagination component.
+                understrap_pagination();
             } else {
                 ?>
                 <p>No posts found.</p>
