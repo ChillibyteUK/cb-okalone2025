@@ -69,6 +69,8 @@ get_header();
                 </article>
                         <?php
                     }
+                    // Display the pagination component.
+                    understrap_pagination();
                 }
             } else {
                 ?>
