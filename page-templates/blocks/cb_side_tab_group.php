@@ -84,7 +84,7 @@ $d = 0;
                 <div class="pill" aria-controls="<?=$i?>_tab4" data-aos="fade"> 
                     <h3 class="pill__title"><?=get_field('tab_4_title')?></h3>
                     <div class="pill__content">
-                        <p><?=get_field('tab_3_content')?><p>
+                        <p><?=get_field('tab_4_content')?><p>
                         <?php
                         if (!empty($tab4Link)) {
                             ?>
