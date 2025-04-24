@@ -1,3 +1,6 @@
+<?php
+$small_h1 = get_field('small_h1');
+?>
 <section class="product_hero d-flex align-items-center">
     <div class="container-xl">
         <div class="row g-5">
@@ -5,16 +8,35 @@
                 <div class="inner">
                     <?php
                     if (get_field('pre_title') ?? null) {
+                        if( $small_h1 && in_array('yes', $small_h1) ) {
+                    ?>
+                        <h1 class="text--yellow-400 fs-600 fw-bold"><?= get_field('pre_title') ?></h1>
+                    <?php
+                        } else {
                     ?>
                         <div class="text--yellow-400 fs-600 fw-bold"><?= get_field('pre_title') ?></div>
                     <?php
+                        }
                     }
+
+                    if( $small_h1 && in_array('yes', $small_h1) ) {
+                    ?>
+                    <h2>
+                        <div class="text-dark h1">
+                            <?= get_field('title') ?>
+                        </div>
+                    </h2>  
+                    <?php
+                    } else {
                     ?>
                     <h1>
                         <div class="text-dark">
                             <?= get_field('title') ?>
                         </div>
-                    </h1>
+                    </h1>  
+                    <?php
+                    }
+                    ?>
                     <div class="hero__content mb-4"><?= get_field('content') ?></div>
                     <div class="d-flex flex-wrap g-4">
                         <?php
