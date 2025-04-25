@@ -30,7 +30,7 @@ function acf_blocks()
             'title'               => __('CB Solution Nav'), 
             'category'            => 'layout',
             'icon'                => 'cover-image', 
-            'render_template'    => 'page-templates/blocks/cb_solutionnav.php', 
+            'render_template'    => 'page-templates/blocks/cb_solution_nav.php', 
             'mode'                => 'edit',
             'supports'            => array('mode' => false),
         ));
