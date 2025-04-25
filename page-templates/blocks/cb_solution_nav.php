@@ -18,7 +18,11 @@
             ?>
                 <a href="<?= get_the_permalink() ?>" class="sector_nav__card" data-filter="<?= $sector_value ?>">
                     <div class="sector_nav__image">
-                        <?= get_the_post_thumbnail( get_the_ID(), 'large') ?>
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <?= get_the_post_thumbnail( get_the_ID(), 'large' ) ?>
+                        <?php else : ?>
+                            <img src="https://www.okaloneworker.com/wp-content/uploads/2025/03/247-safety-monitoring-1024x336.png" alt="Default thumbnail">
+                        <?php endif; ?>
                     </div>
                     <div class="sector_nav__container">
                         <?= get_the_title() ?>
