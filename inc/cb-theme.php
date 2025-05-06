@@ -309,6 +309,13 @@ function filter_posts_by_article_type($query) {
 }
 add_action('pre_get_posts', 'filter_posts_by_article_type');
 
+add_action('pre_get_posts', function($query) {
+	if (is_admin() && $query->is_main_query() && $query->get('post_type') === 'post') {
+		error_log('--- Admin main post query ---');
+		error_log(print_r($query->query_vars, true));
+	}
+});
+
 
 function hide_yoast_filters_css() {
     $screen = get_current_screen();
