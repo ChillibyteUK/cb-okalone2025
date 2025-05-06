@@ -22,7 +22,14 @@ get_header();
 
         <div class="taxonomy-description"><?php echo term_description(); ?></div>
         
-            <?php 
+            <?php
+
+if ($wp_query->is_main_query()) {
+	$wp_query->set('orderby', 'date');
+	$wp_query->set('order', 'DESC');
+	$wp_query->set('ignore_custom_sort', true); // Tell Post Types Order to back off
+	query_posts($wp_query->query); // Re-run the modified query
+}
 
             if (have_posts()) {
                 ?>
