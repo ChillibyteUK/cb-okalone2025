@@ -249,73 +249,55 @@ function add_class_to_first_paragraph($content) {
 // add_filter('wp_nav_menu_items', 'add_custom_menu_item', 10, 2);
 
 
-function add_article_type_filter_to_admin() {
-    global $typenow;
+// function add_article_type_filter_to_admin() {
+//     global $typenow;
 
-    // Only add for the 'post' post type
-    if ($typenow !== 'post') {
-        return;
-    }
+//     // Only add for the 'post' post type
+//     if ($typenow !== 'post') {
+//         return;
+//     }
 
-    $taxonomy = 'article-type'; // Change to your actual taxonomy slug
-    $taxonomy_obj = get_taxonomy($taxonomy);
-    $taxonomy_label = $taxonomy_obj->label;
+//     $taxonomy = 'article-type'; // Change to your actual taxonomy slug
+//     $taxonomy_obj = get_taxonomy($taxonomy);
+//     $taxonomy_label = $taxonomy_obj->label;
 
-    $selected = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
-    $terms = get_terms(array('taxonomy' => $taxonomy, 'hide_empty' => false));
+//     $selected = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+//     $terms = get_terms(array('taxonomy' => $taxonomy, 'hide_empty' => false));
 
-    if (!empty($terms)) {
-        echo "<select name='$taxonomy' id='$taxonomy' class='postform'>";
-        echo "<option value=''>" . sprintf(__('Show All %s'), $taxonomy_label) . "</option>";
+//     if (!empty($terms)) {
+//         echo "<select name='$taxonomy' id='$taxonomy' class='postform'>";
+//         echo "<option value=''>" . sprintf(__('Show All %s'), $taxonomy_label) . "</option>";
 
-        foreach ($terms as $term) {
-            printf(
-                '<option value="%s" %s>%s</option>',
-                esc_attr($term->slug),
-                selected($selected, $term->slug, false),
-                esc_html($term->name)
-            );
-        }
+//         foreach ($terms as $term) {
+//             printf(
+//                 '<option value="%s" %s>%s</option>',
+//                 esc_attr($term->slug),
+//                 selected($selected, $term->slug, false),
+//                 esc_html($term->name)
+//             );
+//         }
 
-        echo "</select>";
-    }
-}
-add_action('restrict_manage_posts', 'add_article_type_filter_to_admin');
+//         echo "</select>";
+//     }
+// }
+// add_action('restrict_manage_posts', 'add_article_type_filter_to_admin');
 
-function filter_posts_by_article_type($query) {
-	if (!is_admin() || !$query->is_main_query()) {
-		return;
-	}
+// function filter_posts_by_article_type($query) {
+//     global $pagenow;
 
-	global $pagenow;
+//     if ($pagenow !== 'edit.php' || !isset($_GET['article-type']) || empty($_GET['article-type'])) {
+//         return;
+//     }
 
-	if ($pagenow === 'edit.php' && !empty($_GET['article-type'])) {
-		$tax_query = $query->get('tax_query') ?: [];
-
-		$tax_query[] = [
-			'taxonomy' => 'article-type',
-			'field'    => 'slug',
-			'terms'    => sanitize_text_field($_GET['article-type']),
-		];
-
-		$query->set('tax_query', $tax_query);
-
-		// Optional: ensure default ordering by publish date if not set
-		if (!$query->get('orderby')) {
-			$query->set('orderby', 'date');
-			$query->set('order', 'DESC');
-		}
-	}
-}
-add_action('pre_get_posts', 'filter_posts_by_article_type');
-
-add_action('pre_get_posts', function($query) {
-	if (is_admin() && $query->is_main_query() && $query->get('post_type') === 'post') {
-		error_log('--- Admin main post query ---');
-		error_log(print_r($query->query_vars, true));
-	}
-});
-
+//     $query->set('tax_query', array(
+//         array(
+//             'taxonomy' => 'article-type',
+//             'field'    => 'slug',
+//             'terms'    => $_GET['article-type']
+//         )
+//     ));
+// }
+// add_action('pre_get_posts', 'filter_posts_by_article_type');
 
 function hide_yoast_filters_css() {
     $screen = get_current_screen();
