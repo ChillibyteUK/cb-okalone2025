@@ -289,19 +289,26 @@ function filter_posts_by_article_type($query) {
 
 	global $pagenow;
 
-	if ($pagenow !== 'edit.php' || empty($_GET['article-type'])) {
-		return;
-	}
+	if ($pagenow === 'edit.php' && !empty($_GET['article-type'])) {
+		$tax_query = $query->get('tax_query') ?: [];
 
-	$query->set('tax_query', array(
-		array(
+		$tax_query[] = [
 			'taxonomy' => 'article-type',
 			'field'    => 'slug',
 			'terms'    => sanitize_text_field($_GET['article-type']),
-		)
-	));
+		];
+
+		$query->set('tax_query', $tax_query);
+
+		// Optional: ensure default ordering by publish date if not set
+		if (!$query->get('orderby')) {
+			$query->set('orderby', 'date');
+			$query->set('order', 'DESC');
+		}
+	}
 }
 add_action('pre_get_posts', 'filter_posts_by_article_type');
+
 
 function hide_yoast_filters_css() {
     $screen = get_current_screen();
