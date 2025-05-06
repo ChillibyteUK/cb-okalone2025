@@ -10,7 +10,7 @@ $section_class = 'row';
 
 if ($term_slug == 'video') {
     $section_class = 'row videos pb-5 g-4';
-} elseif ($term_slug == 'how-to') {
+} elseif ($term_slug == 'how-to' || $term_slug == 'blog') {
     $section_class = 'row how_to pb-5 g-4';
 }
 
