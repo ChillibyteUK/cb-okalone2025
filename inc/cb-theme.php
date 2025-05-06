@@ -312,4 +312,9 @@ function hide_yoast_filters_css() {
 add_action('admin_head', 'hide_yoast_filters_css');
 
 
-
+add_action('pre_get_posts', function($query) {
+	if (is_admin() && $query->is_main_query() && $query->get('post_type') === 'post') {
+		$query->set('orderby', 'date');
+		$query->set('order', 'DESC');
+	}
+});
