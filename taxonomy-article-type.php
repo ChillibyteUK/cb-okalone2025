@@ -15,6 +15,16 @@ if ($term_slug == 'video') {
 }
 
 get_header();
+
+// Force correct order and disable Post Types Order interference
+global $wp_query;
+
+query_posts(array_merge($wp_query->query, array(
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'ignore_custom_sort' => true
+)));
+
 ?>
  <main id="main" class="resources">
     <div class="container-xl pt-5">
