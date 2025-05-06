@@ -283,19 +283,23 @@ function add_article_type_filter_to_admin() {
 add_action('restrict_manage_posts', 'add_article_type_filter_to_admin');
 
 function filter_posts_by_article_type($query) {
-    global $pagenow;
+	if (!is_admin() || !$query->is_main_query()) {
+		return;
+	}
 
-    if ($pagenow !== 'edit.php' || !isset($_GET['article-type']) || empty($_GET['article-type'])) {
-        return;
-    }
+	global $pagenow;
 
-    $query->set('tax_query', array(
-        array(
-            'taxonomy' => 'article-type',
-            'field'    => 'slug',
-            'terms'    => $_GET['article-type']
-        )
-    ));
+	if ($pagenow !== 'edit.php' || empty($_GET['article-type'])) {
+		return;
+	}
+
+	$query->set('tax_query', array(
+		array(
+			'taxonomy' => 'article-type',
+			'field'    => 'slug',
+			'terms'    => sanitize_text_field($_GET['article-type']),
+		)
+	));
 }
 add_action('pre_get_posts', 'filter_posts_by_article_type');
 
