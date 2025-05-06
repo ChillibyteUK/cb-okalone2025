@@ -48,7 +48,7 @@ get_header();
                 </div>
                         <?php
                     }
-                    elseif ($term_slug == 'how-to') {
+                    elseif ($term_slug == 'how-to' || $term_slug == 'blog') {
                         ?>
                 <div class="col-md-6">
                     <a href="<?=get_the_permalink()?>" class="how_to__card">
