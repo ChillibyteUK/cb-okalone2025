@@ -3,8 +3,8 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-$term = get_queried_object();
-$term_slug = $term->slug;
+$term_obj = get_queried_object();
+$term_slug = isset($term_obj->slug) ? $term_obj->slug : '';
 
 $section_class = 'row';
 
