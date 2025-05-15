@@ -137,6 +137,9 @@ defined('ABSPATH') || exit;
     }
 </script>
 <?php wp_footer(); ?>
+<!-- Start of okalone Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ca494108-82b7-45fc-be22-331c70729459"> </script>
+<!-- End of okalone Zendesk Widget script -->
 </body>
 
 </html>
