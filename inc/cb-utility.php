@@ -62,7 +62,7 @@ add_shortcode('social_ig_icon', function () {
 add_shortcode('social_tw_icon', function () {
     $social = get_field('social', 'option');
     if ($social['twitter_url'] ?? null) {
-        return '<a href="' . $social['twitter_url'] . '" target="_blank"><i class="fab fa-twitter"></i></a>';
+        return '<a href="' . $social['twitter_url'] . '" target="_blank"><i class="fab fa-x-twitter"></i></a>';
     }
     return;
 });
