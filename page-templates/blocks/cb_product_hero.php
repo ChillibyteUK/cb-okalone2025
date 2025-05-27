@@ -43,12 +43,12 @@ $small_h1 = get_field('small_h1');
                         if (get_field('quote_link') ?? null) {
                             $l = get_field('quote_link');
                             ?>
-                        <a class="button button-outline mb-2 me-2 text-center w-100 w-md-auto d-inline" href="<?=$l['url']?>" target="<?=$l['target']?>"><span><?=$l['title']?></span></a>
+                        <a class="button button-yellow mb-2 me-2 text-center w-100 w-md-auto d-inline" href="<?=$l['url']?>" target="<?=$l['target']?>"><span><?=$l['title']?></span></a>
                             <?php
                         }
                         if (get_field('show_demo_cta') ?? null) {
                             ?>
-                        <button type="button" class="button button-yellow mb-2 me-2 text-center w-100 w-md-auto d-inline" data-bs-toggle="modal" data-bs-target="#demoModal"><span>Book a Demo</span></button>
+                        <button type="button" class="button button-outline mb-2 me-2 text-center w-100 w-md-auto d-inline" data-bs-toggle="modal" data-bs-target="#demoModal"><span>Book a Demo</span></button>
                             <?php
                         }
                         ?>
