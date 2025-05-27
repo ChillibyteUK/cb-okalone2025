@@ -40,8 +40,8 @@ $small_h1 = get_field('small_h1');
                     }
                     ?>
                     <div class="hero__content mb-4"><?= get_field('content') ?></div>
-                    <button type="button" class="button button-yellow mb-2 me-2 text-center w-100 w-md-auto d-inline" data-bs-toggle="modal" data-bs-target="#demoModal"><span>Book a Demo</span></button>
-                    <a class="button button-outline mb-2 me-2 text-center w-100 w-md-auto" href="/pricing/"><span>Get a Quote</span></a>
+                    <a class="button button-yellow mb-2 me-2 text-center w-100 w-md-auto" href="/pricing/"><span>Get a Quote</span></a>
+                    <button type="button" class="button button-outline mb-2 me-2 text-center w-100 w-md-auto d-inline" data-bs-toggle="modal" data-bs-target="#demoModal"><span>Book a Demo</span></button>
                     <?php
                     if (get_field('cta2')) {
                         $cta2 = get_field('cta2');
