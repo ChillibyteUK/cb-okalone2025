@@ -181,7 +181,7 @@ defined('ABSPATH') || exit;
                             <a class="toggle" aria-controls="dropdownSupport" data-href="/support/">Support</a>
                             <div class="navbar__extras me-xl-2">
                                 <a href="https://my.okalone.net/" target="_blank">Login</a>
-                                <span role="button" data-bs-toggle="modal" data-bs-target="#demoModal" class="button button-yellow mb-2"><span>Book a Demo</span></span>
+                                <a href="/pricing/" class="button button-yellow mb-2"><span>Get a quote</span></a>
                             </div>
                         </div>
                     </div>
