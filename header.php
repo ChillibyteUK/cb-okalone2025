@@ -200,7 +200,7 @@ defined('ABSPATH') || exit;
                                         <img class="item__image" src="/wp-content/uploads/2025/02/lone-worker-app-mobile-150x150.png">
                                         <div class="item__inner">
                                             <div class="item__title">Lone Worker App</div>
-                                            <div class="item__desc">Transform your smartphone into a comprehensive lone worker safety device with the OK Alone app. </div>
+                                            <div class="item__desc">Transform your smartphone into a comprehensive lone worker safety device with the OK Alone app.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/man-down/">
@@ -215,6 +215,13 @@ defined('ABSPATH') || exit;
                                         <div class="item__inner">
                                             <div class="item__title">Timed Activity</div>
                                             <div class="item__desc">Get automatic alerts if a worker fails to end a high-risk activity on time.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/lone-worker-desktop-app/">
+                                        <img class="item__image" src="/wp-content/uploads/2025/06/app.png'">
+                                        <div class="item__inner">
+                                            <div class="item__title">Lone Worker Desktop App</div>
+                                            <div class="item__desc">Turn any computer into a discreet safety tool for front-of-house staff.</div>
                                         </div>
                                     </a>
 
