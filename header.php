@@ -189,6 +189,7 @@ defined('ABSPATH') || exit;
                         <div id="dropdownSolutions" class="dropdownMenu">
                             <ul class="left">
                                 <li class="active" aria-controls="loneWorkerApp">Lone Worker App</li>
+                                <li class="" aria-controls="features">Features</li>
                                 <li class="" aria-controls="platform">Platform</li>
                                 <li class="" aria-controls="integrations">Integrations</li>
                             </ul>
@@ -201,20 +202,6 @@ defined('ABSPATH') || exit;
                                         <div class="item__inner">
                                             <div class="item__title">Lone Worker App</div>
                                             <div class="item__desc">Transform your smartphone into a comprehensive lone worker safety device with the OK Alone app.</div>
-                                        </div>
-                                    </a>
-                                    <a class="item" href="/solutions/man-down/">
-                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-fall-detection.png' ); ?>">
-                                        <div class="item__inner">
-                                            <div class="item__title">Man Down</div>
-                                            <div class="item__desc">Automatically raise an alarm when a worker falls and becomes unresponsive.</div>
-                                        </div>
-                                    </a>
-                                    <a class="item" href="/solutions/timed-activity/">
-                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-timed-activity.png' ); ?>">
-                                        <div class="item__inner">
-                                            <div class="item__title">Timed Activity</div>
-                                            <div class="item__desc">Get automatic alerts if a worker fails to end a high-risk activity on time.</div>
                                         </div>
                                     </a>
                                     <a class="item" href="/solutions/lone-worker-desktop-app/">
@@ -236,6 +223,47 @@ defined('ABSPATH') || exit;
                         </a>
                         */
                                     ?>
+                                </div>
+                            </div>
+                            <div class="right right--products" id="features">
+                                <div class="h3">Features</div>
+                                <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
+                                <div class="items">
+                                    <a class="item" href="/solutions/man-down/">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-fall-detection.png' ); ?>">
+                                        <div class="item__inner">
+                                            <div class="item__title">Man Down</div>
+                                            <div class="item__desc">Automatically raise an alarm when a worker falls and becomes unresponsive.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/timed-activity/">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-timed-activity.png' ); ?>">
+                                        <div class="item__inner">
+                                            <div class="item__title">Timed Activity</div>
+                                            <div class="item__desc">Get automatic alerts if a worker fails to end a high-risk activity on time.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/mass-notifications/">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-mass-notification.png' ); ?>">
+                                        <div class="item__inner">
+                                            <div class="item__title">Mass Notification</div>
+                                            <div class="item__desc">Warn and inform your dispersed workforce through mass notification system embedded in our lone worker app.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/connectivity-and-coverage-solutions/">
+                                        <img class="item__image" src="https://www.okaloneworker.com/wp-content/uploads/2025/06/connectivity.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Connectivity and Coverage Solutions</div>
+                                            <div class="item__desc">Keep your lone workers safe and connected no matter where they are.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/panic-button/">
+                                        <img class="item__image" src="https://www.okaloneworker.com/wp-content/uploads/2025/06/panic.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Panic Button</div>
+                                            <div class="item__desc">Built-in panic button that allows workers to immediately send an emergency alert.</div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="right right--products" id="platform">
@@ -261,13 +289,6 @@ defined('ABSPATH') || exit;
                                         <div class="item__inner">
                                             <div class="item__title">Safety Awards &amp; Training</div>
                                             <div class="item__desc">Embed and drive usage of your lone worker service by engaging your teams with our dedicated Safety Awards & dedicated training.</div>
-                                        </div>
-                                    </a>
-                                    <a class="item" href="/solutions/mass-notifications/">
-                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-mass-notification.png' ); ?>">
-                                        <div class="item__inner">
-                                            <div class="item__title">Mass Notification</div>
-                                            <div class="item__desc">Warn and inform your dispersed workforce through mass notification system embedded in our lone worker app.</div>
                                         </div>
                                     </a>
 								</div>
