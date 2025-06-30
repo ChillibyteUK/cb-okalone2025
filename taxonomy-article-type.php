@@ -18,19 +18,31 @@ get_header();
 
 // Force correct order and disable Post Types Order interference
 global $wp_query;
+$search_term = isset($_GET['search']) ? sanitize_text_field($_GET['search']) : '';
 
 query_posts(array_merge($wp_query->query, array(
     'orderby' => 'date',
     'order' => 'DESC',
-    'ignore_custom_sort' => true
+    'ignore_custom_sort' => true,
+    's' => $search_term,
 )));
-
 ?>
  <main id="main" class="resources">
     <div class="container-xl pt-5">
         <h1><?php single_term_title(); ?></h1>
 
         <div class="taxonomy-description"><?php echo term_description(); ?></div>
+
+            <?php
+            if ( is_user_logged_in() ) {
+            ?>
+            <form method="get" action="">
+                <input type="text" name="search" placeholder="Search blog articles..." value="<?php echo esc_attr(get_query_var('search')); ?>">
+                <button type="submit">Search</button>
+            </form>
+            <?php
+            }
+            ?>
         
             <?php 
 
