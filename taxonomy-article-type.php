@@ -33,16 +33,10 @@ query_posts(array_merge($wp_query->query, array(
 
         <div class="taxonomy-description"><?php echo term_description(); ?></div>
 
-            <?php
-            if ( is_user_logged_in() ) {
-            ?>
-            <form method="get" action="">
-                <input type="text" name="search" placeholder="Search blog articles..." value="<?php echo esc_attr(get_query_var('search')); ?>">
-                <button type="submit">Search</button>
+            <form class="d-flex mb-4" role="search" method="get" action="">
+                <input class="form-control me-2" type="search" name="search" placeholder="Search articles..." aria-label="Search" value="<?php echo esc_attr(get_query_var('search')); ?>">
+                <button class="button button-yellow" type="submit">Search</button>
             </form>
-            <?php
-            }
-            ?>
         
             <?php 
 
