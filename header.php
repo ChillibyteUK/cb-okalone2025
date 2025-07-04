@@ -338,12 +338,12 @@ defined('ABSPATH') || exit;
                                     <li><a href="/sectors/care/">Care</a></li>
                                     <li><a href="/sectors/construction/">Construction</a></li>
                                     <li><a href="/sectors/education/">Education</a></li>
-                                    <li><a href="/sectors/electricians/">Electricians</a></li>
-                                    <li><a href="/sectors/hvac-employees/">HVAC Employees</a></li>
+                                    <li><a href="/sectors/electricians-and-hvac-technicians/">Electricians &amp; HVAC Employees</a></li>
                                     <li><a href="/sectors/logistics-and-drivers/">Logistics and Drivers</a></li>
                                     <li><a href="/sectors/municipal-government/">Municipal/Government</a></li>
                                     <li><a href="/sectors/office-and-retail-staff/">Office and Retail Staff</a></li>
                                     <li><a href="/sectors/security-companies/">Security Companies</a></li>
+                                    <li><a href="/sectors/utilities/">Utilities</a></li>
                                     <li><a href="/sectors/">All Sectors</a></li>
                                 </ul>
                             </div>
