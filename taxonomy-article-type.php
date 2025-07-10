@@ -37,6 +37,21 @@ query_posts(array_merge($wp_query->query, array(
                 <input class="form-control me-2" type="search" name="search" placeholder="Search articles..." aria-label="Search" value="<?php echo esc_attr(get_query_var('search')); ?>">
                 <button class="button button-yellow" type="submit">Search</button>
             </form>
+
+<?php
+if ($term_slug == 'how-to') {
+?>
+            <div class="<?=$section_class?>">
+                <div class="col-md-6">
+                    <a href="/resources/lone-worker-risk-assessment-guide/" class="button button-yellow w-100">Free Lone Working Policy Template</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="/ok-alone-risk-assesment-guide/" class="button button-yellow w-100">Free Risk Assessment Guide</a>
+                </div>
+            </div>
+<?php
+}
+?>
         
             <?php 
 
