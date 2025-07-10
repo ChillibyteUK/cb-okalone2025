@@ -41,7 +41,7 @@ query_posts(array_merge($wp_query->query, array(
 <?php
 if ($term_slug == 'how-to') {
 ?>
-            <div class="<?=$section_class?>">
+            <div class="row how_to pb-4 g-4">
                 <div class="col-md-6">
                     <a href="/resources/lone-worker-risk-assessment-guide/" class="button button-yellow w-100">Free Lone Working Policy Template</a>
                 </div>
