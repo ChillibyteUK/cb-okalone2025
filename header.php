@@ -229,6 +229,13 @@ defined('ABSPATH') || exit;
                                 <div class="h3">Features</div>
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
+                                    <a class="item" href="/solutions/panic-button/">
+                                        <img class="item__image" src="https://www.okaloneworker.com/wp-content/uploads/2025/06/panic.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Panic Button</div>
+                                            <div class="item__desc">Built-in panic button that allows workers to immediately send an emergency alert.</div>
+                                        </div>
+                                    </a>
                                     <a class="item" href="/solutions/man-down/">
                                         <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-fall-detection.png' ); ?>">
                                         <div class="item__inner">
@@ -255,13 +262,6 @@ defined('ABSPATH') || exit;
                                         <div class="item__inner">
                                             <div class="item__title">Connectivity and Coverage Solutions</div>
                                             <div class="item__desc">Keep your lone workers safe and connected no matter where they are.</div>
-                                        </div>
-                                    </a>
-                                    <a class="item" href="/solutions/panic-button/">
-                                        <img class="item__image" src="https://www.okaloneworker.com/wp-content/uploads/2025/06/panic.png">
-                                        <div class="item__inner">
-                                            <div class="item__title">Panic Button</div>
-                                            <div class="item__desc">Built-in panic button that allows workers to immediately send an emergency alert.</div>
                                         </div>
                                     </a>
                                 </div>
@@ -304,11 +304,11 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Protect your drivers in and out the vehicle with our fully-embedded Geotab integration.</div>
                                         </div>
                                     </a>
-									<a class="item" href="/solutions/zoleo/">
+                                    <a class="item" href="/satellite-devices/">
                                         <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-zoleo.png' ); ?>">
                                         <div class="item__inner">
-                                            <div class="item__title">ZOLEO Satellite Phones</div>
-                                            <div class="item__desc">Protect your remote workers through ZOLEO's satellite network, connected directly to our lone worker app.</div>
+                                            <div class="item__title">Satellite Devices</div>
+                                            <div class="item__desc">Protect your remote workers with satellite devices directly connected to our lone worker app.</div>
                                         </div>
                                     </a>
 									<a class="item" href="/solutions/lone-worker-api/">
@@ -318,13 +318,6 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Automate the data management of workers and scheduling of alerts by connecting our service to your HR or Workforce Management services.</div>
                                         </div>
                                     </a>
-									<a class="item" href="/solutions/spot-lone-worker/">
-										<img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-spot.png' ); ?>">
-										<div class="item__inner">
-											<div class="item__title">SPOT Satellite Phones</div>
-											<div class="item__desc">Get help to remote workers through our direct integration to the SPOT satellite network.</div>
-										</div>
-									</a>
                                 </div>
                             </div>
                         </div>
