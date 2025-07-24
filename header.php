@@ -336,6 +336,7 @@ defined('ABSPATH') || exit;
                                     <li><a href="/sectors/municipal-government/">Municipal/Government</a></li>
                                     <li><a href="/sectors/office-and-retail-staff/">Office and Retail Staff</a></li>
                                     <li><a href="/sectors/security-companies/">Security Companies</a></li>
+                                    <li><a href="/sectors/social-services/">Social Services</a></li>
                                     <li><a href="/sectors/utilities/">Utilities</a></li>
                                     <li><a href="/sectors/">All Sectors</a></li>
                                 </ul>
