@@ -328,10 +328,10 @@ defined('ABSPATH') || exit;
                                 <div class="mb-2">Whatever the risks your staff face at work, our fully accredited service will support them in an emergency.</div>
                                 <ul class="cols-md-2">
                                     <li><a href="/sectors/agriculture/">Agriculture</a></li>
-                                    <li><a href="/sectors/care/">Healthcare</a></li>
                                     <li><a href="/sectors/construction/">Construction</a></li>
                                     <li><a href="/sectors/education/">Education</a></li>
                                     <li><a href="/sectors/electricians-and-hvac-technicians/">Electricians &amp; HVAC Employees</a></li>
+                                    <li><a href="/sectors/care/">Healthcare</a></li>
                                     <li><a href="/sectors/logistics-and-drivers/">Logistics and Drivers</a></li>
                                     <li><a href="/sectors/municipal-government/">Municipal/Government</a></li>
                                     <li><a href="/sectors/office-and-retail-staff/">Office and Retail Staff</a></li>
