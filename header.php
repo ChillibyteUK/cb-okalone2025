@@ -141,7 +141,8 @@ defined('ABSPATH') || exit;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" /> 
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Start cookieyes banner --><script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/656733d89b24b27671b83202/script.js"></script><!-- End cookieyes banner -->
 </head>
 
 <body <?php body_class(); ?>>
