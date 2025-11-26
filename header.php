@@ -397,6 +397,13 @@ defined('ABSPATH') || exit;
                                         <div class="item__desc">See how our lone worker tech works</div>
                                     </div>
                                 </a>
+                                <a class="item" href="/resources/whitepapers/">
+                                    <img class="item__icon" src="<?= get_stylesheet_directory_uri() ?>/img/icons/blog.png">
+                                    <div class="item__inner">
+                                        <div class="item__title">Whitepapers</div>
+                                        <div class="item__desc"></div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="w-50 ms-auto">
                                 <a href="/resources/" class="knowledge-link"><span>View all Knowledge Hub</span><i class="fa-solid fa-arrow-right"></i></a>
