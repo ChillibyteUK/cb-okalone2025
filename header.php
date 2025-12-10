@@ -264,6 +264,13 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Keep your lone workers safe and connected no matter where they are.</div>
                                         </div>
                                     </a>
+                                    <a class="item" href="/solutions/privacy-mode/">
+                                        <img class="item__image" src="https://www.okaloneworker.com/wp-content/uploads/2025/12/privacy.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Privacy Mode</div>
+                                            <div class="item__desc">Limit location visibility to monitors to create more privacy for workers.</div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="right right--products" id="platform">
