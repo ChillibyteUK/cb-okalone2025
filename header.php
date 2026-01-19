@@ -336,6 +336,7 @@ defined('ABSPATH') || exit;
                                 <ul class="cols-md-2">
                                     <li><a href="/sectors/agriculture/">Agriculture</a></li>
                                     <li><a href="/sectors/construction/">Construction</a></li>
+                                    <li><a href="/sectors/department-of-corrections/">Department of Corrections</a></li>
                                     <li><a href="/sectors/education/">Education</a></li>
                                     <li><a href="/sectors/electricians-and-hvac-technicians/">Electricians &amp; HVAC Employees</a></li>
                                     <li><a href="/sectors/care/">Healthcare</a></li>
