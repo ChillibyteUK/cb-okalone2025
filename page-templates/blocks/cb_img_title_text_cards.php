@@ -31,7 +31,7 @@
                         <?php
                         if ($content = get_sub_field('content')) {
                             ?>
-                            <div class="fs-300 text--mid-grey"><?= esc_html($content) ?></div>
+                            <div class="fs-300 text--mid-grey"><?= wp_kses_post($content) ?></div>
                             <?php
                         }
                         if ($l) {
