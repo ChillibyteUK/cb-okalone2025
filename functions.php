@@ -107,44 +107,42 @@ add_image_size( 'custom-thumb-275x184', 275, 184, true );
  * Custom single XML sitemap
  * URL: /all-urls-sitemap.xml
  */
-
-add_action('init', function () {
-    add_rewrite_rule(
-        '^all-urls-sitemap\.xml$',
-        'index.php?ap_custom_sitemap=1',
-        'top'
-    );
-});
-
-add_filter('query_vars', function ($vars) {
-    $vars[] = 'ap_custom_sitemap';
-    return $vars;
-});
-
 add_action('template_redirect', function () {
-    if ((int) get_query_var('ap_custom_sitemap') !== 1) {
+    $request_path = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
+
+    if ($request_path !== '/all-urls-sitemap.xml') {
         return;
     }
 
     nocache_headers();
+    status_header(200);
     header('Content-Type: application/xml; charset=UTF-8');
 
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 
-    $post_types = ['post', 'page'];
+    $post_types = get_post_types([
+        'public' => true,
+    ], 'names');
+
+    unset($post_types['attachment']);
 
     $q = new WP_Query([
-        'post_type'              => $post_types,
+        'post_type'              => array_values($post_types),
         'post_status'            => 'publish',
         'posts_per_page'         => -1,
-        'orderby'                => 'date',
+        'orderby'                => 'modified',
         'order'                  => 'DESC',
         'fields'                 => 'ids',
         'no_found_rows'          => true,
         'update_post_meta_cache' => false,
         'update_post_term_cache' => false,
     ]);
+
+    // Homepage
+    echo "  <url>\n";
+    echo '    <loc>' . esc_xml(home_url('/')) . "</loc>\n";
+    echo "  </url>\n";
 
     foreach ($q->posts as $post_id) {
         $url = get_permalink($post_id);
@@ -162,11 +160,6 @@ add_action('template_redirect', function () {
         echo "  </url>\n";
     }
 
-    // Optional: add homepage
-    echo "  <url>\n";
-    echo '    <loc>' . esc_xml(home_url('/')) . "</loc>\n";
-    echo "  </url>\n";
-
     echo '</urlset>';
     exit;
-});
+}, 0);
