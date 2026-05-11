@@ -19,15 +19,8 @@ defined('ABSPATH') || exit;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- <link rel='stylesheet' id='font-awesome-css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' media='all' /> -->
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Light.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Light.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <?php
     if (get_field('gtm_property', 'options')) {
     ?>
