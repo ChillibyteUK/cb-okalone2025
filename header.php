@@ -325,6 +325,7 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Automate the data management of workers and scheduling of alerts by connecting our service to your HR or Workforce Management services.</div>
                                         </div>
                                     </a>
+                                    <a class="item__title" href="/solutions/integrations/" style="display: flex; align-items: flex-end; justify-content: flex-end; text-decoration: none;">See All</a>
                                 </div>
                             </div>
                         </div>
