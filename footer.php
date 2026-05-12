@@ -141,7 +141,8 @@ defined('ABSPATH') || exit;
 .chat-launcher-wrap {
   position: fixed;
   bottom: 14px;
-  right: 12px;
+  left: 12px;
+  right: auto;
   z-index: 99999999;
   display: flex;
   align-items: center;
@@ -208,7 +209,8 @@ defined('ABSPATH') || exit;
 @media (max-width: 540px) {
   .chat-launcher-wrap {
     bottom: 14px;
-    right: 12px;
+    left: 12px;
+    right: auto;
     gap: 8px;
   }
 
@@ -232,12 +234,13 @@ defined('ABSPATH') || exit;
 </style>
 
 <div id="custom-zendesk-wrap" class="chat-launcher-wrap">
-  <button id="custom-zendesk-prompt-close" class="chat-prompt-close" type="button" aria-label="Dismiss chat message">×</button>
-  <div id="custom-zendesk-prompt" class="chat-prompt" role="button">Hi. Need any help?</div>
-
   <button id="custom-zendesk-launcher" class="chat-launcher" type="button" aria-label="Open chat">
     <img id="chat-icon" src="/wp-content/uploads/2026/04/closed-chat.png" alt="Chat">
   </button>
+
+  <div id="custom-zendesk-prompt" class="chat-prompt" role="button">Hi. Need any help?</div>
+
+  <button id="custom-zendesk-prompt-close" class="chat-prompt-close" type="button" aria-label="Dismiss chat message">×</button>
 </div>
 
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ca494108-82b7-45fc-be22-331c70729459"></script>
