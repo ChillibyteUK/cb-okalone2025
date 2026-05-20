@@ -185,6 +185,7 @@ defined('ABSPATH') || exit;
                                 <li class="" aria-controls="features">Features</li>
                                 <li class="" aria-controls="platform">Platform</li>
                                 <li class="" aria-controls="integrations">Integrations</li>
+                                <li class="" aria-controls="training">Training</li>
                             </ul>
                             <div class="right right--products active" id="loneWorkerApp">
                                 <div class="h3">Lone Worker App</div>
@@ -243,13 +244,6 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Get automatic alerts if a worker fails to end a high-risk activity on time.</div>
                                         </div>
                                     </a>
-                                    <a class="item" href="/solutions/mass-notifications/">
-                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-mass-notification.png' ); ?>">
-                                        <div class="item__inner">
-                                            <div class="item__title">Mass Notification</div>
-                                            <div class="item__desc">Warn and inform your dispersed workforce through mass notification system embedded in our lone worker app.</div>
-                                        </div>
-                                    </a>
                                     <a class="item" href="/solutions/connectivity-and-coverage-solutions/">
                                         <img class="item__image" src="https://www.okaloneworker.com/wp-content/uploads/2025/06/connectivity.png">
                                         <div class="item__inner">
@@ -284,11 +278,18 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Get 24/7 emergency help where you are through our professional Safety Monitoring Center.</div>
                                         </div>
                                     </a>
-                                    <a class="item" href="/safety-awards/">
-                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-safety-awards.png' ); ?>">
+                                    <a class="item" href="/solutions/mass-notifications/">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-mass-notification.png' ); ?>">
                                         <div class="item__inner">
-                                            <div class="item__title">Safety Awards &amp; Training</div>
-                                            <div class="item__desc">Embed and drive usage of your lone worker service by engaging your teams with our dedicated Safety Awards & dedicated training.</div>
+                                            <div class="item__title">Mass Notification</div>
+                                            <div class="item__desc">Warn and inform your dispersed workforce through mass notification system embedded in our lone worker app.</div>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="/solutions/threat-intelligence/">
+                                        <img class="item__image" src="/wp-content/uploads/2026/05/threat.png">
+                                        <div class="item__inner">
+                                            <div class="item__title">Threat Intelligence</div>
+                                            <div class="item__desc"></div>
                                         </div>
                                     </a>
 								</div>
@@ -297,7 +298,7 @@ defined('ABSPATH') || exit;
                                 <div class="h3">Integrations</div>
                                 <div>We provide a range of safety products including devices and apps to ensure the most appropriate solution for your organisation.</div>
                                 <div class="items">
-									<a class="item" href="/solutions/geotab/">
+                                    <a class="item" href="/solutions/geotab/">
                                         <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-geotab.png' ); ?>">
                                         <div class="item__inner">
                                             <div class="item__title">Geotab</div>
@@ -311,14 +312,26 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Protect your remote workers with satellite devices directly connected to our lone worker app.</div>
                                         </div>
                                     </a>
-									<a class="item" href="/solutions/lone-worker-api/">
-										<img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-api.png' ); ?>">
+                                    <a class="item" href="/solutions/lone-worker-api/">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-api.png' ); ?>">
                                         <div class="item__inner">
-											<div class="item__title">API</div>
+                                            <div class="item__title">API</div>
                                             <div class="item__desc">Automate the data management of workers and scheduling of alerts by connecting our service to your HR or Workforce Management services.</div>
                                         </div>
                                     </a>
                                     <a class="item__title" href="/solutions/integrations/" style="display: flex; align-items: flex-end; justify-content: flex-end; text-decoration: none;">See All</a>
+                                </div>
+                            </div>
+                            <div class="right right--products" id="training">
+                                <div class="h3">Training</div>
+                                <div class="items">
+                                    <a class="item" href="/safety-awards/">
+                                        <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-safety-awards.png' ); ?>">
+                                        <div class="item__inner">
+                                            <div class="item__title">Safety Awards &amp; Training</div>
+                                            <div class="item__desc">Embed and drive usage of your lone worker service by engaging your teams with our dedicated Safety Awards & dedicated training.</div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
