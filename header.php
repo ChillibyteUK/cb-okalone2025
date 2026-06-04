@@ -289,7 +289,7 @@ defined('ABSPATH') || exit;
                                         <img class="item__image" src="/wp-content/uploads/2026/05/threat.png">
                                         <div class="item__inner">
                                             <div class="item__title">Threat Intelligence</div>
-                                            <div class="item__desc"></div>
+                                            <div class="item__desc">Warn your team of critical risks in their area with real-time risk alerts.</div>
                                         </div>
                                     </a>
 								</div>
@@ -324,6 +324,7 @@ defined('ABSPATH') || exit;
                             </div>
                             <div class="right right--products" id="training">
                                 <div class="h3">Training</div>
+                                <div>Get the most out of your lone worker technology with dedicated training and unique Safety Awards.</div>
                                 <div class="items">
                                     <a class="item" href="/safety-awards/">
                                         <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-safety-awards.png' ); ?>">
