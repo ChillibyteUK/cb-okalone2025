@@ -258,6 +258,13 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Limit location visibility to monitors to create more privacy for workers.</div>
                                         </div>
                                     </a>
+                                    <a class="item" href="/solutions/fall-detection-worker-safety-feature/">
+                                        <img class="item__image" src="https://www.okaloneworker.com/wp-content/uploads/2026/07/fall.jpg">
+                                        <div class="item__inner">
+                                            <div class="item__title">Fall Detection</div>
+                                            <div class="item__desc">Protect Your Lone Workers with Automatic Fall Detection.</div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="right right--products" id="platform">
