@@ -63,7 +63,7 @@ if ($term_slug == 'how-to') {
                 while (have_posts()) {
                     the_post();
 
-                    if ($term_slug == 'video') {
+                    if ($term_slug == 'video' || $term_slug == 'webinar') {
                         ?>
                 <div class="col-md-4">
                     <a href="<?=get_the_permalink()?>" class="videos__card">
