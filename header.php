@@ -371,6 +371,7 @@ defined('ABSPATH') || exit;
 								<li><a href="/about/#leadership">Leadership Team</a></li>
                                 <li><a href="/data-security/">Data Security</a></li>
                                 <li><a href="/partners/">Partners</a></li>
+                                <li><a href="/ok-alone/partner-program/">Partner Program</a></li>
                                 <li><a href="/careers/">Careers</a></li>
 								<li><a href="/contact-us/">Contact Us</a></li>
 							</ul>
