@@ -4,6 +4,56 @@ function acf_blocks()
     if (function_exists('acf_register_block_type')) {
 
         acf_register_block_type(array(
+            'name'              => 'cb-trusted-partners',
+            'title'             => __('CB Trusted Partners'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb-trusted-partners.php',
+            'mode'              => 'edit',
+            'supports'          => array('mode' => false),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'cb-partner',
+            'title'             => __('CB Partner'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb-partner.php',
+            'mode'              => 'edit',
+            'supports'          => array('mode' => false),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'cb_detailed_card',
+            'title'             => __('CB Detailed Card'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_detailed_card.php',
+            'mode'              => 'edit',
+            'supports'          => array('mode' => false),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'cb_at_a_glance',
+            'title'             => __('CB At a Glance'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_at_a_glance.php',
+            'mode'              => 'edit',
+            'supports'          => array('mode' => false),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'key_benefits',
+            'title'             => __('CB Key Benefits'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_key_benefits.php',
+            'mode'              => 'edit',
+            'supports'          => array('mode' => false),
+        ));
+
+        acf_register_block_type(array(
             'name'                => 'cb_author_stacey', 
             'title'               => __('CB Author (Stacey)'), 
             'category'            => 'layout',

@@ -1,0 +1,23 @@
+{
+    "key": "group_cb-partner",
+    "title": "cb-partner",
+    "fields": [
+        {
+            "key": "field_cb-partner_title",
+            "label": "cb-partner",
+            "name": "title",
+            "type": "message"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/cb-partner"
+            }
+        ]
+    ],
+    "active": 1,
+    "description": ""
+}

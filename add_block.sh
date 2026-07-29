@@ -31,16 +31,51 @@ else
     echo "Import already exists in $blocks_scss"
 fi
 
-# Define the block registration code
-block_code="\n        acf_register_block_type(array(\n            'name'                => '$block_slug', \n            'title'               => __('$block_name'), \n            'category'            => 'layout',\n            'icon'                => 'cover-image', \n            'render_template'    => 'page-templates/blocks/$block_slug.php', \n            'mode'                => 'edit',\n            'supports'            => array('mode' => false),\n        ));\n"
+# Create the block registration code in a temporary file
+block_temp=$(mktemp)
 
-# Insert block registration code into cb-blocks.php
-if grep -q "function acf_blocks()" "$blocks_php"; then
-    sed -i "/if (function_exists('acf_register_block_type')) {/a\\$block_code" "$blocks_php"
-    echo "Added block registration to $blocks_php"
+cat > "$block_temp" <<EOF
+
+        acf_register_block_type(array(
+            'name'              => '$block_slug',
+            'title'             => __('$block_name'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/$block_slug.php',
+            'mode'              => 'edit',
+            'supports'          => array('mode' => false),
+        ));
+EOF
+
+# Insert block registration into cb-blocks.php
+if grep -Fq "if (function_exists('acf_register_block_type')) {" "$blocks_php"; then
+
+    if grep -Fq "'name'              => '$block_slug'" "$blocks_php"; then
+        echo "Block registration already exists in $blocks_php"
+    else
+        awk -v insert_file="$block_temp" '
+            {
+                print
+                if (!inserted && $0 ~ /if \(function_exists\('\''acf_register_block_type'\''\)\) \{/) {
+                    while ((getline line < insert_file) > 0) {
+                        print line
+                    }
+                    close(insert_file)
+                    inserted = 1
+                }
+            }
+        ' "$blocks_php" > "${blocks_php}.tmp"
+
+        mv "${blocks_php}.tmp" "$blocks_php"
+
+        echo "Added block registration to $blocks_php"
+    fi
+
 else
-    echo "acf_blocks() function not found in $blocks_php. Please check the file."
+    echo "Could not find the ACF block registration section in $blocks_php"
 fi
+
+rm -f "$block_temp"
 
 # Create ACF JSON skeleton with escaped forward slash and kebab-case block name
 acf_json_content="{

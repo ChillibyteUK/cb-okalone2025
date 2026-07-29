@@ -104,6 +104,21 @@ defined('ABSPATH') || exit;
         </div>
     </div>
 </div>
+<!-- modal_form -->
+<div class="modal fade" id="newSectionsModal" tabindex="-1" aria-labelledby="newSectionsModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-modal btn-close align-self-start" style="background:none;border:none"
+                    data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <iframe loading="lazy" style="border: 0;" src="https://info.okaloneworker.com/l/830213/2026-06-24/2nxr1d"
+                    width="100%" height="1200" frameborder="0" scrolling="auto" id="myiframe"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
 </div><!-- #page -->
 <div class="side-buttons side-buttons--right">
     <a href="/contact-us/">

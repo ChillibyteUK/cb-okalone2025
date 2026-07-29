@@ -1,0 +1,202 @@
+.cb-detailed-card {
+    position: relative;
+    padding: clamp(4rem, 7vw, 7rem) 0;
+    overflow: hidden;
+    background:
+        repeating-linear-gradient(
+            135deg,
+            rgba($orange, .025) 0,
+            rgba($orange, .025) 1px,
+            transparent 1px,
+            transparent 2rem
+        ),
+        #fbfaff;
+
+    &__header {
+        max-width: 760px;
+        margin-bottom: 4rem;
+    }
+
+    &__strapline {
+        gap: .75rem;
+        margin-bottom: 1rem;
+        color: $orange;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        font-size: var(--fs-200);
+    }
+
+    &__strapline-line {
+        display: block;
+        width: 1.5rem;
+        height: 2px;
+        background: currentColor;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__intro {
+        max-width: 620px;
+        margin-top: 1rem;
+        color: #6f7175;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__cards {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background: #fff;
+        border: 1px solid #e4e8ef;
+        border-radius: 1rem;
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .04);
+
+        transition:
+            border-color .25s ease,
+            box-shadow .25s ease,
+            transform .25s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            border-color: $orange;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .08);
+
+            .cb-detailed-card__icon {
+                border-color: rgba($orange, .4);
+                background: rgba($orange, .08);
+            }
+        }
+    }
+
+    &__card-top {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__icon {
+        flex: 0 0 auto;
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: .8rem;
+        border: 1px solid rgba($orange, .2);
+        border-radius: .75rem;
+        background: rgba($orange, .05);
+
+        transition:
+            border-color .25s ease,
+            background-color .25s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__card-strapline {
+        color: $orange;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+    }
+
+    &__card-title {
+        margin: 0 0 1rem;
+        font-weight: 700;
+        transition: color .25s ease;
+    }
+
+    &__card-text {
+        margin-bottom: 1.5rem;
+        color: #6f7175;
+        font-size: var(--fs-200);
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__bullets {
+        margin-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #e4e8ef;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            font-size: var(--fs-200);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                content: "\2713";
+                position: absolute;
+                top: .15rem;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                color: #fff;
+                font-weight: 700;
+                background: $orange;
+                border-radius: 50%;
+            }
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__ideal {
+        margin-top: auto;
+        padding-top: 1.25rem;
+        color: #9a9da2;
+        border-top: 1px solid #e4e8ef;
+        font-size: var(--fs-200);
+
+        strong {
+            color: #55585c;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__header {
+            margin-bottom: 3rem;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 4rem 0;
+
+        &__card {
+            padding: 1.5rem;
+        }
+
+        &__card-top {
+            align-items: flex-start !important;
+        }
+    }
+}
