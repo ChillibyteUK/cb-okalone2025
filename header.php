@@ -285,10 +285,10 @@ defined('ABSPATH') || exit;
                                             <div class="item__desc">Get 24/7 emergency help where you are through our professional Safety Monitoring Center.</div>
                                         </div>
                                     </a>
-                                    <a class="item" href="/solutions/mass-notifications/">
+                                    <a class="item" href="/solutions/team-broadcast/">
                                         <img class="item__image" src="<?= esc_url( get_stylesheet_directory_uri() . '/img/icons/icon-mass-notification.png' ); ?>">
                                         <div class="item__inner">
-                                            <div class="item__title">Mass Notification</div>
+                                            <div class="item__title">Team Broadcast</div>
                                             <div class="item__desc">Warn and inform your dispersed workforce through mass notification system embedded in our lone worker app.</div>
                                         </div>
                                     </a>
