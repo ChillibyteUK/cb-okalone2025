@@ -48,6 +48,55 @@
     }
   }
 }
+// Gravity Forms' "Orbital" theme styles submit buttons via high-specificity
+// selectors and its own --gf-local-* variables, and the Customizer "Additional
+// CSS" forces .button-yellow text to black. Re-assert the site button look on
+// GF submit buttons here (GF doesn't use !important, so !important wins):
+// yellow, black text, white on hover as the orange fill slides in.
+.gform_wrapper button.button-yellow {
+  background-color: var(--col-yellow-400) !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0.25rem !important;
+  color: var(--col-black) !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  padding: calc(var(--_padding-inline) + var(--_button-border))
+    calc(var(--_padding-block) + var(--_button-border)) !important;
+
+  // Re-create the orange slide-in hover fill. GF resets button pseudo-elements,
+  // so re-declare .button-yellow::before here with !important to force it back.
+  &::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -2px;
+    left: 50%;
+    width: 0;
+    height: calc(100% + var(--_button-border));
+    background-color: var(--col-orange-400);
+    transition: width var(--transition);
+    transform: translateX(-50%);
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: var(--col-white) !important;
+
+    &::before {
+      width: 100% !important;
+    }
+  }
+}
+
 .button-outline {
   background-color: transparent;
   border: var(--_button-border) solid black;

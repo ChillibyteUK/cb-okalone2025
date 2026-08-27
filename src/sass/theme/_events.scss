@@ -1,0 +1,155 @@
+// =============================================================
+// Events (CPT: event)
+// Single landing page + Upcoming/Past listing archive
+//
+// Spacing is handled with Bootstrap utility classes in the markup
+// (p-*, m-*, gap-*, row/col). This file only carries the non-spacing
+// visuals: colours, radius, typography and the bullet/card treatments.
+// =============================================================
+
+// Single: builds on the standard .single-blog card styling.
+.single-event {
+
+    // Co-branding lockup: event logo + OK Alone logo, booth beneath.
+    .event-lockup {
+        &__logo {
+            max-height: 60px;
+            width: auto;
+        }
+
+        &__logo--oka {
+            max-height: 44px;
+        }
+
+        &__divider {
+            align-self: stretch;
+            width: 1px;
+            min-height: 36px;
+            background: var(--col-mid-grey);
+            opacity: 0.35;
+        }
+
+        &__booth {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        &__booth-label {
+            font-size: var(--fs-100);
+            font-weight: var(--fw-900);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--col-blue-400);
+        }
+
+        &__booth-value {
+            font-size: var(--fs-500);
+            font-weight: var(--fw-900);
+        }
+    }
+
+    &__strapline {
+        font-size: var(--fs-500);
+        color: var(--col-mid-grey);
+    }
+
+    // Structured, visually distinct detail block.
+    .event-facts {
+        background: var(--col-blue-100);
+        border-radius: 1rem;
+
+        &__label {
+            font-size: var(--fs-100);
+            font-weight: var(--fw-900);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--col-blue-400);
+        }
+
+        &__value {
+            font-size: var(--fs-400);
+
+            a {
+                color: var(--col-black);
+                text-decoration: underline;
+
+                &:hover {
+                    color: var(--col-blue-400);
+                }
+            }
+        }
+    }
+
+    .event-booth {
+        &__icon {
+            flex: 0 0 auto;
+            width: 1.5rem;
+            height: 1.5rem;
+            object-fit: contain;
+
+            &--bullet {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100vw;
+                background: var(--col-blue-400);
+                color: var(--col-white);
+                font-size: 0.7rem;
+            }
+        }
+
+        &__text {
+            font-size: var(--fs-400);
+        }
+    }
+}
+
+// ---- Listing / archive --------------------------------------
+
+.events-archive {
+
+    &__group--past .event-card {
+        opacity: 0.85;
+    }
+
+    .event-card {
+        text-decoration: none;
+        color: var(--col-black);
+        background: var(--col-white);
+        border-radius: 1rem;
+        box-shadow: var(--shadow-out);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: box-shadow var(--transition), transform var(--transition);
+
+        &:hover {
+            box-shadow: var(--shadow-in);
+            transform: translateY(2px);
+        }
+
+        &__image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        &__title {
+            font-size: var(--fs-500);
+        }
+
+        &__meta li {
+            font-size: var(--fs-300);
+            color: var(--col-mid-grey);
+
+            i {
+                color: var(--col-blue-400);
+                width: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ defined('ABSPATH') || exit;
 
 require_once CB_THEME_DIR . '/inc/cb-utility.php';
 require_once CB_THEME_DIR . '/inc/cb-blocks.php';
+require_once CB_THEME_DIR . '/inc/cb-events.php';
 
 // Remove unwanted SVG filter injection WP
 remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
@@ -190,14 +191,45 @@ function wpdocs_remove_shortcode_from_index($content)
  */
 function wd_gf_update_submit_button($button_input, $form)
 {
-    //save attribute string to $button_match[1]
-    preg_match("/<input([^\/>]*)(\s\/)*>/", $button_input, $button_match);
+    // Classes to apply so GF submit buttons match the site button style.
+    $button_classes = 'button button-yellow mb-2';
 
-    //remove value attribute (since we aren't using an input)
-    $button_atts = str_replace("value='" . $form['button']['text'] . "' ", "", $button_match[1]);
+    // Legacy: older Gravity Forms output an <input> submit. Convert it to a
+    // <button>, preserving its attributes (id, onclick, etc.) but dropping the
+    // value attribute since the label now lives inside the element.
+    if (preg_match("/<input([^\/>]*)(\s\/)*>/", $button_input, $button_match)) {
+        $button_atts  = str_replace("value='" . $form['button']['text'] . "' ", "", $button_match[1]);
+        $button_input = '<button ' . $button_atts . '>' . esc_html($form['button']['text']) . '</button>';
+    }
 
-    // create the button element with the button text inside the button element instead of set as the value
-    return '<button ' . $button_atts . '><span>' . $form['button']['text'] . '</span></button>';
+    // Force our class list onto the button (replace GF's default classes).
+    if (preg_match('/<button[^>]*\sclass=([\'"]).*?\1/', $button_input)) {
+        $button_input = preg_replace(
+            '/(<button[^>]*\sclass=)([\'"]).*?\2/',
+            '$1"' . $button_classes . '"',
+            $button_input,
+            1
+        );
+    } else {
+        $button_input = preg_replace('/<button/', '<button class="' . $button_classes . '"', $button_input, 1);
+    }
+
+    // Wrap the label in a <span> (matching the site button markup) unless it
+    // already contains one.
+    $button_input = preg_replace_callback(
+        '/(<button[^>]*>)(.*?)(<\/button>)/s',
+        static function ($m) {
+            $inner = trim($m[2]);
+            if (stripos($inner, '<span') === false && '' !== $inner) {
+                $inner = '<span>' . $inner . '</span>';
+            }
+            return $m[1] . $inner . $m[3];
+        },
+        $button_input,
+        1
+    );
+
+    return $button_input;
 }
 add_filter('gform_submit_button', 'wd_gf_update_submit_button', 10, 2);
 

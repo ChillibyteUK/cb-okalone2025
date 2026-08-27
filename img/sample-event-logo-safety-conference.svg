@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-label="The Safety Conference 2025 (placeholder logo)">
+  <defs>
+    <linearGradient id="tsc-circle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26467f"/>
+      <stop offset="1" stop-color="#152a52"/>
+    </linearGradient>
+  </defs>
+  <!-- Emblem: badge + check -->
+  <circle cx="74" cy="80" r="58" fill="url(#tsc-circle)"/>
+  <circle cx="74" cy="80" r="58" fill="none" stroke="#f5a623" stroke-width="4"/>
+  <path d="M50 82 l17 17 l32 -40" fill="none" stroke="#f5a623" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="156" y="72" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="38" fill="#152a52" letter-spacing="1">THE SAFETY</text>
+  <text x="158" y="114" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="32" fill="#f5a623" letter-spacing="1.5">CONFERENCE&#160;<tspan fill="#152a52">2025</tspan></text>
+</svg>
