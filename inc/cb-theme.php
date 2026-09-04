@@ -5,6 +5,7 @@ defined('ABSPATH') || exit;
 require_once CB_THEME_DIR . '/inc/cb-utility.php';
 require_once CB_THEME_DIR . '/inc/cb-blocks.php';
 require_once CB_THEME_DIR . '/inc/cb-events.php';
+require_once CB_THEME_DIR . '/inc/cb-webinars.php';
 
 // Remove unwanted SVG filter injection WP
 remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');

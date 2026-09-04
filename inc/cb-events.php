@@ -101,6 +101,26 @@ add_action('after_switch_theme', function () {
 });
 
 /**
+ * Enqueue the embed iframe auto-resize listener on single event/webinar pages.
+ */
+function cb_embed_resize_enqueue()
+{
+    if (! is_singular(array('event', 'webinar'))) {
+        return;
+    }
+
+    $path = get_stylesheet_directory() . '/js/cb-embed-resize.js';
+    wp_enqueue_script(
+        'cb-embed-resize',
+        get_stylesheet_directory_uri() . '/js/cb-embed-resize.js',
+        array(),
+        file_exists($path) ? filemtime($path) : null,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'cb_embed_resize_enqueue');
+
+/**
  * Populate the "Choose form" ACF select with the site's Gravity Forms.
  */
 function cb_event_load_gf_form_choices($field)
@@ -168,9 +188,11 @@ function cb_event_is_past($post_id = null)
 function cb_event_form_is_visible($post_id = null)
 {
     $post_id = $post_id ?: get_the_ID();
+    $embed   = get_field('event_form_embed', $post_id);
     $form_id = get_field('event_form_id', $post_id);
 
-    if (empty($form_id)) {
+    // Nothing to show unless a Pardot embed or a (legacy) Gravity Form is set.
+    if (empty($embed) && empty($form_id)) {
         return false;
     }
 
@@ -225,6 +247,43 @@ function cb_event_render_content($content)
     }
 
     return $html;
+}
+
+/**
+ * Sanitise an admin-entered form embed (e.g. a Pardot <iframe> snippet),
+ * allowing the iframe/embed markup while stripping anything unsafe.
+ *
+ * @param string $html Raw embed markup.
+ * @return string Safe HTML.
+ */
+function cb_event_embed_kses($html)
+{
+    $allowed = array(
+        'iframe' => array(
+            'src'               => true,
+            'width'             => true,
+            'height'            => true,
+            'name'              => true,
+            'id'                => true,
+            'class'             => true,
+            'style'             => true,
+            'type'              => true,
+            'title'             => true,
+            'scrolling'         => true,
+            'frameborder'       => true,
+            'allow'             => true,
+            'allowfullscreen'   => true,
+            'allowtransparency' => true,
+            'loading'           => true,
+            'referrerpolicy'    => true,
+            'sandbox'           => true,
+        ),
+        'div' => array('class' => true, 'id' => true, 'style' => true),
+        'p'   => array('class' => true, 'style' => true),
+        'br'  => array(),
+    );
+
+    return wp_kses($html, $allowed);
 }
 
 /**

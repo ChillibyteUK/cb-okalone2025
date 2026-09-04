@@ -327,12 +327,33 @@
             "append": ""
         },
         {
+            "key": "field_event_form_embed",
+            "label": "Form embed code",
+            "name": "event_form_embed",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "0": false,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_event_form_id",
-            "label": "Choose form",
+            "label": "Choose form (legacy Gravity Form)",
             "name": "event_form_id",
             "aria-label": "",
             "type": "select",
-            "instructions": "The Gravity Form to embed. Leave empty to show no form.",
+            "instructions": "Legacy Gravity Form. Leave empty if you are using the Pardot embed code above.",
             "required": 0,
             "conditional_logic": false,
             "wrapper": {
@@ -545,5 +566,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786467879
+    "modified": 1787842724
 }

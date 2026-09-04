@@ -140,12 +140,17 @@ $img          = get_the_post_thumbnail($post_id, 'full', array('class' => 'singl
                 // "Meet us there" — form, or its post-event replacement.
                 if (cb_event_form_is_visible($post_id)) :
                     $form_heading = get_field('event_form_heading') ?: 'Meet us there';
+                    $form_embed   = get_field('event_form_embed');
                     $form_id      = get_field('event_form_id');
                     ?>
                     <section class="event-meet py-4" id="meet-us-there">
                         <h2><?= esc_html($form_heading); ?></h2>
                         <?php
-                        if (function_exists('gravity_form')) {
+                        if (! empty($form_embed)) {
+                            // Pardot (or other) embed code.
+                            echo '<div class="event-meet__embed js-form-embed">' . cb_event_embed_kses($form_embed) . '</div>';
+                        } elseif ($form_id && function_exists('gravity_form')) {
+                            // Legacy Gravity Form.
                             gravity_form((int) $form_id, false, true, false, null, true);
                         }
                         ?>
