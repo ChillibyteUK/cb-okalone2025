@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- Usercentrics CMP - autoblocker must stay above every other script in <head> -->
     <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
-    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-ruleset-id="qvZ6hJNs-eUGDY" async></script>
+    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="qvZ6hJNs-eUGDY" async></script>
     <!-- <link rel='stylesheet' id='font-awesome-css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' media='all' /> -->
     <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/fonts/BasisGrotesquePro-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
