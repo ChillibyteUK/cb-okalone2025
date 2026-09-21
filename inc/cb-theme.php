@@ -241,12 +241,15 @@ function cb_theme_enqueue()
     // wp_enqueue_style('lightbox-stylesheet', get_stylesheet_directory_uri() . '/css/lightbox.min.css', array(), $the_theme->get('Version'));
     // wp_enqueue_script('lightbox-scripts', get_stylesheet_directory_uri() . '/js/lightbox-plus-jquery.min.js', array(), $the_theme->get('Version'), true);
     // wp_enqueue_script('lightbox-scripts', get_stylesheet_directory_uri() . '/js/lightbox.min.js', array(), $the_theme->get('Version'), true);
-    wp_enqueue_style('aos-style', "https://unpkg.com/aos@2.3.1/dist/aos.css", array());
-    wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
-    wp_enqueue_style('swiper-style', "https://unpkg.com/swiper/swiper-bundle.min.css", array());
-    wp_enqueue_script('swiper', "https://unpkg.com/swiper/swiper-bundle.min.js", array(), null, true);
+    // Vendor libraries are self-hosted (not loaded from unpkg / code.jquery.com) so the
+    // Usercentrics autoblocker treats them as first-party and doesn't block them pre-consent.
+    $vendor_uri = get_stylesheet_directory_uri();
+    wp_enqueue_style('aos-style', $vendor_uri . '/css/vendor/aos.min.css', array(), '2.3.1');
+    wp_enqueue_script('aos', $vendor_uri . '/js/vendor/aos.min.js', array(), '2.3.1', true);
+    wp_enqueue_style('swiper-style', $vendor_uri . '/css/vendor/swiper-bundle.min.css', array(), '14.2.0');
+    wp_enqueue_script('swiper', $vendor_uri . '/js/vendor/swiper-bundle.min.js', array(), '14.2.0', true);
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.3.min.js', array(), null, true);
+    wp_enqueue_script('jquery', $vendor_uri . '/js/vendor/jquery-3.6.3.min.js', array(), '3.6.3', true);
     // wp_enqueue_script('parallax', get_stylesheet_directory_uri() . '/js/parallax.min.js', array('jquery'), null, true);
 
 }

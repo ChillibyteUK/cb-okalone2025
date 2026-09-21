@@ -1,10 +1,17 @@
 // new WOW().init();
 
-AOS.init({
-    duration: 600,
-    easing: "ease-in-out",
-    once: true,
-});
+if (window.AOS) {
+    AOS.init({
+        duration: 600,
+        easing: "ease-in-out",
+        once: true,
+    });
+} else {
+    // AOS didn't load (e.g. blocked by a consent tool) - reveal content rather than leaving it at opacity 0.
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('[data-aos]').forEach((el) => el.classList.add('aos-animate'));
+    });
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 

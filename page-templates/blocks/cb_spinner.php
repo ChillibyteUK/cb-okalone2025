@@ -42,7 +42,6 @@ $title = get_field('title') ?: 'Protection you can count on';
     </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.0/countUp.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('.counter').forEach(function(counter) {
