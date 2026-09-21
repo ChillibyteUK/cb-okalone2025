@@ -250,7 +250,7 @@ defined('ABSPATH') || exit;
 
 <div id="custom-zendesk-wrap" class="chat-launcher-wrap">
   <button id="custom-zendesk-launcher" class="chat-launcher" type="button" aria-label="Open chat">
-    <img id="chat-icon" src="/wp-content/uploads/2026/04/closed-chat.png" alt="Chat">
+    <img id="chat-icon" src="/wp-content/uploads/2026/05/closed-chat.png" alt="Chat">
   </button>
 
   <div id="custom-zendesk-prompt" class="chat-prompt" role="button">Hi. Need any help?</div>
