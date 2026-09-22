@@ -27,8 +27,13 @@ defined('ABSPATH') || exit;
     <?php
     if (get_field('gtm_property', 'options')) {
     ?>
-        <!-- Google Tag Manager -->
-        <script>
+        <!-- Google Tag Manager.
+             type="text/plain" + data-usercentrics is Usercentrics' manual consent markup: the CMP
+             flips it to text/javascript only once the named service is consented to. The value must
+             match the service name in the Usercentrics admin exactly. We don't rely on the
+             autoblocker for GTM because NitroPack rewrites inline scripts and the autoblocker's
+             hash-matching then misses them (GTM was firing pre-consent on cached pages). -->
+        <script type="text/plain" data-usercentrics="Google Tag Manager">
             <?php
             if (is_singular('guides') || is_post_type_archive('guides')) {
             ?>
@@ -78,9 +83,9 @@ defined('ABSPATH') || exit;
     }
     if (get_field('ga_property', 'options')) {
     ?>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=<?= get_field('ga_property', 'options') ?>"></script>
-        <script>
+        <!-- Global site tag (gtag.js) - Google Analytics (consent-gated, see GTM note above) -->
+        <script type="text/plain" data-usercentrics="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=<?= get_field('ga_property', 'options') ?>"></script>
+        <script type="text/plain" data-usercentrics="Google Analytics">
             window.dataLayer = window.dataLayer || [];
 
             function gtag() {
@@ -124,15 +129,16 @@ defined('ABSPATH') || exit;
     }
     ?>
     <?php wp_head(); ?>
-    <script type="text/javascript" async src="//l.getsitecontrol.com/v7n3e214.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7R39LXLMJQ"></script>
-    <script>
+    <!-- GetSiteControl popups (consent-gated; service name is lowercase in the Usercentrics database) -->
+    <script type="text/plain" data-usercentrics="getsitecontrol" async src="//l.getsitecontrol.com/v7n3e214.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics (consent-gated) -->
+    <script type="text/plain" data-usercentrics="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-7R39LXLMJQ"></script>
+    <script type="text/plain" data-usercentrics="Google Analytics">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-7R39LXLMJQ');
-    </script>    
+    </script>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -143,18 +149,9 @@ defined('ABSPATH') || exit;
 <body <?php body_class(); ?>>
     <?php
     do_action('wp_body_open');
-
-    if (get_field('gtm_property', 'options')) {
-        if (!is_user_logged_in()) {
-    ?>
-            <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe
-                    src="https://www.googletagmanager.com/ns.html?id=<?= get_field('gtm_property', 'options') ?>"
-                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-    <?php
-        }
-    }
+    // The GTM <noscript> iframe used to go here. It was removed deliberately: it only runs when
+    // JavaScript is off, and then the consent banner can't run either, so it would track
+    // visitors who have had no chance to consent (PECR).
     ?>
     <div class="site" id="page">
         <header>

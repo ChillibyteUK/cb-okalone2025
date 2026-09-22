@@ -258,7 +258,9 @@ defined('ABSPATH') || exit;
   <button id="custom-zendesk-prompt-close" class="chat-prompt-close" type="button" aria-label="Dismiss chat message">×</button>
 </div>
 
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ca494108-82b7-45fc-be22-331c70729459"></script>
+<!-- Zendesk messenger. Consent-gated via Usercentrics manual markup (Functional category):
+     the CMP flips this to text/javascript once "Zendesk" is allowed. -->
+<script type="text/plain" data-usercentrics="Zendesk" id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ca494108-82b7-45fc-be22-331c70729459"></script>
 
 <script>
   function initZendeskLauncher() {
@@ -266,9 +268,18 @@ defined('ABSPATH') || exit;
     var prompt = document.getElementById('custom-zendesk-prompt');
     var promptClose = document.getElementById('custom-zendesk-prompt-close');
 
+    // Zendesk hasn't loaded (visitor hasn't consented to Functional cookies yet):
+    // open the cookie settings so they can allow it, rather than doing nothing.
+    function askForConsent() {
+      if (window.UC_UI && typeof UC_UI.showSecondLayer === 'function') {
+        UC_UI.showSecondLayer();
+      }
+    }
+
     if (prompt) {
       prompt.addEventListener('click', function (e) {
         e.preventDefault();
+        if (typeof zE === 'undefined') { askForConsent(); return; }
         userHasClicked = true;
 
         if (isOpen) {
@@ -315,10 +326,27 @@ defined('ABSPATH') || exit;
 
     var tries = 0;
     var maxTries = 50;
+    var zeReady = false;
 
+    launcher.addEventListener('click', function (e) {
+      if (typeof zE === 'undefined') { e.preventDefault(); askForConsent(); }
+    });
+
+    // Consent can arrive well after page load, so re-run the zE poll whenever
+    // Usercentrics reports a consent change.
+    window.addEventListener('UC_UI_CMP_EVENT', function () {
+      if (!zeReady) waitForZE();
+    });
+
+    waitForZE();
+
+    function waitForZE() {
+    tries = 0;
     var timer = setInterval(function () {
       if (typeof zE !== 'undefined') {
         clearInterval(timer);
+        if (zeReady) return;
+        zeReady = true;
 
         // Force a known closed/hidden state on load
         try { zE('messenger', 'close'); } catch (e) {}
@@ -375,6 +403,7 @@ defined('ABSPATH') || exit;
         clearInterval(timer);
       }
     }, 200);
+    }
   }
 
   if (document.readyState === 'loading') {
