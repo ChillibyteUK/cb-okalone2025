@@ -241,8 +241,8 @@ function cb_theme_enqueue()
     // wp_enqueue_style('lightbox-stylesheet', get_stylesheet_directory_uri() . '/css/lightbox.min.css', array(), $the_theme->get('Version'));
     // wp_enqueue_script('lightbox-scripts', get_stylesheet_directory_uri() . '/js/lightbox-plus-jquery.min.js', array(), $the_theme->get('Version'), true);
     // wp_enqueue_script('lightbox-scripts', get_stylesheet_directory_uri() . '/js/lightbox.min.js', array(), $the_theme->get('Version'), true);
-    // Vendor libraries are self-hosted (not loaded from unpkg / code.jquery.com) so the
-    // Usercentrics autoblocker treats them as first-party and doesn't block them pre-consent.
+    // Vendor libraries are self-hosted (not loaded from unpkg / code.jquery.com); see
+    // cb_usercentrics_allow_theme_scripts() for why the Usercentrics autoblocker must skip them.
     $vendor_uri = get_stylesheet_directory_uri();
     wp_enqueue_style('aos-style', $vendor_uri . '/css/vendor/aos.min.css', array(), '2.3.1');
     wp_enqueue_script('aos', $vendor_uri . '/js/vendor/aos.min.js', array(), '2.3.1', true);
@@ -254,6 +254,24 @@ function cb_theme_enqueue()
 
 }
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
+
+/**
+ * Tell the Usercentrics autoblocker to leave the theme's own scripts alone.
+ *
+ * The autoblocker matches scripts by tag id / src / hash against its last site scan, and a scan
+ * from when these loaded via unpkg still maps the "aos-js" / "swiper-js" ids to the "unpkg"
+ * service, so they get blocked (type="text/plain") until consent and the page never animates.
+ * data-uc-allowed="true" is Usercentrics' documented opt-out for a resource.
+ */
+function cb_usercentrics_allow_theme_scripts($tag, $handle)
+{
+    $first_party = array('aos', 'swiper', 'jquery', 'child-understrap-scripts', 'cb-embed-resize');
+    if (in_array($handle, $first_party, true) && strpos($tag, 'data-uc-allowed') === false) {
+        $tag = str_replace('<script ', '<script data-uc-allowed="true" ', $tag);
+    }
+    return $tag;
+}
+add_filter('script_loader_tag', 'cb_usercentrics_allow_theme_scripts', 10, 2);
 
 // stupid blog layout
 function modify_blog_posts_per_page($query) {
