@@ -18,6 +18,25 @@ defined('ABSPATH') || exit;
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <!-- Google Consent Mode v2 defaults: every Google storage type starts "denied" until
+         Usercentrics (Integrations > Google Consent Mode) pushes the visitor's real choice.
+         Must run before the CMP loader and before any Google tag. -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            functionality_storage: 'denied',
+            personalization_storage: 'denied',
+            security_storage: 'granted',
+            wait_for_update: 2000
+        });
+        gtag('set', 'ads_data_redaction', true);
+        gtag('set', 'url_passthrough', false);
+    </script>
     <!-- Usercentrics CMP - autoblocker must stay above every other script in <head> -->
     <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
     <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="qvZ6hJNs-eUGDY" async></script>
