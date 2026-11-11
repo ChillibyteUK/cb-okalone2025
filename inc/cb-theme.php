@@ -273,6 +273,34 @@ function cb_usercentrics_allow_theme_scripts($tag, $handle)
 }
 add_filter('script_loader_tag', 'cb_usercentrics_allow_theme_scripts', 10, 2);
 
+/**
+ * Switch off scroll animations on thank-you pages (any page with "thank" in its slug).
+ *
+ * NitroPack delays the theme's scripts until the visitor's first interaction, and the AOS stylesheet
+ * keeps every [data-aos] element at opacity 0 until AOS.init() has run. A thank-you page is one short
+ * block that is animated in full, so it stayed blank until the cursor moved. Removing the data-aos
+ * attributes server-side makes the content plain markup that shows straight away.
+ *
+ * @param string $block_content Rendered block HTML.
+ * @return string
+ */
+function cb_disable_aos_on_thank_you_pages($block_content)
+{
+    if (is_admin() || !is_page() || !is_string($block_content) || strpos($block_content, 'data-aos') === false) {
+        return $block_content;
+    }
+
+    $slug = (string) get_post_field('post_name', get_queried_object_id());
+    if (stripos($slug, 'thank') === false) {
+        return $block_content;
+    }
+
+    $stripped = preg_replace('/\sdata-aos(?:-[a-z-]+)?=("[^"]*"|\'[^\']*\')/i', '', $block_content);
+
+    return $stripped ?? $block_content;
+}
+add_filter('render_block', 'cb_disable_aos_on_thank_you_pages');
+
 // stupid blog layout
 function modify_blog_posts_per_page($query) {
     if ($query->is_main_query() && $query->is_home() && !is_admin()) {
