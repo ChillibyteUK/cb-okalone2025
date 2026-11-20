@@ -19,9 +19,11 @@ defined('ABSPATH') || exit;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- Google Consent Mode v2 defaults: every Google storage type starts "denied" until
-         Usercentrics (Integrations > Google Consent Mode) pushes the visitor's real choice.
-         Must run before the CMP loader and before any Google tag. -->
-    <script>
+         Usercentrics (Configuration > CMP Settings > Google Consent Mode) pushes the visitor's
+         real choice. Must run before the CMP loader and before any Google tag.
+         nitro-exclude stops NitroPack holding this back until the first interaction: GTM now
+         loads before consent (see below), so "denied" has to be in place before it can run. -->
+    <script nitro-exclude>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('consent', 'default', {
@@ -46,13 +48,17 @@ defined('ABSPATH') || exit;
     <?php
     if (get_field('gtm_property', 'options')) {
     ?>
-        <!-- Google Tag Manager.
-             type="text/plain" + data-usercentrics is Usercentrics' manual consent markup: the CMP
-             flips it to text/javascript only once the named service is consented to. The value must
-             match the service name in the Usercentrics admin exactly. We don't rely on the
-             autoblocker for GTM because NitroPack rewrites inline scripts and the autoblocker's
-             hash-matching then misses them (GTM was firing pre-consent on cached pages). -->
-        <script type="text/plain" data-usercentrics="Google Tag Manager">
+        <!-- Google Tag Manager. Loads for every visitor, before consent (Advanced Consent Mode,
+             requested by the client, Nov 2026). Until a visitor accepts, the Google tags only send
+             cookieless pings, and every other tag in the container (Facebook, LinkedIn, Twitter,
+             Clarity, Matomo, Apollo, Pardot) is held back by its own consent setting inside GTM.
+             Any tag added to GTM in future needs a consent setting too, or it fires for everyone.
+             data-uc-allowed="true" tells the Usercentrics autoblocker to leave GTM alone; the
+             admin also lists www.googletagmanager.com under "domains auto blocking should bypass".
+             To go back to blocking GTM until consent, swap data-uc-allowed="true" for
+             type="text/plain" data-usercentrics="Google Tag Manager" (must match the service name
+             in the Usercentrics admin exactly). -->
+        <script data-uc-allowed="true">
             <?php
             if (is_singular('guides') || is_post_type_archive('guides')) {
             ?>
@@ -91,6 +97,7 @@ defined('ABSPATH') || exit;
                     var f = d.getElementsByTagName(s)[0],
                         j = d.createElement(s),
                         dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.setAttribute('data-uc-allowed', 'true');
                     j.async = true;
                     j.src =
                         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
@@ -102,7 +109,9 @@ defined('ABSPATH') || exit;
     }
     if (get_field('ga_property', 'options')) {
     ?>
-        <!-- Global site tag (gtag.js) - Google Analytics (consent-gated, see GTM note above) -->
+        <!-- Optional extra Google Analytics property from Theme Options (empty on the live site;
+             GA4 comes from GTM). Still blocked until consent with Usercentrics' manual markup:
+             type="text/plain" + data-usercentrics, flipped to JavaScript once the visitor accepts. -->
         <script type="text/plain" data-usercentrics="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=<?= get_field('ga_property', 'options') ?>"></script>
         <script type="text/plain" data-usercentrics="Google Analytics">
             window.dataLayer = window.dataLayer || [];
@@ -150,14 +159,9 @@ defined('ABSPATH') || exit;
     <?php wp_head(); ?>
     <!-- GetSiteControl popups (consent-gated; service name is lowercase in the Usercentrics database) -->
     <script type="text/plain" data-usercentrics="getsitecontrol" async src="//l.getsitecontrol.com/v7n3e214.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics (consent-gated) -->
-    <script type="text/plain" data-usercentrics="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-7R39LXLMJQ"></script>
-    <script type="text/plain" data-usercentrics="Google Analytics">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7R39LXLMJQ');
-    </script>
+    <!-- GA4 (G-7R39LXLMJQ) and Google Ads (AW-11342103680) are loaded by GTM, not from here.
+         The hard-coded GA4 snippet that used to sit here was removed in Nov 2026 so the
+         property isn't tagged twice. -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
